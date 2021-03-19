@@ -8,7 +8,7 @@
 <meta name="keywords" content="非科班,海贼班,面试,计算机,算法,投资理财,时间管理,Double">
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
-<title>3 Linux基础知识 | Double&#39;s Way</title>
+<title>7 Socket编程基础 | Double&#39;s Way</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1616128051092">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="3 Linux基础知识" />
+  <meta name="description" content="7 Socket编程基础" />
   <meta name="keywords" content="Linux,海贼班,计算机" />
 </head>
 
@@ -281,46 +281,53 @@
     <ul class="markdownIt-TOC">
 <li><a href="#%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9">课程内容</a>
 <ul>
-<li><a href="#%E7%94%B1%E5%9B%BE%E5%BD%A2%E5%8C%96windows%E8%BD%AC%E4%B8%BA%E5%AD%97%E7%AC%A6%E7%95%8C%E9%9D%A2linux">由图形化[Windows]转为字符界面[Linux]</a>
+<li><a href="#%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE">——运输层协议——</a></li>
+<li><a href="#tcp">TCP</a></li>
+<li><a href="#udp">UDP</a></li>
+<li><a href="#socket">——socket——</a></li>
+<li><a href="#%E7%94%9F%E4%B8%8E%E6%AD%BB">【生与死】</a></li>
+<li><a href="#socket%E5%88%9B%E5%BB%BA%E5%A5%97%E6%8E%A5%E5%AD%97">socket：创建套接字</a></li>
+<li><a href="#close%E5%85%B3%E9%97%AD%E8%BF%9E%E6%8E%A5">close：关闭连接</a></li>
+<li><a href="#%E6%9C%8D">【服】</a></li>
+<li><a href="#bind%E7%BB%91%E5%AE%9Aip%E5%92%8C%E7%AB%AF%E5%8F%A3">bind：绑定IP和端口</a>
 <ul>
-<li><a href="#%E9%94%99%E8%AF%AF%E4%B8%8E%E6%8F%90%E7%A4%BA">错误与提示</a></li>
-<li><a href="#%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F">命令格式</a></li>
-<li><a href="#linux%E5%9C%A8%E5%AE%89%E5%85%A8%E6%96%B9%E9%9D%A2%E8%80%83%E8%99%91%E6%9B%B4%E5%A4%9A">Linux在安全方面考虑更多</a></li>
-<li><a href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84">用户和组</a></li>
-<li><a href="#%E6%B5%8F%E8%A7%88%E6%96%87%E4%BB%B6">浏览文件</a></li>
-<li><a href="#%E6%88%91%E6%98%AF%E8%B0%81-%E6%88%91%E5%9C%A8%E5%93%AA-%E6%88%91%E8%A6%81%E5%8E%BB%E5%93%AA">我是谁、我在哪、我要去哪</a></li>
-<li><a href="#%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85ubuntu">软件的安装（Ubuntu）</a></li>
+<li><a href="#%E7%9B%B8%E5%85%B3%E7%BB%93%E6%9E%84%E4%BD%93sockaddr-sockaddr_in"><strong>+相关结构体：sockaddr、sockaddr_in</strong></a></li>
+<li><a href="#%E4%B8%BB%E6%9C%BA%E5%AD%97%E8%8A%82%E5%BA%8F-%E7%BD%91%E7%BB%9C%E5%AD%97%E8%8A%82%E5%BA%8F"><strong>+主机字节序 &amp; 网络字节序</strong></a></li>
 </ul>
 </li>
-<li><a href="#linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">Linux常用命令</a>
+<li><a href="#litsen%E8%AE%BE%E4%B8%BA%E7%9B%91%E5%90%AC%E6%80%81">litsen：设为监听态</a></li>
+<li><a href="#accept%E6%8E%A5%E5%8F%97%E8%BF%9E%E6%8E%A5">accept：接受连接</a></li>
+<li><a href="#%E5%AE%A2">【客】</a></li>
+<li><a href="#connect%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5">connect：建立连接</a></li>
+<li><a href="#%E4%BC%A0%E8%BE%93">【传输】</a></li>
+<li><a href="#send%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE">send：发送数据</a></li>
+<li><a href="#recv%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE">recv：接收数据</a></li>
+<li><a href="#%E9%99%84%E5%8A%A0">——附加——</a></li>
+<li><a href="#kill">kill</a></li>
+<li><a href="#signal">signal</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA">代码演示</a>
 <ul>
-<li><a href="#%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C">文件及目录操作</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E7%9A%84%E4%BF%AE%E6%94%B9%E4%B8%8E%E6%9F%A5%E7%9C%8B">文件内容的修改与查看</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E7%9A%84%E6%9F%A5%E6%89%BE%E4%B8%8E%E5%AE%9A%E4%BD%8D">文件的查找与定位</a></li>
-<li><a href="#%E7%94%A8%E6%88%B7%E7%9B%B8%E5%85%B3">用户相关</a></li>
-<li><a href="#%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3">进程相关</a></li>
-<li><a href="#%E8%8E%B7%E5%8F%96%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF">获取系统信息</a></li>
-<li><a href="#%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4">其他命令</a></li>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF">服务端</a></li>
+<li><a href="#%E5%AE%A2%E6%88%B7%E7%AB%AF">客户端</a></li>
+<li><a href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA">效果展示</a></li>
 </ul>
 </li>
-<li><a href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93">基础知识总结</a>
+<li><a href="#%E9%99%84%E5%8A%A0%E7%9F%A5%E8%AF%86%E7%82%B9">附加知识点</a>
 <ul>
-<li><a href="#terminal-shell">Terminal &amp; Shell</a></li>
-<li><a href="#%E5%88%86%E9%9A%94%E7%AC%A6">分隔符</a></li>
-<li><a href="#%E7%A8%8B%E5%BA%8F%E4%B8%8E%E8%BF%9B%E7%A8%8B">程序与进程</a></li>
-<li><a href="#%E8%B7%AF%E5%BE%84">路径</a></li>
-<li><a href="#%E8%BD%AF%E4%BB%B6">软件</a></li>
-<li><a href="#%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6">隐藏文件</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B">文件类型</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E4%BF%AE%E6%94%B9">文件权限的修改</a></li>
-<li><a href="#%E7%94%A8%E6%88%B7">用户</a></li>
+<li><a href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B-%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B">三次握手、四次挥手</a>
+<ul>
+<li><a href="#%E9%99%84%E5%8A%A02%E4%B8%AAmsl%E7%9A%84%E5%90%AB%E4%B9%89">附加：2个MSL的含义</a></li>
 </ul>
 </li>
+<li><a href="#c%E8%AF%AD%E8%A8%80%E4%B8%8B%E7%9A%84socket%E7%BC%96%E7%A8%8B">C语言下的socket编程</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5kaikebacom%E5%B9%B6%E6%8C%89%E4%B8%8B%E5%9B%9E%E8%BD%A6">输入kaikeba.com并按下回车</a></li>
+<li><a href="#%E7%AB%AF%E5%8F%A3%E5%A4%8D%E7%94%A8%E7%9B%B8%E5%85%B3">端口复用相关</a></li>
+<li><a href="#%E7%88%B6%E5%AD%90%E8%BF%9B%E7%A8%8B%E7%9A%84socket%E5%85%B3%E7%B3%BB">父子进程的socket关系</a></li>
 </ul>
 </li>
-<li><a href="#%E9%99%84%E5%8A%A0%E7%9F%A5%E8%AF%86%E7%82%B9">附加知识点</a></li>
 <li><a href="#tips">Tips</a></li>
-<li><a href="#%E8%AF%BE%E7%A8%8B%E9%80%9F%E8%AE%B0">课程速记</a></li>
 </ul>
 
   </div>
@@ -586,8 +593,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://doublelll3.ml/lnxrm_3_Linux基础知识/">
-      3 Linux基础知识
+    <a class="post-title-link" href="https://doublelll3.ml/wxb_7_Socket编程基础/">
+      7 Socket编程基础
     </a>
   </h1>
   <div class="post-meta">
@@ -595,7 +602,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-11-22 18:00:00">2020-11-22</span>
+      <span class="publish-time" data-t="2021-01-26 18:00:00">2021-01-26</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -626,17 +633,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>9<span class="language" data-lan="minute">分钟</span></span>
+      <span>15<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2226<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>4032<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/lnxrm_3_Linux基础知识/" data-flag-title="3 Linux基础知识" class="meta-item pc-show leancloud_visitors">
+    <span id="/wxb_7_Socket编程基础/" data-flag-title="7 Socket编程基础" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -646,389 +653,601 @@
 </section>
             <div class="post-body next-md-body" id="post_body">
               <h1 id="课程内容">课程内容</h1>
-<h2 id="由图形化windows转为字符界面linux">由图形化[Windows]转为字符界面[Linux]</h2>
-<h3 id="错误与提示">错误与提示</h3>
-<p>图形化→文本信息</p>
+<blockquote>
+<p>套接字是什么？网络编程是做什么的？</p>
+</blockquote>
 <ul>
-<li>一定不要忽略屏幕输出，仔细看系统的每一个回复！</li>
-<li>程序return值反应在下一行右侧
+<li>了解TCP/IP五层模型、OSI七层模型</li>
+<li>类比
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/kGLOnr9hC6Jdamw.png" alt="图片" loading="lazy"></li>
-<li>return 0 表示成功</li>
+<li>套接字——快递员</li>
+<li>运输层——快递公司：TCP——某丰快递公司，UDP——某通快递公司</li>
+<li>交通运输道路——因特网</li>
+<li>通讯地址——IP</li>
 </ul>
 </li>
 </ul>
-<h3 id="命令格式">命令格式</h3>
-<p>命令 [选项] [选项参数]... [参数]...</p>
+<h2 id="运输层协议">——运输层协议——</h2>
+<blockquote>
+<p>类比快递公司<br>
+对于开发者，只能选择TCP或UDP协议，修改协议参数</p>
+</blockquote>
+<h2 id="tcp">TCP</h2>
+<p>传输控制协议；面向连接，可靠的数据传输协议</p>
 <ul>
-<li>选项：--选项全称 -选项简称</li>
-<li>空格：不管多少个都是一个空格，作为分隔符</li>
+<li>连接：三次握手 [详见<strong>附加知识点</strong>]</li>
+<li>可靠的本质：确认与重传 [需要有序号]
+<ul>
+<li>如果丢了就会重传</li>
+<li>[PS] 双方都保存一些描述双方状态的变量</li>
 </ul>
-<h3 id="linux在安全方面考虑更多">Linux在安全方面考虑更多</h3>
-<p>用户、用户组、权限</p>
+</li>
+<li><strong>头部格式</strong></li>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/22zEwoOlCHrh5aVl.png" alt="图片" style="zoom: 80%;" />
+</li>
+<li>源<strong>端口</strong>号：从哪个端口发出；目标端口号：发送到哪个端口
 <ul>
-<li>修改密码：passwd</li>
-<li>退出用户：exit、logout、ctrl + d</li>
-<li>新建用户：useradd</li>
-<li>家目录：/home，其他用户在其他目录可能没有修改权限</li>
-<li>组</li>
-<li>[PS] 一切皆文件，一切设备、抽象的进程、运行数据、CPU...
+<li>不同的端口对应不同的应用</li>
+<li>如果把计算机比作一个大楼，端口号就是大楼里的房间号</li>
+<li>IP地址由IP层给出</li>
+</ul>
+</li>
+<li><strong>序列号</strong>：标志第几次通信；确认应答号：期望对方下次通信的序列号</li>
+<li>首部长度：单位为字 [一般为4字节]</li>
+<li><strong>功能比特位</strong>[关注标黄处]
 <ul>
-<li>与用户相关的文件 /etc/passwd、/etc/group，相关命令 usermod、userdel、id</li>
-<li>id：可查看自己或指定用户的uid、gid(主要组)、groups(所在组)</li>
+<li>ACK：确认</li>
+<li>RST：重置连接 [拒绝下次连接]</li>
+<li>SYN：建立请求 [三次握手中前两次握手会用到]</li>
+<li>FIN：关闭连接 [四次挥手的第一、第三次挥手会用到，同时还可以放一些数据，详见<strong>附加知识点</strong>]</li>
+</ul>
+</li>
+<li>窗口大小：告诉对方还可以发多少数据，用来抑制对方的发送速率</li>
+<li>校验和：确认数据是否正确。如果有问题，直接销毁，然后请求重发</li>
+<li>[PS]
+<ul>
+<li>设计了这么多主要为了可靠</li>
+<li>现实中的快递公司无法达到可靠，因为运输的物品是唯一的</li>
 </ul>
 </li>
 </ul>
-<h3 id="用户和组">用户和组</h3>
+<h2 id="udp">UDP</h2>
+<p>用户数据报协议；无连接，不可靠的数据传输协议</p>
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/BPT6DwbS4hq3QJv.png" alt="图片" loading="lazy"></li>
-<li><strong>权限</strong>：字符表示(r可读、w可写、x可执行)→8/10进制描述</li>
-<li>每个文件都有一个拥有者、一个拥有组、其余用户</li>
-<li>输入ls -l可查看
+<li>无连接：不需要握手</li>
+<li>不可靠：不管对方是否收到</li>
+<li>优势：灵活、成本低</li>
+<li><strong>头部格式</strong></li>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/zxSXY37hhiV9djBF.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>相对TCP，简单得多</li>
+</ul>
+<h2 id="socket">——socket——</h2>
+<blockquote>
+<p>类比快递员，但只为一个任务服务<br>
+进程和运输层之间的接口，进程发送网络数据必须经它交给运输层去交付</p>
+</blockquote>
+<h2 id="生与死">【生与死】</h2>
+<h2 id="socket创建套接字">socket：创建套接字</h2>
 <ul>
 <li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/og2lBeqydMNErhC1.png!thumbnail" alt="img" style="zoom:67%;" />      
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/kRgUvWdxxv9EE0c7.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>见红框，文件类型l、d等，详见附加知识点-7种文件类型</li>
-</ul>
-</li>
-</ul>
-<h3 id="浏览文件">浏览文件</h3>
-<p>Linux只有一棵树，起于根目录 /</p>
-<h3 id="我是谁-我在哪-我要去哪">我是谁、我在哪、我要去哪</h3>
+<li>domain：域名类型
 <ul>
-<li>我是谁 whoami、who am i（看到本质）
+<li>AF_INET，对应ipv4 [常用]</li>
+<li>AF_INET6，对应ipv6</li>
+</ul>
+</li>
+<li>type：类型
+<ul>
+<li>SOCK_STREAM，对应字节流 [TCP]</li>
+<li>SOCK_DGRAM，对应数据报 [UDP]</li>
+</ul>
+</li>
+<li>protocol：协议
+<ul>
+<li>domain和type可能唯一确定protocol，如AF_INET与SOCK_STREAM确定IPPROTO_TCP</li>
+<li>[PS] 只能选一个的话，可用<strong>0</strong>代替</li>
+</ul>
+</li>
+<li>返回值：文件描述符
+<ul>
+<li>出错则返回-1</li>
+<li>socket也是一个文件，一切皆文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="close关闭连接">close：关闭连接</h2>
+<ul>
+<li>int close(int fd);</li>
+<li>四次挥手 [详见附加知识点]</li>
+<li>两端都需要调用close，调用方发送FIN，接收端的recv的<strong>返回值为0</strong></li>
+</ul>
+<h2 id="服">【服】</h2>
+<h2 id="bind绑定ip和端口">bind：绑定IP和端口</h2>
+<p>只针对于收数据方</p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/ltaNbQJdpjOHsvW.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/OgkIlfIyliTM5eW5.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>whoami：系统感觉你是谁，who am i：你实际上是谁</li>
+<li>sockfd：文件描述符</li>
+<li>addr：IP地址和端口
+<ul>
+<li>绑定IP：可以接收来自该IP地址的数据 [本机]
+<ul>
+<li>若为空，则可以接收来自任意IP地址的数据</li>
+<li>可用在内网和外网的交接处，作为防火墙使用</li>
 </ul>
 </li>
-<li>我在哪 pwd：print working directory</li>
-<li>我要去哪 cd：change directory</li>
-<li>[PS] 书写命令或路径时，善用Tab键</li>
+<li>绑定端口：服务于哪个端口 [共$$2^{16}=65536$$个端口]</li>
 </ul>
-<h3 id="软件的安装ubuntu">软件的安装（Ubuntu）</h3>
-<ul>
-<li>.deb：使用dpkg -i xxx.deb</li>
-<li>.tar：使用tar解压</li>
-<li><strong>apt安装</strong>：可自动解决依赖关系、可选择合适的软件源地址
-<ul>
-<li>安装到哪去了？分散放置的：bin、lib；/usr/→bin、include、lib、local、share(帮助手册)、src</li>
-<li>相关命令
+</li>
+<li>addrlen：地址长度</li>
+<li>返回值：成功，0；否则，-1</li>
+</ul>
+<h3 id="相关结构体sockaddr-sockaddr_in"><strong>+相关结构体：sockaddr、sockaddr_in</strong></h3>
+<p><strong>sockaddr</strong></p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/jLIMvfm6zhAWqeN.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/UUA1L3vmzQhFAfki.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>search可以找一个软件，查看是否存在、可能忘记名字了</li>
-<li>apt remove xxx--purge (不保留配置文件)</li>
-<li>apt autoremove慎用，毕竟是apt管理的，可能误删还要用但没在运行、其他方式下载的软件</li>
+<li>sin_family：地址协议族，一般使用AF_INET，对应ipv4</li>
+<li>sa_data：同时包含IP地址和端口</li>
+<li>❗ 使用并不方便，转用下列更友好的方式👇，再使用(struct sockaddr*)强转即可</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="linux常用命令">Linux常用命令</h2>
-<h3 id="文件及目录操作">文件及目录操作</h3>
+<p><strong>sockaddr_in</strong></p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/VWNkg9dzbjhe2iu.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/V3Nr8MGVDCk71SNU.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>ln：软连接、硬连接</li>
-</ul>
-<h3 id="文件内容的修改与查看">文件内容的修改与查看</h3>
+<li>sin_port：<strong>端口</strong>号 [需要<strong>网络字节序</strong>，见下]</li>
+<li>sin_addr：<strong>IP</strong>地址</li>
+<li>其中，sin_addr对应一个新的结构体<strong>in_addr</strong>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/DrmvGtY37AsdU5h.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/Jk7gr6uhcOkNI7c6.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>⭐Linux三剑客：grep [Global Regular Expression Print]、awk [数据处理]、sed [批量操作]</li>
-<li>❗ 管道：|  把前一个命令的输出传给下个命令</li>
-<li>less比more更友好，功能更多</li>
-<li>wc：word count，可接参数-l [行数]等等</li>
-</ul>
-<h3 id="文件的查找与定位">文件的查找与定位</h3>
+<li>存储32位无符号整型，一般使用<strong>inet_addr</strong>函数将<strong>点分十进制</strong>转换为in_addr结构体：
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/cyagNJAMbr8V45F.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/hW1wGoM0IJ2wRc8N.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>which：查找可执行文件的具体位置，具体用的是哪个</li>
-<li>locate
+<li><strong>点分十进制</strong>表示 [字符串形式] 更方便</li>
+<li>inet_ntoa，则反之</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="主机字节序-网络字节序"><strong>+主机字节序 &amp; 网络字节序</strong></h3>
 <ul>
-<li>基于索引，查找非常快</li>
-<li>【不是实时更新】，因为更新需遍历全部文件，慢</li>
-<li>会定期更新，或使用sudo updatedb立即更新数据库</li>
+<li>主机字节序：大端、小端
+<ul>
+<li>常见为<strong>小端</strong>机，<strong>低</strong>位字节排放在内存的<strong>低</strong>地址端</li>
 </ul>
 </li>
-</ul>
-<h3 id="用户相关">用户相关</h3>
+<li>网络字节序：对于4个字节的32bit值，先传输0<sub>7bit，...，最后传输24</sub>31bit</li>
+<li>整形字节序的转换函数
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/loiRHM7E45K9Uzv.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/fiOwuV68C3WKBPZM.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>sudo -i：使用超管权限登录默认shell</li>
-<li>chmod：change mode</li>
-<li>chown：change owner</li>
+<li>htonl：32位主机字节序到网络字节序的转换</li>
+<li>htons：16位主机字节序到网络字节序的转换</li>
+<li>ntohl、ntohs，则反之</li>
 </ul>
-<h3 id="进程相关">进程相关</h3>
+</li>
+</ul>
+<h2 id="litsen设为监听态">litsen：设为监听态</h2>
+<p>将套接字从主动（默认）切换为被动 [首先需要bind绑定端口]</p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/7qambg5TtjuzKMJ.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/GBLxx7faWM6SHN3M.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>常用ps -ef，输出所有进程的详细信息</li>
-<li>kill指定PID [process ID] 即可杀死进程</li>
-<li>pkill可以批量杀死字符匹配的进程，只杀死该用户有权限杀的，sudo pkill慎用</li>
-<li>crontab -e：编辑【定时任务】，参考里面格式即可</li>
-<li>ctrl + z、fg、bg、jobs
+<li>注意：第二个参数的真实含义是完成队列的长度
 <ul>
-<li>jobs查看进程序号</li>
-<li>ctrl + z会让进程暂停</li>
-<li>bg可以在后台跑，输出会显示在终端</li>
-<li>%2（或fg %2）[zsh下]、fg 2 [bash下] 将2号进程调至前台</li>
-<li>[PS] fg可用在修改源文件、gcc的时候，提高效率</li>
+<li>① TCP连接过程存在两个队列
+<ul>
+<li><strong>未完成队列</strong>：客户端发送SYN过来，服务器回应SYN+ACK之后，服务器当前处于SYN_RECV状态，此时的连接处在未完成队列中</li>
+<li><strong>完成队列</strong>：客户端回应ACK之后，两边都处于ESTABLISHED状态，此时连接从未完成队列<strong>转移</strong>到完成队列中</li>
+<li>👉 当服务器调用accept时，才将连接从完成队列中移除</li>
+</ul>
+</li>
+<li>② 注意事项：设置合适的backlog；服务端要尽快accept新的连接</li>
 </ul>
 </li>
 </ul>
-<h3 id="获取系统信息">获取系统信息</h3>
+<h2 id="accept接受连接">accept：接受连接</h2>
+<p>生成一个新的快递员 [还可继续建立多个连接]</p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/Lgstr5SnFNh2QPb.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/N3V0XORx7JISzLOB.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>可用于调优</li>
-<li>查看有没有被别人占用资源，检查系统是否被攻破：top、htop、nmon</li>
-<li>【如何降低云主机被攻破的几率】
+<li>① 传入的sockfd必须经过**socket()、bind()、listen()**处理</li>
+<li>② addr为传出参数，用来存储客户端地址</li>
+<li>返回值
 <ul>
-<li>取消密码，配置sshd，通过公私钥方式登录</li>
-<li>改复杂密码</li>
-<li>改默认的用户名或新建一个用户</li>
-<li>改ssh的连接端口</li>
+<li>成功，则返回一个<strong>新的sockfd</strong>，原先的sockfd仍可用来accept</li>
+<li>失败，则返回-1</li>
 </ul>
 </li>
-<li>-h 说人话，友好显示
-<ul>
-<li>du -h，友好显示目录文件大小，K、M</li>
-<li>free -h，友好显示内存数据</li>
+<li>[PS] 一般新的scokfd使用完毕就将其关闭；listen状态的socket不关闭</li>
 </ul>
-</li>
-<li>nmon：适合检查系统什么时候出了问题</li>
-<li>ifconfig [interfaces config] 显示的<a href="http://einverne.github.io/post/2017/10/ifconfig.html#%E6%98%BE%E7%A4%BA%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E4%BF%A1%E6%81%AF">网络设备信息含义</a>-博客
-<ul>
-<li>能看到私网ip，不能看到公网ip</li>
-</ul>
-</li>
-<li>uname -a：打印所有可用的系统信息，还可以用cat /etc/os-release</li>
-</ul>
-<h3 id="其他命令">其他命令</h3>
+<h2 id="客">【客】</h2>
+<h2 id="connect建立连接">connect：建立连接</h2>
+<p>主动套接字，最多只能连<strong>一个</strong></p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/2GIXykMsfNReqlJ.png" alt="图片" style="zoom:67%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/GJvc9u55zGHvTS2s.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>在ssh [已开源] 以前常用telnet</li>
-<li>【scp使用ssh拷贝】
+<li>与accept不同的是：
 <ul>
-<li>远程👉本地：scp username@ip_address: 远程文件 本地路径</li>
-<li>本地👉远程：scp 本地文件 username@ip_address: 远程路径</li>
-</ul>
-</li>
-<li>云主机用了poweroff后，需连到控制台去开机</li>
-</ul>
-<h2 id="基础知识总结">基础知识总结</h2>
-<h3 id="terminal-shell">Terminal &amp; Shell</h3>
-<ul>
-<li>Terminal类似设备</li>
-<li>Terminal里面运行着Shell软件，比如bash、zsh，用来解释在Terminal中输入的命令</li>
-<li>Shell接收命令时：是否内置→在系统环境变量PATH中的路径里查找、调用</li>
-</ul>
-<h3 id="分隔符">分隔符</h3>
-<ul>
-<li>一些特殊符号也属于分隔符：管道 | ，重定向 &gt;、&gt;&gt;、&lt;、&lt;&lt; ，后台运行 &amp;，序列执行 &amp;&amp;
-<ul>
-<li>重定向到/dev/zero、/dev/null：输入到数据黑洞，输入到此处的东西直接被忽略，具体通过man zero查看【/dev：设备】</li>
+<li>sockfd不需要经过**bind()、listen()**处理</li>
+<li>不会返回新的socket</li>
 </ul>
 </li>
 </ul>
-<h3 id="程序与进程">程序与进程</h3>
-<ul>
-<li>程序就是一个可执行的二进制文件；进程是程序在内存中的镜像、实例化</li>
-</ul>
-<h3 id="路径">路径</h3>
-<ul>
-<li>绝对路径：起始点为根目录/</li>
-<li>相对路径：善用当前路径&quot;.&quot;和上一级路径&quot;..&quot;</li>
-<li>远程路径：协议://用户名:密码@位置/路径:端口</li>
-<li>特殊路径：~用户名 = 用户名的家目录，- = 上次工作目录</li>
-</ul>
-<h3 id="软件">软件</h3>
-<ul>
-<li>Linux中没有注册表概念</li>
-<li>
-<img src="https://i.loli.net/2020/12/09/S3TdJpfgOtP8uX4.png" alt="图片" style="zoom:67%;" />
-</li>
-</ul>
-<h3 id="隐藏文件">隐藏文件</h3>
-<ul>
-<li>名字以.开头即可</li>
-<li>特殊目录：当前目录&quot;.&quot;和父目录&quot;..&quot;</li>
-</ul>
-<h3 id="文件类型">文件类型</h3>
-<p>【7种文件类型】</p>
+<p>⭐ connect和accept是一对，分别在客户端和服务端执行，在此期间，完成了三次握手</p>
+<h2 id="传输">【传输】</h2>
+<h2 id="send发送数据">send：发送数据</h2>
+<p>本质同<a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/#write?fileGuid=zdkyBEa86pCYmlA6">write</a></p>
 <ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/czgy186mWStRKpq.png" alt="图片" style="zoom: 80%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/l46q5pF4fGtwVpgu.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>link：可暂时理解为windows的快捷方式</li>
-<li>block：系统大多数的block是4096Byte = 4KB，起到缓冲的作用，类比快递配送</li>
-<li>character：设备也是文件，如虚拟终端 /dev/pts/0</li>
-<li>socket：基于网络的都离不开它</li>
-<li>pipe：不占用内存，只负责传输，举例一次传输：echo &gt; 管道文件，cat 管道文件</li>
-<li>3种普通文件</li>
+<li>❗ sendto多传入了dest_addr和addrlen，它是用于UDP的
+<ul>
+<li>因为没有建立连接，从而没有绑定IP和端口</li>
+</ul>
+</li>
+<li>flag一般置为0</li>
+</ul>
+<h2 id="recv接收数据">recv：接收数据</h2>
+<p>本质同<a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/#read?fileGuid=zdkyBEa86pCYmlA6">read</a></p>
+<ul>
 <li>
-<img src="https://i.loli.net/2020/12/09/dcJIQ5OxYHSnw9G.png" alt="图片" style="zoom: 50%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/pZPxTWro2jZi6d72.png" alt="图片" style="zoom:67%;" />
 </li>
-</ul>
-<h3 id="文件权限的修改">文件权限的修改</h3>
+<li>当对方断开时，返回值为0</li>
+<li>❗ recvfrom多传入了src_addr和addrlen，它是用于UDP的
 <ul>
-<li>chmod
-<ul>
-<li>善用+、-、=
-<ul>
-<li><img src="https://i.loli.net/2020/12/09/vEDJf5HhxFLP4s3.png" alt="图片" loading="lazy"></li>
-<li>a = all、+ 增加权限、- 去除权限、= 直接覆写权限</li>
+<li>src_addr存储发送数据端的地址信息</li>
 </ul>
 </li>
-<li>尽量减少chmod 777的使用，权限开放过多</li>
+<li>默认是阻塞的</li>
+</ul>
+<h2 id="附加">——附加——</h2>
+<h2 id="kill">kill</h2>
+<p>给一个进程发送信号</p>
+<ul>
+<li>man 2 kill</li>
+<li>原型
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/0GCOYMAiRNUEDPWc.png" alt="图片" loading="lazy"></li>
+<li>基于进程ID和信号位掩码</li>
 </ul>
 </li>
-<li>chown
+<li>描述
 <ul>
-<li>可同时修改文件所属的用户和组
-<ul>
-<li>chown 所属用户:所属组 文件</li>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/pKhjaMSIbHG2g8pT.png" alt="图片" loading="lazy"></li>
+<li>设置pid有各种形式</li>
+<li>均需要存在和权限检查</li>
 </ul>
 </li>
-<li>可修改目录及目录下所有文件的所属用户
+<li>返回值
 <ul>
-<li>chown -R 所属用户 目录</li>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/Q6gnAVTARsJZRXdu.png" alt="图片" loading="lazy"></li>
+<li>0，成功；-1，出错</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>chgrp：修改文件所属的组，一般可用chown替代</li>
-<li>查看文件权限
+<li>kill -l 查看信号列表
 <ul>
-<li>ll = ls -lh
-<ul>
-<li>可通过which ll或alias ll查看ll具体使用的命令</li>
-</ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/Mmlbp8rlT9B7NLN6.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>l = ls -lah</li>
-<li>系统中的三个时间：修改时间mtime、读取时间atime、权限修改时间ctime</li>
+<li>64种信号</li>
 </ul>
 </li>
 </ul>
-<h3 id="用户">用户</h3>
+<h2 id="signal">signal</h2>
+<p>信号的处理方式</p>
 <ul>
-<li>慎用root</li>
-<li>su 用户名：切换到另一用户，需输入其密码</li>
-<li>su - 用户名
+<li>man signal</li>
+<li>原型
 <ul>
-<li>使用&quot;-&quot;，会完全更新环境变量，适合复杂操作</li>
-<li>不加&quot;-&quot;，会适当更新环境变量，适合临时切换用户</li>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/Mz8QFutg5aKAj8Oo.png" alt="图片" loading="lazy"></li>
+<li>需要定义一个sighandler_t类型的函数</li>
 </ul>
 </li>
-<li>不加用户名，则默认切换到root</li>
+<li>描述
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/gvIS3OTHiNDdGPwv.png" alt="图片" loading="lazy"></li>
+<li>其行为会随UNIX版本变化</li>
+<li>handler有三种类型：忽略、默认、自定义</li>
+<li>自定义类型涉及涉及捕鼠器原理：夹住一个老鼠的时候，后面一个老鼠可能被丢失
+<ul>
+<li>需要重新设置 [由系统操作]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>返回值
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/jyPDaV7gb3o8IM7a.png" alt="图片" loading="lazy"></li>
+<li>根据handler而定</li>
+</ul>
+</li>
+</ul>
+<h1 id="代码演示">代码演示</h1>
+<h2 id="服务端">服务端</h2>
+<p>tcp_server.h</p>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/e9PzcWwmUxaZwExQ.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>在指定端口上创建一个处于监听状态的快递员</li>
+</ul>
+<p>tcp_server.c</p>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/tHVDLd7f4YqTJtWj.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>参照序号阅读</li>
+<li>注意：head.h中添加socket相关的头文件，可在man手册中查找，这里不赘述</li>
+</ul>
+<p>1.server.c</p>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/dcbFehW6bnDB9Xeb.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/Jk5Q7puuOBzag29S.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>accept可以获取客户端的地址信息</li>
+<li>创建子进程单独用于传输数据</li>
+<li>每一步都要注意有错误检测
+<ul>
+<li>+断开连接情况（FIN，recv返回为0）的处理</li>
+</ul>
+</li>
+<li>收发策略不同
+<ul>
+<li>有多少发多少，能收多少收多少</li>
+<li>send使用strlen，recv使用sizeof</li>
+</ul>
+</li>
+</ul>
+<h2 id="客户端">客户端</h2>
+<p>tcp_client.h</p>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/F5zmgYqw9m3sxIdx.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>主动连接指定IP [点分十进制的ipv4字符串] 和端口</li>
+</ul>
+<p>tcp_client.c</p>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/9da6ArxMgIeuyusI.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>填表基于输入</li>
+</ul>
+<p>1.client.c</p>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/5UwmCtAod03u0KUA.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/qHbXoss0yugR5nKI.png" alt="图片" style="zoom: 67%;" />
+</li>
+<li>加入了对信号的捕捉</li>
+<li>bzero的使用，初始化buff变量</li>
+</ul>
+<h2 id="效果展示">效果展示</h2>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/JhrdLiS2L5fq6pm5.png" alt="图片" loading="lazy"></li>
+<li>左：服务端，右：客户端 [可多用户]</li>
+<li>建立连接、地址捕获、数据传输、断开连接</li>
+<li>使用netstat可查看端口的监听状态
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/A0t7d4Aq70Q0Glqm.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>添加-alnt选项</li>
+</ul>
+</li>
+<li>[PS] 需要在云主机的控制台——安全组中开放端口8888</li>
 </ul>
 <h1 id="附加知识点">附加知识点</h1>
 <ul>
-<li>. 当前目录 .. 父目录 / 根目录</li>
-<li>僵尸进程[有害]：子进程死了，父进程没管，子进程还占着资源；孤儿进程[无害]：会被1号进程领养</li>
-<li>与其它终端聊天
+<li>IP：公共的地址服务，尽力而为交付服务。另一层含义，其不可靠 [有可能出车祸]</li>
+</ul>
+<h2 id="三次握手-四次挥手">三次握手、四次挥手</h2>
 <ul>
-<li>输入w查看在线终端
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/RVvwDJVpHvVYieL3.png" alt="图片" style="zoom: 50%;" />
+</li>
+<li>三次握手 [SYN、ACK]
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/hDpCbj54OFMsQ98.png" alt="图片" loading="lazy"></li>
-<li>TTY[Teletype]：终端；pts[pseudo terminal slave]：虚拟终端</li>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/C51Xz7NYuU8B5eIK.png" alt="图片" style="zoom:67%;" />
+</li>
+<li><strong>第一次握手</strong>：客户端发送SYN包到服务器[客户端进入SYN_SEND状态，等待服务器确认]</li>
+<li><strong>第二次握手</strong>：服务器收到，必须确认客户端，设置一个ACK，同时自己也设置一个SYN，即SYN+ACK包[服务端从LISTEN进入SYN_RECV状态]</li>
+<li><strong>第三次握手</strong>：客户端收到服务器的SYN＋ACK包，向服务器发送ACK确认包，发送完毕后，客户端进入ESTABLISHED状态，服务器收到ACK后也进入ESTABLISHED状态</li>
+<li>注意：每次的ACK序号，在需要确认的包的序号上加一，表示确认</li>
 </ul>
 </li>
-<li>输入echo &quot;hello&quot; &gt;&gt; /dev/pts/1给终端pts/1发&quot;hello&quot;
+<li>四次挥手 [FIN、ACK]
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/pxiEV9wtQFdWZBS.png" alt="图片" loading="lazy"></li>
-<li>pts/1可以收到消息，并以同样方式echo回信</li>
-</ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/GlWgLx87BeFdH15F.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>还可以使用wall &quot;System is rebooting in 15s&quot;告诉所有在线用户自己要重启了</li>
-</ul>
-</li>
-<li>sudo !! 可以以超级用户准备执行上次命令
+<li><strong>第一次挥手</strong>：假设客户端想要关闭连接，客户端发送一个FIN包，表示自己已经没有数据可以发送了 [此时仍然可以接收数据][客户端进入FIN_WAIT_1状态]</li>
+<li><strong>第二次挥手</strong>：服务端回复一个ACK包，表明自己接收到了客户端关闭连接的请求，但自己还需要做些准备来关闭连接[服务端进入CLOSE_WAIT状态]
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/P3qp2SBJFWL8yDV.png" alt="图片" loading="lazy"></li>
-<li>可以以超级用户准备执行上次命令，不需要再输一遍命令了</li>
+<li>客户端接收到这个ACK后，进入FIN_WAIT_2状态，等待服务端关闭连接</li>
 </ul>
 </li>
-<li>whereis
+<li><strong>第三次挥手</strong>：服务端准备好关闭连接时，向客户端再发送FIN[服务端进入LAST_ACK状态，等待客户端的确认]</li>
+<li><strong>第四次挥手</strong>：客户端接收到来自服务器端的关闭请求，发送一个ACK包[客户端进入 TIME_WAIT状态，为可能出现的超时重传的FIN包，等待<strong>2个MSL</strong>时间]
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/Qgjh3exSyTvfR1A.png" alt="图片" loading="lazy"></li>
-<li>查看软件的安装目录</li>
+<li>服务端接收到这个ACK之后，关闭连接，进入CLOSED状态</li>
+<li>客户端等待了<strong>2个MSL</strong>后，如果没有收到服务端的FIN，则认为服务端已经正常关闭连接，于是自己也关闭连接，进入CLOSED状态；否则，再次发送ACK</li>
 </ul>
 </li>
-<li>file 文件
+</ul>
+</li>
+<li>参考<a href="https://hit-alibaba.github.io/interview/basic/network/TCP.html#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B?fileGuid=zdkyBEa86pCYmlA6">三次握手与四次挥手</a>——博客 [注：第四次挥手客户端等待的是超时重传的FIN而不是ACK]</li>
+</ul>
+<h3 id="附加2个msl的含义">附加：2个MSL的含义</h3>
+<p>TIME_WAIT是如何引起的，有什么作用，在编程时有什么弊端，怎么解决？</p>
 <ul>
-<li><img src="https://i.loli.net/2020/12/09/S8dyhzKCnvpIJUg.png" alt="图片" loading="lazy"></li>
-<li>查看文件的具体信息</li>
-</ul>
-</li>
-<li>通常使用[man 命令]或[命令 -h]可以查看命令帮助
+<li>引起原因：TCP的四次挥手时，已经完成前三次挥手，在第四次挥手时，客户端收到来自服务端的FIN，它在发送一个ACK后，就会进入TIME_WAIT状态
 <ul>
-<li>使用说明的格式规则：[] 可选选项，| 不能同时使用的参数</li>
+<li>此时客户端需要等待两个最大<strong>数据段生命周期</strong>（Maximum segment lifetime，MSL）的时间之后，才会进入CLOSED状态</li>
 </ul>
 </li>
-<li>目录也是文件</li>
-<li>alias 别名=命令，可设置别名对应的命令</li>
+<li>存在原因
+<ul>
+<li>①<strong>阻止延迟数据段</strong>
+<ul>
+<li>每一个TCP数据段都包含唯一的序列号，这个序列号能够保证TCP协议的可靠</li>
+<li>为了保证新TCP连接的数据段不会与还在网络中传输的历史连接的数据段重复，TCP连接在分配新的序列号之前需要至少<strong>静默</strong>数据段在网络中能够存活的最长时间，即MSL</li>
+<li>从而防止延迟的数据段被其他使用相同源地址、源端口、目的地址以及目的端口的TCP连接收到</li>
+</ul>
+</li>
+<li>②<strong>保证连接关闭</strong>
+<ul>
+<li>如果客户端等待的时间不够长，当服务端还没有收到ACK消息，而客户端重新与服务端建立TCP连接时，会发生：
+<ul>
+<li>服务端因为没有收到ACK消息，所以仍然认为当前连接是合法的</li>
+<li>客户端重新发送SYN消息请求握手时，会收到服务端的RST消息，连接建立的过程被终止</li>
+</ul>
+</li>
+<li>所以要保证TCP连接的远程被正确关闭，即等待被动关闭连接的一方收到FIN对应的ACK消息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编程影响
+<ul>
+<li>对于高并发的场景容易出现过多的TIME_WAIT</li>
+<li>而MSL的时长一般是60s，这是难以接受的，可能一个TCP连接只为了通信几秒钟，但TIME_WAIT就需要等待2分钟</li>
+</ul>
+</li>
+<li>解决方式
+<ul>
+<li>基于一个<strong>时间戳变量</strong>，记录发送数据包、最近一次接收数据包的时间</li>
+<li>然后配合两个参数
+<ul>
+<li><strong>reuse</strong>：允许主动关闭连接的一方，再次向对方发起连接的时候，复用处于TIME_WAIT状态的连接</li>
+<li><strong>recycle</strong>：内核会快速回收处于TIME_WAIT的连接，只需等待RTO时间 [数据包重传的超时时间]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>参考
+<ul>
+<li><a href="https://draveness.me/whys-the-design-tcp-time-wait/?fileGuid=zdkyBEa86pCYmlA6">为什么 TCP 协议有 TIME_WAIT 状态</a>——博客</li>
+<li><a href="https://zhuanlan.zhihu.com/p/40013724?fileGuid=zdkyBEa86pCYmlA6">系统调优你所不知道的TIME_WAIT和CLOSE_WAIT</a>——知乎</li>
+<li><a href="https://www.yisu.com/zixun/63792.html?fileGuid=zdkyBEa86pCYmlA6">理解TIME_WAIT，彻底弄清解决TCP: time wait bucket table overflow</a>——亿速云</li>
+</ul>
+</li>
+</ul>
+<h2 id="c语言下的socket编程">C语言下的socket编程</h2>
+<ul>
+<li>服务端：socket、sockaddr[_in]、bind、listen；accept、send/recv；close</li>
+<li>客户端：socket、sockaddr[_in]、connect；send/recv；close</li>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/EK9MDAKZoTqQbhUY.png" alt="图片" style="zoom:67%;" />
+</li>
+<li>基于TCP的流式套接字、基于UDP的数据报套接字
+<ul>
+<li>UDP不需要bind IP与端口</li>
+</ul>
+</li>
+<li>sockaddr[_in]：保存socket信息的结构体，使用[_in]填写信息，再转换为sockaddr</li>
+<li>服务端需要两个套接字，一个用来监听，一个用来接收客户端connect发送的套接字</li>
+</ul>
+<h2 id="输入kaikebacom并按下回车">输入kaikeba.com并按下回车</h2>
+<p>-&gt;到TCP建立连接，本地发送第一个request报文-&gt;到收到第一个request报文为止，发生了哪些事情？</p>
+<ul>
+<li>[宏观层面] DNS👉TCP连接 [应用层、传输层、网络层、数据链路层]👉服务器处理请求👉返回响应结果</li>
+<li>DNS
+<ul>
+<li>本地hosts、本地DNS解析器缓存</li>
+<li>本地DNS</li>
+<li>迭代/递归：根DNS服务器，顶级DNS，权威DNS</li>
+<li>直到找到域名对应的IP</li>
+</ul>
+</li>
+<li>TCP连接
+<ul>
+<li>应用层：发送HTTP请求——请求方法、URL、HTTP版本</li>
+<li>传输层：与服务器进行三次握手</li>
+<li>网路层：ARP协议查询IP对应的MAC地址，如果在一个局域网内，就直接根据MAC地址发送请求；否则使用路由表，查找下一个跳转的地址，再访问对应的MAC地址</li>
+<li>数据链路层：以太网协议</li>
+<li>广播：向一个局域网中的所有机器发送请求，比较MAC地址</li>
+</ul>
+</li>
+<li>Web服务器
+<ul>
+<li>解析用户请求，知道了需要调度哪些资源文件，并调用数据库信息，返回给浏览器客户端</li>
+</ul>
+</li>
+<li>返回响应结果
+<ul>
+<li>一般会有一个HTTP状态码，比如200、301、404等，通过这个状态码我们可以直到服务器端的处理是否正常，并能了解具体的错误</li>
+</ul>
+</li>
+<li>⭐ 推荐视频：<a href="https://www.youtube.com/watch?v=7rR8p6gsExY&amp;fileGuid=zdkyBEa86pCYmlA6">TCP-IP Explained (2000)</a>——Youtube
+<ul>
+<li>[主要从IP层展开]</li>
+<li>涉及对象：TCP包、ICMP Ping包、UDP包、死亡之Ping、路由器、路由器交换机...</li>
+<li>大致流程
+<ul>
+<li><strong>本地</strong>：封装包、本地传输、本地路由器选择、交换机选择、代理检查、防火墙检查、本地传输、路由器选择</li>
+<li>——&gt;网络传输——&gt;</li>
+<li><strong>响应端</strong>：防火墙检查 [监管端口]、代理检查请求包、返回相应信息给请求端、同上述本地过程 [封装包、...、路由器选择]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="端口复用相关">端口复用相关</h2>
+<p>一个端口可以同时绑定不同的服务吗？</p>
+<ul>
+<li>可以。接收数据时，根据五元组**{传输协议，源IP，源端口，目的IP，目的端口}**判断数据属性</li>
+<li>例如：
+<ul>
+<li>使用TCP和UDP传输协议监听同一个端口后，接收数据互不影响，不冲突</li>
+<li>同样，accept产生新的socket，还是用的同一个端口
+<ul>
+<li>产生了多个不同的socket，这些socket里包含的目的IP和端口是不变的，变化的只是源IP和端口 [端口复用]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[PS] TCP类型socket只给TCP类型发数据</li>
+</ul>
+<h2 id="父子进程的socket关系">父子进程的socket关系</h2>
+<p>父进程克隆出的子进程里的socket和父进程的socket的关系</p>
+<ul>
+<li>是同一个，对应同一个文件</li>
+<li>当有数据到来时，两个进程谁先收到数据则谁有该数据，另一个进程继续等待</li>
+<li>所以一般地，子进程不需要的资源就不要继承，如：可使用close直接关闭子进程中继承自父进程的socket</li>
 </ul>
 <h1 id="tips">Tips</h1>
 <ul>
-<li>
-<p>用户相关</p>
-<ul>
-<li>创建用户时没有特殊指定组，会以自己用户名创建一个组</li>
-<li>一个用户可以在多个不同的组</li>
-</ul>
-</li>
-<li>
-<p>优秀的资源监控软件</p>
-<ul>
-<li>Htop：一款运行于Linux的监控与进程管理软件，比top更友好</li>
-<li>nmon：用于Linux的计算机性能系统监视工具 [IBM开发]</li>
-<li>dstat：灵活的资源统计工具</li>
-</ul>
-</li>
-<li>
-<p>命令相关</p>
-<ul>
-<li>apt和apt-get没区别</li>
-<li>history：打印输出的命令历史</li>
-<li>tldr + 命令：查看命令格式</li>
-<li>echo $PATH：打印PATH环境变量，存放系统默认的可执行文件的路径</li>
-</ul>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/Sasoritattoo/article/details/9318893">CPU状态信息us,sy,ni,id,wa,hi,si,st含义</a>-CSDN</p>
-</li>
-<li>
-<p><a href="https://www.itcoder.tech/posts/how-to-change-hostname-on-ubuntu-20-04/">如何在 Ubuntu 上修改主机名</a>-博客，关于hostnamectl</p>
-<ul>
-<li>
-<img src="https://i.loli.net/2020/12/09/jRKHp5QWTd9baxU.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>基本操作可参考 <a href="https://doublelll3.ml/lnxrm_5_%E5%9F%BA%E6%9C%AC%E7%B3%BB%E7%BB%9F/#%E7%BD%91%E7%BB%9C">5 基本系统——网络——第2点</a></li>
-</ul>
-</li>
-<li>
-<p>计算机网络学习推荐：<a href="https://github.com/Epsirong/book/raw/master/os/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%95%99%E7%A8%8B%EF%BC%9A%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95.pdf">《计算机网络：自顶向下方法》</a>，重点前5章</p>
-</li>
+<li>系统/网络编程要考虑所有可能出错的地方</li>
+<li>信号知识扩展：实现自己的sleep函数</li>
+<li>编译时要记得考虑所有相关的源文件 [*.c]</li>
 </ul>
 <hr>
-<h1 id="课程速记">课程速记</h1>
 
             </div>
             
@@ -1041,7 +1260,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://doublelll3.ml/lnxrm_3_Linux基础知识/" title="3 Linux基础知识">https://doublelll3.ml/lnxrm_3_Linux基础知识/</a>
+      <a href="https://doublelll3.ml/wxb_7_Socket编程基础/" title="7 Socket编程基础">https://doublelll3.ml/wxb_7_Socket编程基础/</a>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">源码链接：</strong>
