@@ -9,7 +9,7 @@
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
 <title>《面试笔试算法下》笔记汇总 | Double&#39;s Way</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1616128051092">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1616128963866">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -1588,7 +1588,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;li&gt;可用在内网和外网的交接处，作为防火墙使用&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;绑定端口：服务于哪个端口 [共$$2^{16}=65536$$个端口]&lt;/li&gt;
+&lt;li&gt;绑定端口：服务于哪个端口 [共&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;65536&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;2^{16}=65536&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8141079999999999em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.8141079999999999em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;6&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;6&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;个端口]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;addrlen：地址长度&lt;/li&gt;
@@ -1635,7 +1635,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;li&gt;常见为&lt;strong&gt;小端&lt;/strong&gt;机，&lt;strong&gt;低&lt;/strong&gt;位字节排放在内存的&lt;strong&gt;低&lt;/strong&gt;地址端&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;网络字节序：对于4个字节的32bit值，先传输0&lt;sub&gt;7bit，...，最后传输24&lt;/sub&gt;31bit&lt;/li&gt;
+&lt;li&gt;网络字节序：对于4个字节的32bit值，先传输0~7bit，...，最后传输24~31bit&lt;/li&gt;
 &lt;li&gt;整形字节序的转换函数
 &lt;ul&gt;
 &lt;li&gt;
@@ -1672,7 +1672,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;li&gt;
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/N3V0XORx7JISzLOB.png&#34; alt=&#34;图片&#34; style=&#34;zoom:67%;&#34; /&gt;
 &lt;/li&gt;
-&lt;li&gt;① 传入的sockfd必须经过**socket()、bind()、listen()**处理&lt;/li&gt;
+&lt;li&gt;① 传入的sockfd必须经过socket()、bind()、listen()处理&lt;/li&gt;
 &lt;li&gt;② addr为传出参数，用来存储客户端地址&lt;/li&gt;
 &lt;li&gt;返回值
 &lt;ul&gt;
@@ -1691,7 +1691,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;与accept不同的是：
 &lt;ul&gt;
-&lt;li&gt;sockfd不需要经过**bind()、listen()**处理&lt;/li&gt;
+&lt;li&gt;sockfd不需要经过bind()、listen()处理&lt;/li&gt;
 &lt;li&gt;不会返回新的socket&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1874,7 +1874,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;三次握手-四次挥手&#34;&gt;三次握手、四次挥手&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/RVvwDJVpHvVYieL3.png&#34; alt=&#34;图片&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/RVvwDJVpHvVYieL3.png&#34; alt=&#34;图片&#34; style=&#34;zoom: 33%;&#34; /&gt;
 &lt;/li&gt;
 &lt;li&gt;三次握手 [SYN、ACK]
 &lt;ul&gt;
@@ -2027,7 +2027,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;h2 id=&#34;端口复用相关&#34;&gt;端口复用相关&lt;/h2&gt;
 &lt;p&gt;一个端口可以同时绑定不同的服务吗？&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;可以。接收数据时，根据五元组**{传输协议，源IP，源端口，目的IP，目的端口}**判断数据属性&lt;/li&gt;
+&lt;li&gt;可以。接收数据时，根据五元组{&lt;strong&gt;传输协议，源IP，源端口，目的IP，目的端口&lt;/strong&gt;}判断数据属性&lt;/li&gt;
 &lt;li&gt;例如：
 &lt;ul&gt;
 &lt;li&gt;使用TCP和UDP传输协议监听同一个端口后，接收数据互不影响，不冲突&lt;/li&gt;
