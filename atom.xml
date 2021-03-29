@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-03-22T06:39:53.032Z</updated>
+    <updated>2021-03-29T09:19:47.417Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -391,7 +391,7 @@ void do_add(int end, int id) {
 <li>解释
 <ul>
 <li>多个进程打开同一文件，每个进程都有它自己的文件表项（file对象），包含它自己的文件位移量</li>
-<li>所以对于多个进程读同一文件都能正确工作，但写同一文件可能产生预期不到的结果,可参考使用pread，pwrite</li>
+<li>所以对于多个进程读同一文件都能正确工作，但写同一文件可能产生预期不到的结果，可参考使用pread、pwrite</li>
 <li>还可参考<a href="https://www.cnblogs.com/fnlingnzb-learner/p/13030070.html">Linux下多进程同时操作文件</a>——cnblogs</li>
 </ul>
 </li>
@@ -740,6 +740,7 @@ void input_msg() {
         wait(&amp;status);  // 监控子进程状态
         // 父进程提示vim出错
         if (WEXITSTATUS(status)) printf(&quot;vim error!\n&quot;);
+        else printf(&quot;input msg completed!\n&quot;);
     }
     return ;
 }
@@ -1245,7 +1246,7 @@ strcpy(gname, getgrgid(st.st_gid)-&gt;gr_name);  // 5. 获取文件所属组名
 <li>
 <img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1610595284725-mXTuTCOqIrT5Q5Ot.png" alt="图片" style="zoom:67%;" />
 </li>
-<li>排序规则稍有区别，接下俩控制颜色和显示软连接指向</li>
+<li>排序规则稍有区别，接下来控制颜色和显示软连接指向</li>
 </ul>
 </li>
 </ul>
@@ -1585,7 +1586,7 @@ echo &quot;./ls -b $path:&quot; | lolcat
 </blockquote>
 <p>本书有两种目录，这也是作者的用心之处，一种目录是像小说一样讲述了职场新人“小强”与职场老手“老付”之间的故事，另一种目录是从时间管理的角度用专业术语描述。</p>
 <p>本书结构如下，主要分为寻找种子→种子发芽→长出枝干→抽出绿叶→开花结果→摘下果实6个步骤：</p>
-<figure data-type="image" tabindex="1"><img src="D:%5CDATA%5CRecords%5CBo2SS%5Cimgs%5C%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0%E2%80%94%E2%80%94%E6%9C%AC%E4%B9%A6%E7%BB%93%E6%9E%84.png" alt="本书结构" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0%E2%80%94%E2%80%94%E6%9C%AC%E4%B9%A6%E7%BB%93%E6%9E%84.png" alt="本书结构" loading="lazy"></figure>
 <p>下面把自己当成“小强”一起历练吧！可在文末先下载好本书的PDF。</p>
 <h1 id="精简版">——精简版——</h1>
 <p><strong>准备工作</strong>：找出浪费时间的源头、找到自己的价值观</p>
