@@ -9,7 +9,7 @@
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
 <title>10 《Linux入门及使用》复习总结 | Double&#39;s Way</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1617009532818">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1618456573890">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -1946,7 +1946,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;❗ sendto多传入了dest_addr和addrlen，它是用于UDP的
 &lt;ul&gt;
-&lt;li&gt;因为没有建立连接，从而没有绑定IP和端口&lt;/li&gt;
+&lt;li&gt;因为没有建立连接，从而需要指定目的IP和端口&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;flag一般置为0&lt;/li&gt;
@@ -2213,7 +2213,7 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;基于TCP的流式套接字、基于UDP的数据报套接字
 &lt;ul&gt;
-&lt;li&gt;UDP不需要bind IP与端口&lt;/li&gt;
+&lt;li&gt;UDP服务端也需要bind IP与端口，但不需要listen，使用sendto、recvfrom来发、收信息&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;sockaddr[_in]：保存socket信息的结构体，使用[_in]填写信息，再转换为sockaddr&lt;/li&gt;
@@ -7712,15 +7712,11 @@ s-65,47,-65,47z M834 80H400000v40H845z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/sp
 &lt;/li&gt;
 &lt;li&gt;② 什么是线程
 &lt;ul&gt;
-&lt;li&gt;线程代表一列有顺序的、需要CPU执行的指令&lt;/li&gt;
+&lt;li&gt;线程代表一系列有顺序的、需要CPU执行的指令&lt;/li&gt;
 &lt;li&gt;一个进程可能由一个或多个线程组成，同时执行指令&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;[PS] 程序是CPU资源分配的基本单位，线程是CPU调度的基本单位
-&lt;ul&gt;
-&lt;li&gt;暂不关注，容易混淆&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;[PS] 进程是CPU&lt;strong&gt;资源分配&lt;/strong&gt;的基本单位，线程是CPU&lt;strong&gt;调度&lt;/strong&gt;的基本单位&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -26234,22 +26230,26 @@ X位数上界为 10^X&lt;br&gt;
 &lt;img src=&#34;https://i.loli.net/2020/11/16/BCa9qiYOer5kgEs.png&#34; alt=&#34;图片&#34; style=&#34;zoom: 50%;&#34; /&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;C源码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C源码&lt;/strong&gt; .c&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;👇预处理阶段(预编译)(gcc -E)：包含头文件、宏替换等预处理命令，替换所有的#命令&lt;/p&gt;
+&lt;p&gt;👇预处理阶段(预编译) (gcc -E)：包含头文件、宏替换等预处理命令，替换所有的#命令&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;编译源码&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编译源码&lt;/strong&gt; .c&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;👇语法检查、编译(gcc -c)&lt;/p&gt;
+&lt;p&gt;👇语法检查、编译 (gcc –S)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;对象文件&lt;/strong&gt;.o（linux下）或 .obj（windows下）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;汇编源码&lt;/strong&gt; .s、.asm&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;👇链接(gcc)&lt;/p&gt;
+&lt;p&gt;👇汇编 (gcc -c)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;可执行程序&lt;/strong&gt;（二进制文件）a.out（linux下）或 a.exe（windows下）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对象文件&lt;/strong&gt; .o（linux下）或 .obj（windows下）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;（还有一个程序装载过程，先忽略）&lt;/p&gt;
+&lt;p&gt;👇链接 (gcc)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;可执行程序&lt;/strong&gt; a.out（linux下）或 a.exe（windows下） （二进制文件）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PS：最后还有一个装载过程，主要是建立可执行文件、虚拟地址、物理地址三者的映射关系&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;字符串&#34;&gt;字符串&lt;/h2&gt;
