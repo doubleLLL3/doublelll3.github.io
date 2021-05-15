@@ -8,7 +8,7 @@
 <meta name="keywords" content="非科班,海贼班,面试,计算机,算法,投资理财,时间管理,Double">
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
-<title>1 文件、目录操作与实现ls的思路 | Double&#39;s Way</title>
+<title>1 尝尝鲜：从一个Hello到另一个Hello | Double&#39;s Way</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1621045219190">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="1 文件、目录操作与实现ls的思路" />
-  <meta name="keywords" content="网络系统,操作系统,Linux,海贼班,计算机" />
+  <meta name="description" content="1 尝尝鲜：从一个Hello到另一个Hello" />
+  <meta name="keywords" content="操作系统,极客时间,计算机" />
 </head>
 
 <body>
@@ -279,39 +279,17 @@
   <div class="toc-wrapper auto-number no_compress"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9">课程内容</a>
+<li><a href="#%E5%AE%9E%E8%B7%B5%E4%B8%80%E4%B8%8B">实践一下</a>
 <ul>
-<li><a href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">文件操作</a>
-<ul>
-<li><a href="#open">open</a></li>
-<li><a href="#read">read</a></li>
-<li><a href="#write">write</a></li>
-<li><a href="#close">close</a></li>
-<li><a href="#fopen">fopen</a></li>
-<li><a href="#fread-fwrite">fread、fwrite</a></li>
-<li><a href="#fclose">fclose</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81">下载源码</a></li>
+<li><a href="#%E7%94%9F%E6%88%90bin%E6%96%87%E4%BB%B6">生成bin文件</a></li>
+<li><a href="#%E7%A7%BB%E5%8A%A8bin%E6%96%87%E4%BB%B6">移动bin文件</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9grub%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AE">修改grub启动配置⭐</a></li>
+<li><a href="#%E9%87%8D%E5%90%AF%E6%9C%BA%E5%99%A8">重启机器</a></li>
 </ul>
 </li>
-<li><a href="#%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C">目录操作</a>
-<ul>
-<li><a href="#opendir">opendir</a></li>
-<li><a href="#readdir">readdir</a></li>
-<li><a href="#closedir">closedir</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AE%9E%E7%8E%B0ls-al%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF">实现ls -al的基本思路</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA">代码演示</a>
-<ul>
-<li><a href="#%E5%BA%95%E5%B1%82%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">底层文件操作</a></li>
-<li><a href="#%E6%A0%87%E5%87%86%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">标准文件操作</a></li>
-<li><a href="#%E6%A0%87%E5%87%86io%E6%98%AF%E7%BC%93%E5%86%B2io">标准IO是缓冲IO</a></li>
-</ul>
-</li>
-<li><a href="#%E9%99%84%E5%8A%A0%E7%9F%A5%E8%AF%86%E7%82%B9">附加知识点</a></li>
-<li><a href="#%E6%80%9D%E8%80%83%E7%82%B9">思考点</a></li>
-<li><a href="#tips">Tips</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E5%86%85%E5%AE%B9">参考内容</a></li>
+<li><a href="#%E8%AF%BE%E7%A8%8B%E9%93%BE%E6%8E%A5">课程链接</a></li>
 </ul>
 
   </div>
@@ -577,8 +555,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://doublelll3.ml/wxb_1_文件、目录操作与实现ls的思路/">
-      1 文件、目录操作与实现ls的思路
+    <a class="post-title-link" href="https://doublelll3.ml/cosmos_1_尝尝鲜：从一个Hello到另一个Hello/">
+      1 尝尝鲜：从一个Hello到另一个Hello
     </a>
   </h1>
   <div class="post-meta">
@@ -586,7 +564,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-12-31 18:00:00">2020-12-31</span>
+      <span class="publish-time" data-t="2021-05-15 09:40:00">2021-05-15</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -595,26 +573,14 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://doublelll3.ml/Kw2y7WPqF/">
-        <span>网络系统</span>
-      </a>、
-      
-      
-      
       <a href="https://doublelll3.ml/T3nppl_zO/">
         <span>操作系统</span>
       </a>、
       
       
       
-      <a href="https://doublelll3.ml/linux/">
-        <span>Linux</span>
-      </a>、
-      
-      
-      
-      <a href="https://doublelll3.ml/hzcla/">
-        <span>海贼班</span>
+      <a href="https://doublelll3.ml/p5_eR4JOS8/">
+        <span>极客时间</span>
       </a>、
       
       
@@ -629,17 +595,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>10<span class="language" data-lan="minute">分钟</span></span>
+      <span>3<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2579<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>600<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/wxb_1_文件、目录操作与实现ls的思路/" data-flag-title="1 文件、目录操作与实现ls的思路" class="meta-item pc-show leancloud_visitors">
+    <span id="/cosmos_1_尝尝鲜：从一个Hello到另一个Hello/" data-flag-title="1 尝尝鲜：从一个Hello到另一个Hello" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -648,599 +614,107 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="课程内容">课程内容</h1>
-<h2 id="文件操作">文件操作</h2>
+              <p><em><strong>环境：Windows下的Ubuntu 18.04虚拟机</strong></em></p>
+<h1 id="实践一下">实践一下</h1>
+<p>🎯目标：让自己的系统输出&quot;Hello OS&quot;</p>
+<h2 id="下载源码">下载源码</h2>
+<ol>
+<li>可在系统任意位置，<strong>打开终端</strong>执行以下命令，下载源码到虚拟机上</li>
+</ol>
+<pre><code class="language-shell">git clone https://gitee.com/lmos/cosmos.git
+</code></pre>
+<h2 id="生成bin文件">生成bin文件</h2>
+<ol start="2">
+<li>在库中具体位置：/lesson02/HelloOS下，编译源码，生成HelloOS.bin</li>
+</ol>
 <ul>
-<li>【引入】之前学过的cp、mv、cat命令，都涉及到文件的读写
-<ul>
-<li>cp：读→写</li>
-<li>mv：读→写→删</li>
-<li>cat：读→写</li>
-</ul>
-</li>
-<li>上面这些步骤是如何实现的呢？</li>
-</ul>
-<hr>
-<p>【底层操作，基于文件描述符】</p>
-<h3 id="open">open</h3>
-<p>打开或创建一个文件 [别名：openat、create]</p>
-<ul>
-<li>man 2 open【关注函数原型及描述】</li>
-<li>原型
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911974334-zRYB0s6vHFYCdwgV.png" alt="图片" loading="lazy"></li>
-<li>返回值 int：文件描述符 或 -1
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911973333-ctFjfPc7ouEiJz3h.png" alt="图片" loading="lazy"></li>
-<li>常用文件描述符：0-stdin、1-stdout、2-stderr</li>
-<li>-1：发生错误，并会设置errno [可供perror使用，见代码演示]</li>
-</ul>
-</li>
-<li>flags：文件的打开方式</li>
-<li>[PS] 不需要特意记头文件</li>
-</ul>
-</li>
-<li>描述
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911971616-4NA5y5A8SjF884q2.png" alt="图片" loading="lazy"></li>
-<li>系统调用 [system call]：帮助你做你没有权限做的事情</li>
-<li>如果open的文件不存在，可能会新建该文件 [当flags里定义了O_CREAT]
-<ul>
-<li>O_CREAT
-<ul>
-<li>open函数的flag</li>
-<li>C语言体系中，全大写表示宏定义</li>
-<li>底层是一个int型数据，叫做位掩码
-<ul>
-<li>32位，可表示32种状态，每一位表示一种状态</li>
-<li>状态之间可使用与、或、异或的方式转换</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>文件描述符 [file descrip<strong>tor</strong>]
-<ul>
-<li>小、非负、后续系统可调用 [read、write...]</li>
-<li>返回值永远是当前进程中可以取的最小的数字
-<ul>
-<li>可用来判断文件数量 [如果返回1000，当前文件数量一定超过1000了]</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>打开文件后，文件指针默认在文件头部</li>
-<li>文件描述 [file descrip<strong>tion</strong>]
-<ul>
-<li>每次调用open会创建一个新的open文件描述，它是系统全局文件表中的一条信息
-<ul>
-<li>记录文件偏移量和文件的状态</li>
-</ul>
-</li>
-<li>[PS] 文件描述符是一个open文件描述的引用，不因pathname的改变而受影响</li>
-</ul>
-</li>
-<li>⭐flags
-<ul>
-<li>必须包含O_RDONLY、O_WRONLY、O_RDWR中的一个</li>
-<li>flag之间用位或组合</li>
-<li>O_CREAT 创建</li>
-<li>O_TRUNC 截断</li>
-<li>O_DIRECT 直接IO
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911969217-ZwUuawUHEwSVCUBn.png" alt="图片" loading="lazy"></li>
-<li>直接IO——同步写，文件会直接写进去，而不经过缓冲</li>
-<li>缓冲IO
-<ul>
-<li>缓冲结束条件：① 攒到一堆数据；② 等固定时间
-<ul>
-<li>往磁盘写一个字符a，不会马上写入磁盘，可以减小成本</li>
-<li>但断电时易丢失数据</li>
-<li>[PS]
-<ul>
-<li>磁盘的最小单元是块，每个块是4K
-<ul>
-<li>所以磁盘又叫块设备</li>
-</ul>
-</li>
-<li>类似printf输出到stdout的条件 [行缓冲]
-<ul>
-<li>遇到回车 / 程序结束，系统自动冲洗缓冲区</li>
-<li>缓冲区满，自动冲洗</li>
-<li>fflush函数，手动冲洗</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>O_NONBLOCK 非阻塞IO
-<ul>
-<li>阻塞
-<ul>
-<li>如：scanf的时候，要等标准输入流中有输入才能进行后面的操作</li>
-<li>缺点：浪费资源</li>
-</ul>
-</li>
-<li>非阻塞
-<ul>
-<li>不会等</li>
-<li>缺点
-<ul>
-<li>需频繁回来查看，也浪费资源</li>
-<li>需有某种机制监测，花费技术成本</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>O_TMPFILE 创建临时文件
-<ul>
-<li>进程运行结束后文件就会被删除，交易关闭也会</li>
-<li>类似系统的临时文件夹/tmp</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>❗ 底层读写文件前，需要调用open函数获得文件描述符</li>
-</ul>
-<h3 id="read">read</h3>
-<p>通过文件描述符读取数据</p>
-<ul>
-<li>man read</li>
-<li>原型
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911967104-ARruqOhO6IbihzZy.png" alt="图片" loading="lazy"></li>
-<li>返回值 ssize_t：读取的字节数 或 -1
-<ul>
-<li>以_t结尾，一般是用户自定义类型</li>
-<li>猜测：也是基本类型之一，可能是long long，可能是int</li>
-<li>通过ctags一步步找具体类型：ctrl + ] 、ctrl + o
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911965957-bNPLrqg6gvivUtqc.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>答案：int [32位系统下]；long int [64位系统下]</li>
-<li>[PS] 按理说，32位系统下，long int大小等同于int</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>buf、count：每次最多读取count字节数据到buf中</li>
-</ul>
-</li>
-<li>描述 + 返回值
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911964236-6RrznWn1uUE0tBWB.png" alt="图片" loading="lazy"></li>
-<li>尝试读取最多count字节到buffer中
-<ul>
-<li>读取字节数达不到count的情况：被人中断 [signal]；数据本身不足count大小</li>
-</ul>
-</li>
-<li>每成功读取num [≤ count] 字节数据，文件偏移量 [像指针] 会自动往后走num大小
-<ul>
-<li>如果文件偏移量在EOF [没有数据可读了]，函数返回0</li>
-</ul>
-</li>
-<li>count
-<ul>
-<li>如果设为0，错误可能被检测出来，如果没有检测到错误，返回0</li>
-<li>如果大于SSIZE_MAX [int / long int的最大值]，返回的结果将是定义好的 [POSIX.1标准]</li>
-</ul>
-</li>
-<li>返回值
-<ul>
-<li>≤ count</li>
-<li>出错时返回-1，并会设置errno</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>[PS] ERRORS
-<ul>
-<li>EAGAIN
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911962957-veHABIGS5EeQ9KSq.png" alt="图片" loading="lazy"></li>
-<li>读文件 [包括socket] 的时候，尽管文件已被设置为O_NONBLOCK，read将会阻塞</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="write">write</h3>
-<p>通过文件描述符写数据</p>
-<ul>
-<li>man 2 write</li>
-<li>原型
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911961924-vHVZPskO5EUQTa8L.png" alt="图片" loading="lazy"></li>
-<li>与read很相似</li>
-</ul>
-</li>
-<li>描述 + 返回值
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911960571-NEfF2aAgOMe9ALXi.png" alt="图片" loading="lazy"></li>
-<li>与read很相似</li>
-<li>写的字节数达不到count的情况：物理空间不够；系统资源限制；被signal中断</li>
-<li>open文件时设置了O_APPEND [追加]
-<ul>
-<li>文件偏移量 [offset] 在文件末尾，写操作会追加</li>
-<li>否则放在开头，写操作会覆写</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="close">close</h3>
-<p>关闭一个文件描述符</p>
-<ul>
-<li>man close</li>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609912275739-ZjQOcPWhDLunI0Wk.png" alt="图片" loading="lazy"></li>
-<li>主要就是关闭文件描述符</li>
-<li>[PS]
-<ul>
-<li>记录锁将被移除</li>
-<li>特殊情况
-<ul>
-<li>close的是文件描述的最后一个文件描述符，文件描述对应的资源会被释放</li>
-<li>close的是文件的最后一个引用的文件描述符，文件将会被删除</li>
-</ul>
-</li>
-<li>暂时不用在意内核具体做了什么</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>【标准文件操作，基于文件指针】</p>
-<p>&lt;stdio.h&gt;</p>
-<h3 id="fopen">fopen</h3>
-<p>通过流打开文件</p>
-<ul>
-<li>man fopen</li>
-<li>原型
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911957565-vPIBzo161qeWiFIS.png" alt="图片" loading="lazy"></li>
-<li>返回值 FILE *：文件指针
-<ul>
-<li>早期是宏定义，这里大写是为了兼容性</li>
-</ul>
-</li>
-<li>mode
-<ul>
-<li>类型是char *，而不是int</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>描述
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911954929-xrs9K7u1SYZKTKLI.png" alt="图片" loading="lazy"></li>
-<li>关联一个流 [stream]
-<ul>
-<li>[PS] 网络上发布数据，字节流；文件流 &lt;类型：FILE *&gt;</li>
-</ul>
-</li>
-<li>mode
-<ul>
-<li>r / r+：读 / 读写
-<ul>
-<li>流在文件开始</li>
-</ul>
-</li>
-<li>w / w+：读 / 读写
-<ul>
-<li>流在文件开始</li>
-<li>文件存在，截断文件 [打开就会将原数据清除]</li>
-<li>文件不存在，创建文件</li>
-</ul>
-</li>
-<li>a / a+：追加 / 读与追加
-<ul>
-<li>追加时，流在EOF；读时，流在文件开始</li>
-<li>文件不存在就会创建</li>
-</ul>
-</li>
-<li>+：读写通吃</li>
-<li>[PS]
-<ul>
-<li>b：可以在mode字符串的最后或者两个字符之间，可用于处理二进制文件，但在Linux上一般没有效果</li>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911951494-qW3AKv8wbRfgRI1B.png" alt="图片" loading="lazy"></li>
-<li>❓ 任何被创建的文件会被进程的umask value修正</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>返回值
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911943481-r9zpyy8CNm05gR7l.png" alt="图片" loading="lazy"></li>
-<li>成功时，返回文件指针</li>
-<li>出错时，返回NULL，并设置errno</li>
-</ul>
-</li>
-</ul>
-<h3 id="fread-fwrite">fread、fwrite</h3>
-<p>二进制流的IO</p>
-<ul>
-<li>man fread / fwrite</li>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911941441-LUcrEhzmSWBtpySL.png" alt="图片" loading="lazy"></li>
-<li>fread：从stream中读nmeb次数据 [size字节 / 次] 到ptr</li>
-<li>fwrite：把ptr的数据写nmeb次数据 [size字节 / 次] 到stream</li>
-<li>返回值 size_t：读 / 写的items数量 [成功]
-<ul>
-<li>[<strong>无符号</strong>的ssize_t]</li>
-<li>发生错误或提前遇到EOF时 👉 0 ≤ 返回值 &lt; nmeb
-<ul>
-<li>❗ 所以不能通过返回值区分EOF和错误，需使用feof、ferror确认</li>
-</ul>
-</li>
-<li>[PS] 当size为1时，返回值等于传输的字节数</li>
-</ul>
-</li>
-</ul>
-<h3 id="fclose">fclose</h3>
-<p>刷新流并关闭文件描述符</p>
-<ul>
-<li>man fclose</li>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911940161-l9tRICTnHd417Fq2.png" alt="图片" loading="lazy"></li>
-<li>刷新流实际调用的是fflush</li>
-<li>返回值
-<ul>
-<li>0 [成功]</li>
-<li>-1(EOF)，并设置errno [失败]</li>
-<li>未定义行为 [传入的是一个非法指针或已经被fclose过]</li>
-</ul>
-</li>
-<li>⭐标准IO里的所有操作都是缓冲IO
-<ul>
-<li>本身没有权限写，需等待内核控制</li>
-</ul>
-</li>
-<li>❓ 标准IO更适合文本 [用户]，底层的IO更适合二进制文件</li>
-</ul>
-<h2 id="目录操作">目录操作</h2>
-<p>本质上也是文件 [早期可以直接open]</p>
-<h3 id="opendir">opendir</h3>
-<ul>
-<li>man opendir</li>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911938619-rCcq6fwqGWAlpOFz.png" alt="图片" loading="lazy"></li>
-<li>返回值 DIR *：目录流指针 或 NULL
-<ul>
-<li>目录流默认被放置在目录的第一个条目</li>
-<li>发生错误时，返回NULL，并设置errno</li>
-</ul>
-</li>
-</ul>
-<h3 id="readdir">readdir</h3>
-<ul>
-<li>man readdir</li>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911937332-vm8yap2OtNzRcU4w.png" alt="图片" loading="lazy"></li>
-<li>返回值 struct dirent *：目录项 或 NULL
-<ul>
-<li>目录流中下一个目录项 [结构体] 的指针
-<ul>
-<li>结构体的主要字段：d_ino、d_name</li>
-<li>[PS]
-<ul>
-<li>一次一次地返回下一个文件</li>
-<li>d_off：与telldir返回的值一样，又类似ftell()
-<ul>
-<li>此offset [每个文件的大小不同] 与一般意义 [字节为单位] 上的不一样</li>
-<li>ftell()获取当前文件所在位置指示器的值</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>NULL [遇到目录流结尾或发生错误时]</li>
-</ul>
-</li>
-</ul>
-<h3 id="closedir">closedir</h3>
-<ul>
-<li>关闭目录</li>
-</ul>
-<h2 id="实现ls-al的基本思路">实现ls -al的基本思路</h2>
-<ul>
-<li>ls -al效果
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911935637-vkJUOIIpeyTfhPCD.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>需要的信息有：文件权限、连接数、用户名、组名、文件大小、修改时间、文件名</li>
-</ul>
-</li>
-<li>思路
-<ul>
-<li>readdir()
-<ul>
-<li>man readdir</li>
-<li>读取目录里的每一个文件</li>
-<li>可获取文件名</li>
-</ul>
-</li>
-<li>stat()、lstat()
-<ul>
-<li>man 2 stat</li>
-<li>根据文件路径获取文件信息：stat结构体</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911933442-5HRval8N3GV68IXv.png" alt="图片" style="zoom: 50%;" />
-</li>
-<li>可获取文件权限、硬连接数、uid、gid、文件大小、修改时间</li>
-<li>可参考里面的EXAMPLE：lstat</li>
-<li>lstat()和stat()的区别
-<ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911932417-Bism4SyHRND7aByM.png" alt="图片" loading="lazy"></li>
-<li>lstat()可以查看软连接的信息，而不会跳到软连接指向的文件</li>
+<li>首先，需要安装工具gcc、make、nasm，默认只有nasm没有，其它工具如没有再安装</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>getpwuid()
-<ul>
-<li>man getpwuid</li>
-<li>根据uid获取passwd结构体</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911931306-SMqGncUtToXAPLMa.png" alt="图片" style="zoom: 67%;" />
-</li>
-<li>可获取对应的用户名</li>
-</ul>
-</li>
-<li>getgrgid
-<ul>
-<li>man getgrgid</li>
-<li>根据gid获取group结构体</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911929420-SQ1i1Cg1Wq4Dz2xI.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>可获取对应的组名</li>
-</ul>
-</li>
-<li>如果自己去实现 → 读文件、切分
+<pre><code class="language-shell">sudo apt update
+sudo apt install nasm
+</code></pre>
 <ul>
-<li>用户信息：/etc/passwd</li>
-<li>组的信息：/etc/group</li>
-</ul>
-</li>
+<li>然后，执行编译即可，默认按照Makefile里的规则，<strong>生成HelloOS.bin</strong></li>
 </ul>
-</li>
-<li>其他细节
+<pre><code class="language-shell">make
+</code></pre>
+<h2 id="移动bin文件">移动bin文件</h2>
+<ol start="3">
+<li>将HelloOS.bin放到/boot/目录下</li>
+</ol>
+<pre><code class="language-shell">mv HelloOS.bin /boot/
+</code></pre>
+<h2 id="修改grub启动配置">修改grub启动配置⭐</h2>
+<ol start="4">
+<li>修改/boot/grub/grub.cfg文件</li>
+</ol>
 <ul>
-<li>颜色</li>
-<li>排序</li>
-<li>纯ls命令输出的显示列数随宽度变化
-<ul>
-<li>获取终端大小</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911928224-7JpZeaM1AjvUsHsl.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>参考ioctl，man ioctl</li>
+<li>使用sudo权限，用vim打开</li>
 </ul>
-</li>
-<li>列宽如何确定，可用暴力方式、二分查找、慢慢逼近</li>
-</ul>
-</li>
-</ul>
-<h1 id="代码演示">代码演示</h1>
-<h2 id="底层文件操作">底层文件操作</h2>
+<pre><code class="language-shell">sudo vim /boot/grub/grub.cfg
+</code></pre>
 <ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911926813-YMGqg3de6kJjvaMb.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>⭐ 详见注释，关注使用</li>
-<li>❗ 避免乱码情况
-<ul>
-<li>字符串buff末尾留一位放'\0'
-<ul>
-<li>sizeof(buff) - 1</li>
+<li>在最后位置插入以下代码，注意修改两个地方：set root、multiboot2</li>
 </ul>
-</li>
-<li>最后一次不足512字节的读取，需要排除多余字节的干扰
+<pre><code class="language-json">menuentry 'HelloOS' {
+     insmod part_msdos            # GRUB加载分区模块识别分区
+     insmod ext2                  # GRUB加载ext文件系统模块识别ext文件系统
+     set root='hd0,msdos4'        # 注意boot目录挂载的分区
+     multiboot2 /boot/HelloOS.bin # GRUB以multiboot2协议加载HelloOS.bin
+     boot                         # GRUB启动HelloOS.bin
+}
+</code></pre>
 <ul>
-<li>方法①：手动menset(buff, 0, sizeof(buff))</li>
-<li>方法②：始终保持数据末尾是'\0'，buff[nread] = '\0'</li>
+<li>修改内容参考此步骤，再打开一个终端，观察**df /boot/**的结果，关注两个地方：文件系统、挂载点</li>
 </ul>
-</li>
-<li>[PS] 学习系统上层命令时，不必太关注这些</li>
-</ul>
-</li>
-<li>perror 打印一个系统错误信息
-<ul>
-<li>man 3 perror</li>
-<li>原型
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092657939.png" alt="image-20210515092657939" style="zoom:80%;" />
 <ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911924962-CVun2mPup3OGLhFX.png" alt="图片" loading="lazy"></li>
-<li>fopen等发生错误时就会设置errno</li>
-</ul>
-</li>
-<li>描述
+<li>文件系统⭐
 <ul>
-<li><img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911924018-Ov0aVXAx5T85yPzT.png" alt="图片" loading="lazy"></li>
-<li>在stderr上输出上一个调用的错误信息</li>
-<li>s通常包含函数的名称</li>
-</ul>
-</li>
+<li>若为/dev/sda1，即1对应修改set root='hd0,msdos1'</li>
+<li>如果不是sda [其它系统环境]，还需看情况修改 [看课程评论]</li>
 </ul>
 </li>
-<li>建一个常用的common头文件夹，放常用的头文件
+<li>挂载点⭐
 <ul>
-<li>head.h</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911922932-SYoNt70o6NN7oK5i.png" alt="图片" style="zoom: 67%;" />
-</li>
+<li>若为/boot，对应修改multiboot2 /HelloOS.bin</li>
+<li>若为/，则无需修改</li>
 </ul>
 </li>
 </ul>
-<h2 id="标准文件操作">标准文件操作</h2>
+<p>PS：使用<code>:w!</code>保存，使用<code>:q</code>退出编辑</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092718504.png" alt="image-20210515092718504" style="zoom:67%;" />
+<h2 id="重启机器">重启机器</h2>
+<ol start="5">
+<li>重启机器，在加载系统前疯狂按shift键 [也可能是其他键，如esc键]，进入grub引导界面</li>
+</ol>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092730798.png" alt="image-20210515092730798" style="zoom: 80%;" />
 <ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911921001-KhG3ZVzuHu3GtoSS.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>buffer放在循环里，每次都会初始化</li>
-<li>nread为非负数，并且不能区分EOF和错误</li>
+<li>选择自己的系统，按enter键</li>
 </ul>
-<h2 id="标准io是缓冲io">标准IO是缓冲IO</h2>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911920001-L87o6NXvF6ArZMLc.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>第一个&quot;Hello world&quot;直接输出，stderr没有缓冲</li>
-<li>第二个&quot;Hello world&quot;本来会等sleep结束，无法输出到stdout，但是可以立马输出，通过👇
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092740876.png" alt="image-20210515092740876" style="zoom:80%;" />
 <ul>
-<li>手动刷新缓冲区：fflush</li>
-<li>输出换行</li>
+<li>如果此处报错，主要涉及系统类型（物理机、其它虚拟机系统）、系统分区类型（UEFI）、分区表类型（GPT）等因素，可参考以下参考内容👇</li>
 </ul>
-</li>
-<li>sleep函数在unistd.h中</li>
-</ul>
-<h1 id="附加知识点">附加知识点</h1>
-<ul>
-<li>ulimit -a，可查看可打开的文件数量上限
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1609911918467-G3C0Xt336prYucP0.png" alt="图片" style="zoom: 67%;" />
-</li>
-<li>每个进程中文件打开数量上限为1024
+<h1 id="参考内容">参考内容</h1>
+<p>如果在其他环境下运行，可参考课程里的评论和相关博客</p>
 <ul>
-<li>超过会使系统崩盘</li>
-<li>[PS]
+<li><a href="https://blog.csdn.net/chenchengwudi/article/details/116707122?spm=1001.2014.3001.5501&amp;fileGuid=KrkEVnreWxFr4eAJ">操作系统实战45讲01：运行HelloOS</a>——CSDN</li>
+<li><a href="https://gitee.com/gaopedro/pos/tree/master?fileGuid=KrkEVnreWxFr4eAJ">pedro/pos</a>——码云
 <ul>
-<li>系统崩盘还需考虑内存</li>
-<li>要做一个负责任的程序：手动close / free、输出错误日志</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>可在非桌面端（如WSL2）下实现</li>
 </ul>
 </li>
-<li>只有标准输出是行缓冲的</li>
-</ul>
-<h1 id="思考点">思考点</h1>
+<li><a href="https://shimo.im/docs/PgF2AVpTWWg7LPAR/?fileGuid=KrkEVnreWxFr4eAJ">彭东的【操作系统实战】交流群核心问题汇总</a>——石墨
 <ul>
-<li>❓ 文件保存就会立即写入磁盘吗？
-<ul>
-<li><a href="https://unix.stackexchange.com/questions/464184/are-file-edits-in-linux-directly-saved-into-disk">参考Are file edits in Linux directly saved into disk?</a>——StackExchange</li>
+<li>❗ 这里基本都能找到答案！</li>
 </ul>
 </li>
-</ul>
-<h1 id="tips">Tips</h1>
-<ul>
-<li>在vim中，Shift + K可跳到man手册</li>
-<li>推荐复制即翻译软件：<a href="https://copytranslator.github.io/">CopyTranslator</a></li>
-<li>man手册在线文档：<a href="https://linux.die.net/man/">man page</a>——die.net</li>
+<li><a href="https://time.geekbang.org/column/article/369502?fileGuid=KrkEVnreWxFr4eAJ">02 | 几行汇编几行C：实现一个最简单的内核</a>——极客时间</li>
 </ul>
-<hr>
-
+<h1 id="课程链接">课程链接</h1>
+<p>扫码即可加入：</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092755797.png" alt="image-20210515092755797" style="zoom: 25%;" />
             </div>
             
             
@@ -1252,7 +726,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://doublelll3.ml/wxb_1_文件、目录操作与实现ls的思路/" title="1 文件、目录操作与实现ls的思路">https://doublelll3.ml/wxb_1_文件、目录操作与实现ls的思路/</a>
+      <a href="https://doublelll3.ml/cosmos_1_尝尝鲜：从一个Hello到另一个Hello/" title="1 尝尝鲜：从一个Hello到另一个Hello">https://doublelll3.ml/cosmos_1_尝尝鲜：从一个Hello到另一个Hello/</a>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">源码链接：</strong>
@@ -1273,13 +747,9 @@
   </ul>
   <div class="tags">
     
-      <a href="https://doublelll3.ml/Kw2y7WPqF/"># 网络系统</a>
-    
       <a href="https://doublelll3.ml/T3nppl_zO/"># 操作系统</a>
     
-      <a href="https://doublelll3.ml/linux/"># Linux</a>
-    
-      <a href="https://doublelll3.ml/hzcla/"># 海贼班</a>
+      <a href="https://doublelll3.ml/p5_eR4JOS8/"># 极客时间</a>
     
       <a href="https://doublelll3.ml/computer/"># 计算机</a>
     
@@ -1289,6 +759,10 @@
       
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="《操作系统实战45讲》笔记汇总" href="https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/">《操作系统实战45讲》笔记汇总</a>
+        <a class="nav-mobile-next" title="《操作系统实战45讲》笔记汇总" href="https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
