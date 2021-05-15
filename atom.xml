@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-05-15T02:21:16.103Z</updated>
+    <updated>2021-05-15T02:30:47.405Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -67,7 +67,7 @@ sudo apt install nasm
 }
 </code></pre>
 <ul>
-<li>修改内容参考此步骤，再打开一个终端，观察**df /boot/**的结果，关注两个地方：文件系统、挂载点</li>
+<li>修改内容参考此步骤，再打开一个终端，观察df /boot/的结果，关注两个地方：文件系统、挂载点</li>
 </ul>
 <img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092657939.png" alt="image-20210515092657939" style="zoom:80%;" />
 <ul>
