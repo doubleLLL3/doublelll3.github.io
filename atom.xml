@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-05-13T03:01:13.164Z</updated>
+    <updated>2021-05-15T02:09:49.295Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -10,6 +10,24 @@
     <logo>https://doublelll3.ml/images/avatar.png</logo>
     <icon>https://doublelll3.ml/favicon.ico</icon>
     <rights>All rights reserved 2021, Double&apos;s Way</rights>
+    <entry>
+        <title type="html"><![CDATA[《操作系统实战45讲》笔记汇总]]></title>
+        <id>https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/</id>
+        <link href="https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/">
+        </link>
+        <updated>2021-05-15T00:40:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="操作系统实战45讲笔记汇总">《操作系统实战45讲》笔记汇总</h1>
+<p>🎯：从0到1，实现自己的操作系统</p>
+<p>👨：导师，<strong>彭东</strong>，网名 LMOS，Intel 傲腾项目关键开发者</p>
+<h2 id="传送门">传送门</h2>
+<ol>
+<li><a href="https://doublelll3.ml/cosmos_1_%E5%B0%9D%E5%B0%9D%E9%B2%9C%EF%BC%9A%E4%BB%8E%E4%B8%80%E4%B8%AAHello%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AAHello/">尝尝鲜：从一个Hello到另一个Hello</a></li>
+<li></li>
+</ol>
+<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
+<p>扫码即可加入：</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210515092755797.png" alt="image-20210515092755797" style="zoom: 25%;" />]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《C++程序设计》笔记汇总]]></title>
         <id>https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/</id>
@@ -3553,192 +3571,6 @@ echo &quot;./ls -b $path:&quot; | lolcat
 <p>《小强升职记》附加自定义书签</p>
 <p>链接：<a href="https://pan.baidu.com/s/1eXAqzIDpOEKn5U6BpmlMVQ">https://pan.baidu.com/s/1eXAqzIDpOEKn5U6BpmlMVQ</a></p>
 <p>提取码：ful3</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文件特殊权限的常用场景]]></title>
-        <id>https://doublelll3.ml/lnxrm_文件特殊权限的常用场景/</id>
-        <link href="https://doublelll3.ml/lnxrm_文件特殊权限的常用场景/">
-        </link>
-        <updated>2020-12-14T11:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>实验环境</strong>：Ubuntu18.04远程服务器 + WSL 2本机</p>
-<h1 id="测评说明">测评说明</h1>
-<p>[版本一]</p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/Vw6qCLa.png" alt="图片" style="zoom: 67%;" />
-</li>
-</ul>
-<p>[版本二]</p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/hseZWVa.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>
-<p>⭐考察对文件权限【尤其是文件特殊权限】的理解</p>
-<ul>
-<li>文件权限：参考《Linux入门及使用》笔记汇总——3 Linux基础知识——<a href="https://doublelll3.ml/lnxrm_3_Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84">用户和组</a>以及<a href="https://doublelll3.ml/lnxrm_3_Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E4%BF%AE%E6%94%B9">文件权限的修改</a></li>
-<li>文件特殊权限：参考《Linux入门及使用》笔记汇总——8 文件与目录、AWK——<a href="https://doublelll3.ml/lnxrm_8_%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E3%80%81AWK/#%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E6%AE%8A%E6%9D%83%E9%99%90">文件的特殊权限</a></li>
-</ul>
-</li>
-<li>
-<p>理解了以上，实现上述功能就游刃有余了</p>
-</li>
-</ul>
-<h1 id="最终效果">最终效果</h1>
-<ul>
-<li>
-<p>其他用户无法进入Project目录</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/uxMDsfp.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>
-<p>TestUser1创建了文件u1.txt</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/iu4neAY.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>
-<p>TestUser2仍可以编辑u1.txt，但无法删除它</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/YoWpkPS.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>
-<ul>
-<li>反之同理</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="实现过程">实现过程</h1>
-<h2 id="准备工作">准备工作</h2>
-<ul>
-<li>新建一个用户组TestGroup，使用groupadd命令，有一些选项可查看man手册</li>
-</ul>
-<pre><code class="language-shell">groupadd TestGroup
-</code></pre>
-<ul>
-<li>新建两个属于TestGroup组的用户TestUser1、TestUser2</li>
-</ul>
-<pre><code class="language-shell">useradd -G TestGroup TestUser1
-useradd -G TestGroup TestUser2
-</code></pre>
-<ul>
-<li>
-<ul>
-<li>需要先有组</li>
-</ul>
-</li>
-<li>设置密码，用来登录用户，否则登不了</li>
-</ul>
-<pre><code class="language-shell">passwd TestUser1
----&gt;输入密码：xxx
-passwd TestUser2
----&gt;输入密码：yyy
-</code></pre>
-<ul>
-<li>在/opt目录下新建Project目录，作为项目目录</li>
-</ul>
-<pre><code class="language-shell">cd /opt
-mkdir Project
-</code></pre>
-<h2 id="实现功能1-进入权限">实现功能1 进入权限</h2>
-<p>【只能TestUser1、TestUser2、 root三个用户进入该目录】</p>
-<ul>
-<li>把Project目录的所属组修改为TestGroup，所属用户不动</li>
-</ul>
-<pre><code class="language-shell">sudo chown :TestGroup Project
-</code></pre>
-<ul>
-<li>将其他用户的执行权限去除，其他用户将不能进入目录</li>
-</ul>
-<pre><code class="language-shell">sudo chmod o-x Project
-</code></pre>
-<ul>
-<li>
-<p>效果如下：</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/nlubPF9.png" alt="图片" style="zoom:67%;" />
-</li>
-</ul>
-<h2 id="实现功能2-编辑权限">实现功能2 编辑权限</h2>
-<p>【TestUser1创建的文件，TestUser2可以编辑】</p>
-<ul>
-<li>首先，给所属组TestGroup添加写权限，这样用户才能在该目录下创建文件</li>
-</ul>
-<pre><code class="language-shell">sudo chmod g+w Project
-</code></pre>
-<ul>
-<li>设置set_gid，这样用户进入目录后的操作会以目录所属组的身份进行</li>
-</ul>
-<pre><code class="language-shell">sudo chmod g+s Project
-</code></pre>
-<p>[PS] 否则，用户创建的文件的所属组属于与自己同名的组，而不是TestGroup [从而无法将两个用户建立联系]</p>
-<ul>
-<li>
-<p>权限如下：</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/70b6JmL.png" alt="图片" style="zoom:67%;" />
-</li>
-</ul>
-<h2 id="实现功能3-删除权限">实现功能3 删除权限</h2>
-<p>【TestUser1和TestUser2只能删除自己创建的文件】</p>
-<ul>
-<li>设置sticky bit，这样在该目录下，用户只能删除自己创建的内容</li>
-</ul>
-<pre><code class="language-shell">sudo chmod +t Project
-</code></pre>
-<ul>
-<li>
-<p>权限如下：</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/mxV6phw.png" alt="图片" style="zoom:67%;" />
-</li>
-</ul>
-<p>[PS] 文件夹颜色都变了，zsh干的漂亮</p>
-<hr>
-<h1 id="思考点">思考点</h1>
-<ul>
-<li>某场景：进入某目录的用户对某文件没有写权限，却可以删除文件，为什么？
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/ghYqP4q.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>删除文件的权限：优先取决于用户对进入的目录的权限
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/TfLSIS9.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>该用户属于TestGroup，有可写权限</li>
-<li>参考<a href="http://linux.vbird.org/linux_basic/0210filepermission.php#filepermission_dir">鸟哥的私房菜——目录与文件之权限意义</a>——权限对目录的重要性：
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/Lg2GhLI.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>但是碰见sticky bit [黏着位]，事情又不一样了</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="附加">附加</h1>
-<ul>
-<li>目录的可执行权限代表进入权限</li>
-</ul>
-<hr>
-<h1 id="参考资料">参考资料</h1>
-<ul>
-<li>《Linux入门及使用》笔记汇总——3 Linux基础知识——<a href="https://doublelll3.ml/lnxrm_3_Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84">用户和组</a>以及<a href="https://doublelll3.ml/lnxrm_3_Linux%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E4%BF%AE%E6%94%B9">文件权限的修改</a></li>
-<li>《Linux入门及使用》笔记汇总——8 文件与目录、AWK——<a href="https://doublelll3.ml/lnxrm_8_%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E3%80%81AWK/#%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E6%AE%8A%E6%9D%83%E9%99%90">文件的特殊权限</a></li>
-<li><a href="http://linux.vbird.org/linux_basic/0210filepermission.php#filepermission_dir">鸟哥的私房菜——目录与文件之权限意义</a></li>
-</ul>
 ]]></content>
     </entry>
 </feed>
