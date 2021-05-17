@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://doublelll3.ml</id>
+    <id>https://blog-eta-brown.vercel.app</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-05-17T13:54:47.685Z</updated>
+    <updated>2021-05-17T15:08:31.010Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://doublelll3.ml"/>
-    <link rel="self" href="https://doublelll3.ml/atom.xml"/>
+    <link rel="alternate" href="https://blog-eta-brown.vercel.app"/>
+    <link rel="self" href="https://blog-eta-brown.vercel.app/atom.xml"/>
     <subtitle>你永远不知道你不知道什么</subtitle>
-    <logo>https://doublelll3.ml/images/avatar.png</logo>
-    <icon>https://doublelll3.ml/favicon.ico</icon>
+    <logo>https://blog-eta-brown.vercel.app/images/avatar.png</logo>
+    <icon>https://blog-eta-brown.vercel.app/favicon.ico</icon>
     <rights>All rights reserved 2021, Double&apos;s Way</rights>
     <entry>
         <title type="html"><![CDATA[《操作系统实战45讲》笔记汇总]]></title>
-        <id>https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/</id>
-        <link href="https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/">
+        <id>https://blog-eta-brown.vercel.app/cosmos_《操作系统实战45讲》笔记汇总/</id>
+        <link href="https://blog-eta-brown.vercel.app/cosmos_《操作系统实战45讲》笔记汇总/">
         </link>
         <updated>2021-05-15T00:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="操作系统实战45讲笔记汇总">《操作系统实战45讲》笔记汇总</h1>
@@ -30,8 +30,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[《C++程序设计》笔记汇总]]></title>
-        <id>https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/</id>
-        <link href="https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/">
+        <id>https://blog-eta-brown.vercel.app/cpp_《CPP程序设计》笔记汇总/</id>
+        <link href="https://blog-eta-brown.vercel.app/cpp_《CPP程序设计》笔记汇总/">
         </link>
         <updated>2021-02-27T10:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="c程序设计笔记汇总">《C++程序设计》笔记汇总</h1>
@@ -49,8 +49,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[《胡船长专属课堂》笔记汇总]]></title>
-        <id>https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/</id>
-        <link href="https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/">
+        <id>https://blog-eta-brown.vercel.app/hcz_《胡船长专属课堂》笔记汇总/</id>
+        <link href="https://blog-eta-brown.vercel.app/hcz_《胡船长专属课堂》笔记汇总/">
         </link>
         <updated>2021-01-25T00:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="胡船长专属课堂笔记汇总">《胡船长专属课堂》笔记汇总</h1>
@@ -85,8 +85,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[《面试笔试算法下》笔记汇总]]></title>
-        <id>https://doublelll3.ml/mbsx_《面试笔试算法下》笔记汇总/</id>
-        <link href="https://doublelll3.ml/mbsx_《面试笔试算法下》笔记汇总/">
+        <id>https://blog-eta-brown.vercel.app/mbsx_《面试笔试算法下》笔记汇总/</id>
+        <link href="https://blog-eta-brown.vercel.app/mbsx_《面试笔试算法下》笔记汇总/">
         </link>
         <updated>2021-01-23T01:51:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="面试笔试算法下笔记汇总">《面试笔试算法下》笔记汇总</h1>
@@ -105,8 +105,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[基于文件的进程间通信——用100个进程抢算累加和]]></title>
-        <id>https://doublelll3.ml/wxb_基于文件的进程间通信_用100个进程抢算累加和/</id>
-        <link href="https://doublelll3.ml/wxb_基于文件的进程间通信_用100个进程抢算累加和/">
+        <id>https://blog-eta-brown.vercel.app/wxb_基于文件的进程间通信_用100个进程抢算累加和/</id>
+        <link href="https://blog-eta-brown.vercel.app/wxb_基于文件的进程间通信_用100个进程抢算累加和/">
         </link>
         <updated>2021-01-20T10:00:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="需求描述">需求描述</h1>
@@ -584,8 +584,8 @@ int main(int argc, char **argv) {
     </entry>
     <entry>
         <title type="html"><![CDATA[git commit的-m原理实现]]></title>
-        <id>https://doublelll3.ml/wxb_git_commit的-m原理实现/</id>
-        <link href="https://doublelll3.ml/wxb_git_commit的-m原理实现/">
+        <id>https://blog-eta-brown.vercel.app/wxb_git_commit的-m原理实现/</id>
+        <link href="https://blog-eta-brown.vercel.app/wxb_git_commit的-m原理实现/">
         </link>
         <updated>2021-01-17T10:00:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="功能要求">功能要求</h1>
@@ -1010,8 +1010,8 @@ ${cmd} -b
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux中ls -al的手动实现]]></title>
-        <id>https://doublelll3.ml/wxb_Linux中ls_-al的手动实现/</id>
-        <link href="https://doublelll3.ml/wxb_Linux中ls_-al的手动实现/">
+        <id>https://blog-eta-brown.vercel.app/wxb_Linux中ls_-al的手动实现/</id>
+        <link href="https://blog-eta-brown.vercel.app/wxb_Linux中ls_-al的手动实现/">
         </link>
         <updated>2021-01-14T02:00:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="功能要求">功能要求</h1>
@@ -1536,8 +1536,8 @@ echo &quot;./ls -b $path:&quot; | lolcat
     </entry>
     <entry>
         <title type="html"><![CDATA[《网络与系统编程》笔记汇总]]></title>
-        <id>https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/</id>
-        <link href="https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/">
+        <id>https://blog-eta-brown.vercel.app/wxb_《网络与系统编程》笔记汇总/</id>
+        <link href="https://blog-eta-brown.vercel.app/wxb_《网络与系统编程》笔记汇总/">
         </link>
         <updated>2021-01-06T05:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="网络与系统编程笔记汇总">《网络与系统编程》笔记汇总</h1>
@@ -1564,8 +1564,8 @@ echo &quot;./ls -b $path:&quot; | lolcat
     </entry>
     <entry>
         <title type="html"><![CDATA[《高级数据结构》笔记汇总]]></title>
-        <id>https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/</id>
-        <link href="https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/">
+        <id>https://blog-eta-brown.vercel.app/gsj_《高级数据结构》笔记汇总/</id>
+        <link href="https://blog-eta-brown.vercel.app/gsj_《高级数据结构》笔记汇总/">
         </link>
         <updated>2020-12-24T12:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="高级数据结构笔记汇总">《高级数据结构》笔记汇总</h1>
@@ -1583,8 +1583,8 @@ echo &quot;./ls -b $path:&quot; | lolcat
     </entry>
     <entry>
         <title type="html"><![CDATA[一本被书名耽搁的时间管理书——《小强升职记》]]></title>
-        <id>https://doublelll3.ml/小强升职记/</id>
-        <link href="https://doublelll3.ml/小强升职记/">
+        <id>https://blog-eta-brown.vercel.app/小强升职记/</id>
+        <link href="https://blog-eta-brown.vercel.app/小强升职记/">
         </link>
         <updated>2020-12-24T02:12:00.000Z</updated>
         <content type="html"><![CDATA[<p>这本书我非常想推荐给身边的人，虽然每个人的经历和阶段都不同，所以体会肯定也会不一样。但如果你觉得自己的时间不够用/每天忙得不可开交/不知道每天的自己在做什么/早上起不来...，那这本书肯定会有所帮助！</p>
