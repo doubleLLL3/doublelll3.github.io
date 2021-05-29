@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://blog-eta-brown.vercel.app</id>
+    <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-05-28T08:36:07.662Z</updated>
+    <updated>2021-05-29T02:22:47.674Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://blog-eta-brown.vercel.app"/>
-    <link rel="self" href="https://blog-eta-brown.vercel.app/atom.xml"/>
+    <link rel="alternate" href="https://doublelll3.ml"/>
+    <link rel="self" href="https://doublelll3.ml/atom.xml"/>
     <subtitle>你永远不知道你不知道什么</subtitle>
-    <logo>https://blog-eta-brown.vercel.app/images/avatar.png</logo>
-    <icon>https://blog-eta-brown.vercel.app/favicon.ico</icon>
+    <logo>https://doublelll3.ml/images/avatar.png</logo>
+    <icon>https://doublelll3.ml/favicon.ico</icon>
     <rights>All rights reserved 2021, Double&apos;s Way</rights>
     <entry>
         <title type="html"><![CDATA[我的秋招0 OFFER到春招7 OFFERS之路]]></title>
-        <id>https://blog-eta-brown.vercel.app/我的秋招0OFFER到春招7OFFERS之路/</id>
-        <link href="https://blog-eta-brown.vercel.app/我的秋招0OFFER到春招7OFFERS之路/">
+        <id>https://doublelll3.ml/我的秋招0OFFER到春招7OFFERS之路/</id>
+        <link href="https://doublelll3.ml/我的秋招0OFFER到春招7OFFERS之路/">
         </link>
         <updated>2021-05-28T06:40:00.000Z</updated>
         <content type="html"><![CDATA[<p>2021年5月，春招基本告一段落。</p>
@@ -166,8 +166,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[《操作系统实战45讲》笔记汇总]]></title>
-        <id>https://blog-eta-brown.vercel.app/cosmos_《操作系统实战45讲》笔记汇总/</id>
-        <link href="https://blog-eta-brown.vercel.app/cosmos_《操作系统实战45讲》笔记汇总/">
+        <id>https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/</id>
+        <link href="https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/">
         </link>
         <updated>2021-05-15T00:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="操作系统实战45讲笔记汇总">《操作系统实战45讲》笔记汇总</h1>
@@ -175,7 +175,7 @@
 <p>👨：导师，<strong>彭东</strong>，网名 LMOS，Intel 傲腾项目关键开发者</p>
 <h2 id="传送门">传送门</h2>
 <ol>
-<li><a href="https://blog-eta-brown.vercel.app/cosmos_1_%E5%B0%9D%E5%B0%9D%E9%B2%9C%EF%BC%9A%E4%BB%8E%E4%B8%80%E4%B8%AAHello%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AAHello/">尝尝鲜：从一个Hello到另一个Hello</a></li>
+<li><a href="https://doublelll3.ml/cosmos_1_%E5%B0%9D%E5%B0%9D%E9%B2%9C%EF%BC%9A%E4%BB%8E%E4%B8%80%E4%B8%AAHello%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AAHello/">尝尝鲜：从一个Hello到另一个Hello</a></li>
 <li>心有蓝图：设计</li>
 <li>程序的基石：硬件</li>
 </ol>
@@ -186,27 +186,27 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[《C++程序设计》笔记汇总]]></title>
-        <id>https://blog-eta-brown.vercel.app/cpp_《CPP程序设计》笔记汇总/</id>
-        <link href="https://blog-eta-brown.vercel.app/cpp_《CPP程序设计》笔记汇总/">
+        <id>https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/</id>
+        <link href="https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/">
         </link>
         <updated>2021-02-27T10:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="c程序设计笔记汇总">《C++程序设计》笔记汇总</h1>
 <p><strong>掌舵：光哥</strong></p>
 <h2 id="传送门">传送门</h2>
 <ol start="0">
-<li><a href="https://blog-eta-brown.vercel.app/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
+<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
 <li>类和对象</li>
 <li>重载</li>
 </ol>
 <hr>
-<p>【附加】<a href="https://blog-eta-brown.vercel.app/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
+<p>【附加】<a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[《胡船长专属课堂》笔记汇总]]></title>
-        <id>https://blog-eta-brown.vercel.app/hcz_《胡船长专属课堂》笔记汇总/</id>
-        <link href="https://blog-eta-brown.vercel.app/hcz_《胡船长专属课堂》笔记汇总/">
+        <id>https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/</id>
+        <link href="https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/">
         </link>
         <updated>2021-01-25T00:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="胡船长专属课堂笔记汇总">《胡船长专属课堂》笔记汇总</h1>
@@ -214,55 +214,55 @@
 <h2 id="传送门">传送门</h2>
 <h2 id="高级数据结构">高级数据结构</h2>
 <ol>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_1_%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81AVL%E6%A0%91/">二叉排序树、AVL树</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_2_%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_3_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼树与哈夫曼编码</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_4_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">字符串匹配算法（上）：BF、KMP、SUNDAY、SHIFT-AND、Hash</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_5_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E5%A4%9A%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%85%B3/">字符串匹配算法（下）：Trie、AC、DAT</a></li>
+<li><a href="https://doublelll3.ml/gsj_1_%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81AVL%E6%A0%91/">二叉排序树、AVL树</a></li>
+<li><a href="https://doublelll3.ml/gsj_2_%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
+<li><a href="https://doublelll3.ml/gsj_3_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼树与哈夫曼编码</a></li>
+<li><a href="https://doublelll3.ml/gsj_4_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">字符串匹配算法（上）：BF、KMP、SUNDAY、SHIFT-AND、Hash</a></li>
+<li><a href="https://doublelll3.ml/gsj_5_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E5%A4%9A%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%85%B3/">字符串匹配算法（下）：Trie、AC、DAT</a></li>
 </ol>
 <h2 id="面试笔试算法下">面试笔试算法下</h2>
 <ol>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_1_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8A%EF%BC%89/">从递推到动态规划（上）</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_2_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8B%EF%BC%89/">从递推到动态规划（下）</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_3_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E6%A0%88/">单调队列与单调栈</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_4_%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_5_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_6_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0/">树状数组、线段树练习题</a></li>
+<li><a href="https://doublelll3.ml/mbsx_1_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8A%EF%BC%89/">从递推到动态规划（上）</a></li>
+<li><a href="https://doublelll3.ml/mbsx_2_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8B%EF%BC%89/">从递推到动态规划（下）</a></li>
+<li><a href="https://doublelll3.ml/mbsx_3_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E6%A0%88/">单调队列与单调栈</a></li>
+<li><a href="https://doublelll3.ml/mbsx_4_%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></li>
+<li><a href="https://doublelll3.ml/mbsx_5_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></li>
+<li><a href="https://doublelll3.ml/mbsx_6_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0/">树状数组、线段树练习题</a></li>
 </ol>
 <h2 id="c程序设计">C++程序设计</h2>
 <ol start="0">
-<li><a href="https://blog-eta-brown.vercel.app/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
+<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
 <li>类和对象</li>
 <li>重载</li>
 </ol>
-<p>【附加】<a href="https://blog-eta-brown.vercel.app/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
+<p>【附加】<a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[《面试笔试算法下》笔记汇总]]></title>
-        <id>https://blog-eta-brown.vercel.app/mbsx_《面试笔试算法下》笔记汇总/</id>
-        <link href="https://blog-eta-brown.vercel.app/mbsx_《面试笔试算法下》笔记汇总/">
+        <id>https://doublelll3.ml/mbsx_《面试笔试算法下》笔记汇总/</id>
+        <link href="https://doublelll3.ml/mbsx_《面试笔试算法下》笔记汇总/">
         </link>
         <updated>2021-01-23T01:51:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="面试笔试算法下笔记汇总">《面试笔试算法下》笔记汇总</h1>
 <p><strong>掌舵：光哥</strong></p>
 <h2 id="传送门">传送门</h2>
 <ol>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_1_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8A%EF%BC%89/">从递推到动态规划（上）</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_2_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8B%EF%BC%89/">从递推到动态规划（下）</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_3_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E6%A0%88/">单调队列与单调栈</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_4_%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_5_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/mbsx_6_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0/">树状数组、线段树练习题</a></li>
+<li><a href="https://doublelll3.ml/mbsx_1_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8A%EF%BC%89/">从递推到动态规划（上）</a></li>
+<li><a href="https://doublelll3.ml/mbsx_2_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8B%EF%BC%89/">从递推到动态规划（下）</a></li>
+<li><a href="https://doublelll3.ml/mbsx_3_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E6%A0%88/">单调队列与单调栈</a></li>
+<li><a href="https://doublelll3.ml/mbsx_4_%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></li>
+<li><a href="https://doublelll3.ml/mbsx_5_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></li>
+<li><a href="https://doublelll3.ml/mbsx_6_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0/">树状数组、线段树练习题</a></li>
 </ol>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[基于文件的进程间通信——用100个进程抢算累加和]]></title>
-        <id>https://blog-eta-brown.vercel.app/wxb_基于文件的进程间通信_用100个进程抢算累加和/</id>
-        <link href="https://blog-eta-brown.vercel.app/wxb_基于文件的进程间通信_用100个进程抢算累加和/">
+        <id>https://doublelll3.ml/wxb_基于文件的进程间通信_用100个进程抢算累加和/</id>
+        <link href="https://doublelll3.ml/wxb_基于文件的进程间通信_用100个进程抢算累加和/">
         </link>
         <updated>2021-01-20T10:00:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="需求描述">需求描述</h1>
@@ -730,9 +730,9 @@ int main(int argc, char **argv) {
 <ul>
 <li>主要知识点参考《网络与系统编程》
 <ul>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">0 课程介绍及命令行解析函数</a>——getopt</li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">1 文件、目录操作与实现ls的思路</a>——fopen、fread、fwrite</li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">3 多进程</a>——fork、wait、flock⭐</li>
+<li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">0 课程介绍及命令行解析函数</a>——getopt</li>
+<li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">1 文件、目录操作与实现ls的思路</a>——fopen、fread、fwrite</li>
+<li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">3 多进程</a>——fork、wait、flock⭐</li>
 </ul>
 </li>
 </ul>
@@ -740,8 +740,8 @@ int main(int argc, char **argv) {
     </entry>
     <entry>
         <title type="html"><![CDATA[git commit的-m原理实现]]></title>
-        <id>https://blog-eta-brown.vercel.app/wxb_git_commit的-m原理实现/</id>
-        <link href="https://blog-eta-brown.vercel.app/wxb_git_commit的-m原理实现/">
+        <id>https://doublelll3.ml/wxb_git_commit的-m原理实现/</id>
+        <link href="https://doublelll3.ml/wxb_git_commit的-m原理实现/">
         </link>
         <updated>2021-01-17T10:00:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="功能要求">功能要求</h1>
@@ -1156,9 +1156,9 @@ ${cmd} -b
 <ul>
 <li>主要知识点参考《网络与系统编程》
 <ul>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">0 课程介绍及命令行解析函数</a>——getopt</li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">1 文件、目录操作与实现ls的思路</a>——open、read</li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">3 多进程</a>——fork、wait、exec族⭐</li>
+<li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">0 课程介绍及命令行解析函数</a>——getopt</li>
+<li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">1 文件、目录操作与实现ls的思路</a>——open、read</li>
+<li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">3 多进程</a>——fork、wait、exec族⭐</li>
 </ul>
 </li>
 </ul>
@@ -1166,8 +1166,8 @@ ${cmd} -b
     </entry>
     <entry>
         <title type="html"><![CDATA[Linux中ls -al的手动实现]]></title>
-        <id>https://blog-eta-brown.vercel.app/wxb_Linux中ls_-al的手动实现/</id>
-        <link href="https://blog-eta-brown.vercel.app/wxb_Linux中ls_-al的手动实现/">
+        <id>https://doublelll3.ml/wxb_Linux中ls_-al的手动实现/</id>
+        <link href="https://doublelll3.ml/wxb_Linux中ls_-al的手动实现/">
         </link>
         <updated>2021-01-14T02:00:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="功能要求">功能要求</h1>
@@ -1686,53 +1686,53 @@ echo &quot;./ls -b $path:&quot; | lolcat
 </ul>
 <h1 id="参考">参考</h1>
 <ul>
-<li>整体思路参考：<a href="https://blog-eta-brown.vercel.app/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/#%E5%AE%9E%E7%8E%B0ls-al%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF">《1 文件、目录操作与实现ls的思路——实现ls-al的基本思路》</a></li>
+<li>整体思路参考：<a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/#%E5%AE%9E%E7%8E%B0ls-al%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF">《1 文件、目录操作与实现ls的思路——实现ls-al的基本思路》</a></li>
 </ul>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[《网络与系统编程》笔记汇总]]></title>
-        <id>https://blog-eta-brown.vercel.app/wxb_《网络与系统编程》笔记汇总/</id>
-        <link href="https://blog-eta-brown.vercel.app/wxb_《网络与系统编程》笔记汇总/">
+        <id>https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/</id>
+        <link href="https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/">
         </link>
         <updated>2021-01-06T05:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="网络与系统编程笔记汇总">《网络与系统编程》笔记汇总</h1>
 <p><strong>掌舵：宿船</strong></p>
 <h2 id="传送门">传送门</h2>
 <ol start="0">
-<li><a href="https://blog-eta-brown.vercel.app/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">课程介绍及命令行解析函数</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">文件、目录操作与实现ls的思路</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_2_%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9EIO/">阻塞与非阻塞IO</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">多进程</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_4_%E9%AB%98%E7%BA%A7%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">高级进程管理</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_5_%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/">进程间通信</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_6_%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">多线程编程基础</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_7_Socket%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">Socket编程基础</a></li>
+<li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">课程介绍及命令行解析函数</a></li>
+<li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">文件、目录操作与实现ls的思路</a></li>
+<li><a href="https://doublelll3.ml/wxb_2_%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9EIO/">阻塞与非阻塞IO</a></li>
+<li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">多进程</a></li>
+<li><a href="https://doublelll3.ml/wxb_4_%E9%AB%98%E7%BA%A7%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">高级进程管理</a></li>
+<li><a href="https://doublelll3.ml/wxb_5_%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/">进程间通信</a></li>
+<li><a href="https://doublelll3.ml/wxb_6_%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">多线程编程基础</a></li>
+<li><a href="https://doublelll3.ml/wxb_7_Socket%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">Socket编程基础</a></li>
 </ol>
 <hr>
 <ol>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_Linux%E4%B8%ADls_-al%E7%9A%84%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0/">[Task001] Linux中ls -al的手动实现</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_git_commit%E7%9A%84-m%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0/">[Task002] git commit的-m原理实现</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/wxb_%E5%9F%BA%E4%BA%8E%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1_%E7%94%A8100%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%8A%A2%E7%AE%97%E7%B4%AF%E5%8A%A0%E5%92%8C/">[Task003] 基于文件的进程间通信——用100个进程抢算累加和</a></li>
+<li><a href="https://doublelll3.ml/wxb_Linux%E4%B8%ADls_-al%E7%9A%84%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0/">[Task001] Linux中ls -al的手动实现</a></li>
+<li><a href="https://doublelll3.ml/wxb_git_commit%E7%9A%84-m%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0/">[Task002] git commit的-m原理实现</a></li>
+<li><a href="https://doublelll3.ml/wxb_%E5%9F%BA%E4%BA%8E%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1_%E7%94%A8100%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%8A%A2%E7%AE%97%E7%B4%AF%E5%8A%A0%E5%92%8C/">[Task003] 基于文件的进程间通信——用100个进程抢算累加和</a></li>
 </ol>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[《高级数据结构》笔记汇总]]></title>
-        <id>https://blog-eta-brown.vercel.app/gsj_《高级数据结构》笔记汇总/</id>
-        <link href="https://blog-eta-brown.vercel.app/gsj_《高级数据结构》笔记汇总/">
+        <id>https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/</id>
+        <link href="https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/">
         </link>
         <updated>2020-12-24T12:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="高级数据结构笔记汇总">《高级数据结构》笔记汇总</h1>
 <p><strong>掌舵：光哥</strong></p>
 <h2 id="传送门">传送门</h2>
 <ol>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_1_%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81AVL%E6%A0%91/">二叉排序树、AVL树</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_2_%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_3_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼树与哈夫曼编码</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_4_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">字符串匹配算法（上）：BF、KMP、SUNDAY、SHIFT-AND、Hash</a></li>
-<li><a href="https://blog-eta-brown.vercel.app/gsj_5_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E5%A4%9A%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%85%B3/">字符串匹配算法（下）：Trie、AC、DAT</a></li>
+<li><a href="https://doublelll3.ml/gsj_1_%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81AVL%E6%A0%91/">二叉排序树、AVL树</a></li>
+<li><a href="https://doublelll3.ml/gsj_2_%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
+<li><a href="https://doublelll3.ml/gsj_3_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼树与哈夫曼编码</a></li>
+<li><a href="https://doublelll3.ml/gsj_4_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">字符串匹配算法（上）：BF、KMP、SUNDAY、SHIFT-AND、Hash</a></li>
+<li><a href="https://doublelll3.ml/gsj_5_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E5%A4%9A%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%85%B3/">字符串匹配算法（下）：Trie、AC、DAT</a></li>
 </ol>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
