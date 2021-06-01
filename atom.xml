@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-06-01T02:34:16.352Z</updated>
+    <updated>2021-06-01T02:39:31.421Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -110,7 +110,7 @@
 <br/>
 <p>2️⃣ 简历可以使用<a href="https://www.overleaf.com/project">overleaf</a>制作，这是一个在线的Latex工具，Latex排版更显整洁和专业</p>
 <p>👉分享一个自己改的<a href="https://www.overleaf.com/latex/templates/zhong-wen-jian-li-mo-ban-chinese-resume-template/jgdzmymxmpfc">中文简历模板</a>，效果如下：</p>
-<img src="C:\Users\Bob\AppData\Roaming\Typora\typora-user-images\image-20210601102725048.png" alt="image-20210601102725048" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210601102725048.png" alt="image-20210601102725048" style="zoom:50%;" />
 <p> (1) [使用说明]</p>
 <p>  ① 点击Open as Template</p>
 <p>  ② 加载后，修改resume.tex文件完善内容</p>
