@@ -9,7 +9,7 @@
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
 <title>0 从C到C++ | Double&#39;s Way</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1622712262147">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1622882935623">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -18901,14 +18901,13 @@ No
 &lt;li&gt;修改zsh控制台显示：用户名hz@后面隐藏主机名字，节省屏幕
 &lt;ul&gt;
 &lt;li&gt;在~/.zshrc中，找到该行&lt;/li&gt;
-&lt;li&gt;&lt;img src=&#34;https://i.loli.net/2020/11/20/NXIqYu3alOShD4R.png&#34; alt=&#34;图片&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210604160421969.png&#34; alt=&#34;image-20210604160421969&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
 &lt;li&gt;主要是删去%m，如下：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;PROMPT=&amp;quot;%{$fg[red]%}%n%{​$reset_color%} :%{$fg[yellow]%}%1~%{$reset_color%}% $ &amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;PROMPT=&amp;quot;%{$fg[red]%}%n%{$reset_color%} : %{$fg[yellow]%}%1~ %{$reset_color%}%# &amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Man手册&lt;/li&gt;
 &lt;/ul&gt;
@@ -19186,7 +19185,7 @@ No
 &lt;li&gt;
 &lt;img src=&#34;https://gitee.com/doubleL3/blog-imgs/raw/master/img/n72TkgV.png&#34; alt=&#34;图片&#34; style=&#34;zoom: 33%;&#34; /&gt;
 &lt;/li&gt;
-&lt;li&gt;完全二叉树：除了最后一层最右边可以缺少若干结点，其他地方都满满当当&lt;/li&gt;
+&lt;li&gt;完全二叉树：除了最后一层最右边可以缺少若干连续结点，其他地方都满满当当&lt;/li&gt;
 &lt;li&gt;满二叉树：度为0或2即可&lt;/li&gt;
 &lt;li&gt;完美二叉树：度均为2，所有叶结点在同一层&lt;/li&gt;
 &lt;li&gt;PS：中国版只分完全二叉树和满二叉树，满二叉树的定义同国际版的完美二叉树&lt;/li&gt;
@@ -19275,27 +19274,12 @@ No
 &lt;p&gt;栈里存储结点地址[Node *]：把广义表中的字符看成结点&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;转换过程&lt;/p&gt;
+&lt;p&gt;转换过程&lt;br&gt;
+|&lt;strong&gt;(&lt;/strong&gt;|&lt;strong&gt;,&lt;/strong&gt;|&lt;strong&gt;)&lt;/strong&gt;|&lt;strong&gt;其他字符【字母】&lt;/strong&gt;|&lt;br&gt;
+|:----😐:----😐:----😐:----😐&lt;br&gt;
+|【将元素入栈】&lt;br&gt;下一个&#39;,&#39;前的元素为左孩子|决定下一个字符封装的元素为【右孩子】|记录栈顶，【将元素弹栈】|①将字符【封装】成结点指针类型，作为栈的元素&lt;br&gt;②【关系确定】如果栈不为空，则根据该字符相对于&#39;,&#39;的位置，成为栈顶元素的左孩子或右孩子|&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;(&lt;/strong&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;,&lt;/strong&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;)&lt;/strong&gt;&lt;/th&gt;
-&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;其他字符【字母】&lt;/strong&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;【将元素入栈】&lt;br&gt;下一个&#39;,&#39;前的元素为左孩子&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;决定下一个字符封装的元素为【右孩子】&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;记录栈顶，【将元素弹栈】&lt;/td&gt;
-&lt;td style=&#34;text-align:center&#34;&gt;①将字符【封装】成结点指针类型，作为栈的元素&lt;br&gt;②【关系确定】如果栈不为空，则根据该字符相对于&#39;,&#39;的位置，成为栈顶元素的左孩子或右孩子&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;代码&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
