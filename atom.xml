@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-07-01T11:17:46.249Z</updated>
+    <updated>2021-07-05T08:18:51.395Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -10,6 +10,191 @@
     <logo>https://doublelll3.ml/images/avatar.png</logo>
     <icon>https://doublelll3.ml/favicon.ico</icon>
     <rights>All rights reserved 2021, Double&apos;s Way</rights>
+    <entry>
+        <title type="html"><![CDATA[Mac、Windows常用快捷键]]></title>
+        <id>https://doublelll3.ml/Mac、Windows常用快捷键/</id>
+        <link href="https://doublelll3.ml/Mac、Windows常用快捷键/">
+        </link>
+        <updated>2021-07-01T10:51:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="文件管理器finder-explorer">文件管理器（Finder / Explorer）</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">Mac</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">删除文件 / 文件夹（移至废纸篓）⭐️</td>
+<td style="text-align:left">command + 退格键</td>
+<td>（ctrl + D） / delete</td>
+</tr>
+<tr>
+<td style="text-align:left">清空废纸篓</td>
+<td style="text-align:left">command + shift + 退格键</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:left">移动文件 / 文件夹</td>
+<td style="text-align:left">command + C（先复制）；<br/>command + option + V（移动）</td>
+<td>ctrl + X（直接剪切）；<br/>ctrl + V（粘贴）</td>
+</tr>
+<tr>
+<td style="text-align:left">创建所选文件的副本</td>
+<td style="text-align:left">command + D</td>
+<td>ctrl + C -&gt; ctrl + V</td>
+</tr>
+<tr>
+<td style="text-align:left">新建文件管理器窗口</td>
+<td style="text-align:left">command + N</td>
+<td>win + E</td>
+</tr>
+<tr>
+<td style="text-align:left">新建文件夹</td>
+<td style="text-align:left">command + shift + N</td>
+<td>ctrl + shift + N</td>
+</tr>
+<tr>
+<td style="text-align:left">新建重复的文件管理器窗口</td>
+<td style="text-align:left">-</td>
+<td>ctrl + N</td>
+</tr>
+<tr>
+<td style="text-align:left">复制当前文件夹路径</td>
+<td style="text-align:left">command + option + C</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:left">跳转到指定路径</td>
+<td style="text-align:left">command + shift + G</td>
+<td>-</td>
+</tr>
+<tr>
+<td style="text-align:left">按不同规则排列 / 整理文件</td>
+<td style="text-align:left">command + control + 1 ～ 7</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h1 id="程序控制">程序控制</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">Mac</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">退出当前软件⭐️</td>
+<td style="text-align:left">command + Q</td>
+<td>alt + f4</td>
+</tr>
+<tr>
+<td style="text-align:left">关闭当前页面</td>
+<td style="text-align:left">command + W</td>
+<td>ctrl + W</td>
+</tr>
+<tr>
+<td style="text-align:left">切换应用</td>
+<td style="text-align:left">command + tab</td>
+<td>alt + Tab</td>
+</tr>
+<tr>
+<td style="text-align:left">新建窗口</td>
+<td style="text-align:left">command + N</td>
+<td>ctrl + N</td>
+</tr>
+<tr>
+<td style="text-align:left">新建标签页</td>
+<td style="text-align:left">command + T</td>
+<td>ctrl + T</td>
+</tr>
+<tr>
+<td style="text-align:left">恢复上次关闭的标签页（浏览器）</td>
+<td style="text-align:left">command + shift + T</td>
+<td>ctrl + Shift + T</td>
+</tr>
+<tr>
+<td style="text-align:left">弹出「强制退出应用」窗口</td>
+<td style="text-align:left">command + option + esc</td>
+<td>win + Esc（任务管理器）</td>
+</tr>
+<tr>
+<td style="text-align:left">打开应用的偏好设置</td>
+<td style="text-align:left">command + ,（逗号）</td>
+<td>ctrl + ,</td>
+</tr>
+<tr>
+<td style="text-align:left">最小化最前面的窗口到程序坞</td>
+<td style="text-align:left">command + M</td>
+<td>win + D</td>
+</tr>
+<tr>
+<td style="text-align:left">全屏</td>
+<td style="text-align:left">command + control + F</td>
+<td>F11</td>
+</tr>
+<tr>
+<td style="text-align:left">切换桌面</td>
+<td style="text-align:left">control + 左/右键</td>
+<td>ctrl + win + 左/右键</td>
+</tr>
+</tbody>
+</table>
+<h1 id="其它">其它</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">功能</th>
+<th style="text-align:left">Mac</th>
+<th>Windows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">打开本地搜索功能（聚焦搜索）⭐️</td>
+<td style="text-align:left">command + 空格</td>
+<td>win + S</td>
+</tr>
+<tr>
+<td style="text-align:left">锁定屏幕</td>
+<td style="text-align:left">command + control + Q</td>
+<td>win + L</td>
+</tr>
+<tr>
+<td style="text-align:left">复制 / 剪切 / 粘贴</td>
+<td style="text-align:left">command + C / X / V</td>
+<td>ctrl + C / X / V</td>
+</tr>
+<tr>
+<td style="text-align:left">撤销<br/>重做</td>
+<td style="text-align:left">command + Z<br/>command + shift + Z（或command + Y）</td>
+<td>ctrl + Z<br/>ctrl + Shift + Z（或ctrl + Y）</td>
+</tr>
+<tr>
+<td style="text-align:left">打开表情界面</td>
+<td style="text-align:left">fn / （control + command + 空格）</td>
+<td>win + .</td>
+</tr>
+<tr>
+<td style="text-align:left">删除光标后的字符</td>
+<td style="text-align:left">（fn + 退格键） / （control + D）</td>
+<td>delete</td>
+</tr>
+</tbody>
+</table>
+<h1 id="tips">Tips</h1>
+<ul>
+<li>参考<a href="https://support.apple.com/zh-cn/HT201236">Mac 键盘快捷键</a>——Apple官网</li>
+<li>Mac与Windows键位的一般对应关系：command——ctrl、option——alt、control——辅助ctrl</li>
+<li>Mac显示路径栏：option + command + P</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[我的秋招0 OFFER到春招7 OFFERS之路]]></title>
         <id>https://doublelll3.ml/我的秋招0OFFER到春招7OFFERS之路/</id>
@@ -1717,25 +1902,6 @@ echo &quot;./ls -b $path:&quot; | lolcat
 <li><a href="https://doublelll3.ml/wxb_Linux%E4%B8%ADls_-al%E7%9A%84%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0/">[Task001] Linux中ls -al的手动实现</a></li>
 <li><a href="https://doublelll3.ml/wxb_git_commit%E7%9A%84-m%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0/">[Task002] git commit的-m原理实现</a></li>
 <li><a href="https://doublelll3.ml/wxb_%E5%9F%BA%E4%BA%8E%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1_%E7%94%A8100%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%8A%A2%E7%AE%97%E7%B4%AF%E5%8A%A0%E5%92%8C/">[Task003] 基于文件的进程间通信——用100个进程抢算累加和</a></li>
-</ol>
-<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《高级数据结构》笔记汇总]]></title>
-        <id>https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/</id>
-        <link href="https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/">
-        </link>
-        <updated>2020-12-24T12:40:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="高级数据结构笔记汇总">《高级数据结构》笔记汇总</h1>
-<p><strong>掌舵：光哥</strong></p>
-<h2 id="传送门">传送门</h2>
-<ol>
-<li><a href="https://doublelll3.ml/gsj_1_%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81AVL%E6%A0%91/">二叉排序树、AVL树</a></li>
-<li><a href="https://doublelll3.ml/gsj_2_%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
-<li><a href="https://doublelll3.ml/gsj_3_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼树与哈夫曼编码</a></li>
-<li><a href="https://doublelll3.ml/gsj_4_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">字符串匹配算法（上）：BF、KMP、SUNDAY、SHIFT-AND、Hash</a></li>
-<li><a href="https://doublelll3.ml/gsj_5_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E5%A4%9A%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%85%B3/">字符串匹配算法（下）：Trie、AC、DAT</a></li>
 </ol>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
