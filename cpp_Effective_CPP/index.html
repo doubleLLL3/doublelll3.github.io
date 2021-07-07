@@ -8,7 +8,7 @@
 <meta name="keywords" content="非科班,海贼班,面试,计算机,算法,投资理财,时间管理,Double">
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
-<title>7 Shell编程基础 | Double&#39;s Way</title>
+<title>Effective C++阅读分享 | Double&#39;s Way</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1625655120750">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="7 Shell编程基础" />
-  <meta name="keywords" content="计算机,操作系统,海贼班,Linux" />
+  <meta name="description" content="Effective C++阅读分享" />
+  <meta name="keywords" content="计算机,C/C++,海贼班" />
 </head>
 
 <body>
@@ -279,36 +279,10 @@
   <div class="toc-wrapper auto-number no_compress"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9">课程内容</a>
-<ul>
-<li><a href="#%E7%AC%AC%E4%B8%80%E4%B8%AAshell%E8%84%9A%E6%9C%AC">第一个Shell脚本</a></li>
-<li><a href="#%E5%8F%98%E9%87%8F">变量</a>
-<ul>
-<li><a href="#%E7%89%B9%E6%AE%8A%E5%8F%98%E9%87%8F">特殊变量</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA">输入输出</a></li>
-<li><a href="#%E5%87%BD%E6%95%B0">函数</a></li>
-<li><a href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6">流程控制</a>
-<ul>
-<li><a href="#%E9%87%8D%E7%82%B9test%E8%A1%A8%E8%BE%BE%E5%BC%8F">【重点】TEST表达式⭐</a></li>
-<li><a href="#%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84">分支结构</a></li>
-<li><a href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84">循环结构</a></li>
-</ul>
-</li>
-<li><a href="#%E6%95%B0%E7%BB%84">数组</a></li>
-</ul>
-</li>
-<li><a href="#%E9%9A%8F%E5%A0%82%E7%BB%83%E4%B9%A0">随堂练习</a>
-<ul>
-<li><a href="#1~100%E7%9A%84%E5%81%B6%E6%95%B0%E5%92%8C">1~100的偶数和</a></li>
-<li><a href="#%E6%9A%B4%E5%8A%9B%E6%B1%82%E7%B4%A0%E6%95%B0">暴力求素数</a></li>
-<li><a href="#%E7%B4%A0%E6%95%B0%E7%AD%9B">素数筛</a></li>
-</ul>
-</li>
-<li><a href="#%E9%99%84%E5%8A%A0%E7%9F%A5%E8%AF%86%E7%82%B9">附加知识点</a></li>
-<li><a href="#tips">Tips</a></li>
-<li><a href="#%E8%AF%BE%E7%A8%8B%E9%80%9F%E8%AE%B0">课程速记</a></li>
+<li><a href="#%E6%9D%A1%E6%AC%BE1%E8%A7%86c%E4%B8%BA%E4%B8%80%E4%B8%AA%E8%AF%AD%E8%A8%80%E8%81%94%E9%82%A6">条款1：视C++为一个语言联邦</a></li>
+<li><a href="#%E6%9D%A1%E6%AC%BE2%E5%B0%BD%E9%87%8F%E4%BB%A5constenuminline%E6%9B%BF%E6%8D%A2define">条款2：尽量以const/enum/inline替换#define</a></li>
+<li><a href="#%E6%9D%A1%E6%AC%BE3%E5%B0%BD%E5%8F%AF%E8%83%BD%E4%BD%BF%E7%94%A8const">条款3：尽可能使用const</a></li>
+<li><a href="#%E6%9D%A1%E6%AC%BE4%E7%A1%AE%E5%AE%9A%E5%AF%B9%E8%B1%A1%E8%A2%AB%E4%BD%BF%E7%94%A8%E5%89%8D%E5%B7%B2%E7%BB%8F%E5%85%88%E8%A2%AB%E5%88%9D%E5%A7%8B%E5%8C%96">条款4：确定对象被使用前已经先被初始化</a></li>
 </ul>
 
   </div>
@@ -574,8 +548,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://doublelll3.ml/lnxrm_7_Shell编程基础/">
-      7 Shell编程基础
+    <a class="post-title-link" href="https://doublelll3.ml/cpp_Effective_CPP/">
+      Effective C++阅读分享
     </a>
   </h1>
   <div class="post-meta">
@@ -583,7 +557,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-11-29 19:00:00">2020-11-29</span>
+      <span class="publish-time" data-t="2021-02-27 18:10:00">2021-02-27</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -598,20 +572,14 @@
       
       
       
-      <a href="https://doublelll3.ml/os/">
-        <span>操作系统</span>
+      <a href="https://doublelll3.ml/ccpp/">
+        <span>C/C++</span>
       </a>、
       
       
       
       <a href="https://doublelll3.ml/hzcla/">
         <span>海贼班</span>
-      </a>、
-      
-      
-      
-      <a href="https://doublelll3.ml/linux/">
-        <span>Linux</span>
       </a>
       
       
@@ -620,17 +588,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>7<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1686<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>521<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/lnxrm_7_Shell编程基础/" data-flag-title="7 Shell编程基础" class="meta-item pc-show leancloud_visitors">
+    <span id="/cpp_Effective_CPP/" data-flag-title="Effective C++阅读分享" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -639,418 +607,62 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>高级语言、脚本语言、解释型语言：xxx.sh，一般基于bash</p>
-<h1 id="课程内容">课程内容</h1>
-<h2 id="第一个shell脚本">第一个Shell脚本</h2>
-<pre><code class="language-shell">#!/bin/bash
-#注释
-echo &quot;Hello&quot;
-</code></pre>
+              <h1 id="条款1视c为一个语言联邦">条款1：视C++为一个语言联邦</h1>
+<p>除了过程、对象、模板、函数四种编程范式，还有元编程形式，其可包括在泛型编程里，即模板；STL就是元编程的一个典范</p>
 <ul>
-<li>第一行#!指定解释器，只在第一行才有效</li>
-<li>注释：&quot;#&quot;</li>
+<li>可体会学习C++的方法</li>
 </ul>
-<h2 id="变量">变量</h2>
-<pre><code class="language-shell">a=123
-a=hello
-a=`pwd`
-PATH=${PATH}:path  # 变量后接字符串，可以直接拼接字符串
-# 【注意】&quot;:a&quot;有特殊含义，会指到当前路径
-</code></pre>
+<h1 id="条款2尽量以constenuminline替换define">条款2：尽量以const/enum/inline替换#define</h1>
+<p>能不用#define就不用，为了方便调试；而用define容易掩盖错误，因为所有宏对编译器不可见</p>
+<ol>
+<li>对于单纯常量，最好用const对象或者enums</li>
+<li>对于形似函数的宏，最好用inline函数</li>
+</ol>
+<h1 id="条款3尽可能使用const">条款3：尽可能使用const</h1>
+<p>数据意义上的const VS. 逻辑意义上的const</p>
 <ul>
-<li>不需要定义变量类型【弱类型语言】
-<ul>
-<li>如a=123可以是字符串，也可以是整数</li>
+<li>编译器强制实施前者，我们编写程序时使用后者</li>
+<li>前者：真正数据意义上的const是很难实现的，涉及到指针，可能通过其他方式改变数据</li>
+<li>后者：核心的数据没变，就可以认为是逻辑意义上的const</li>
 </ul>
-</li>
-<li>&quot;:a&quot;有特殊含义
+<p>PS：const对象和方法</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210707184228548.png" alt="image-20210707184228548" style="zoom: 80%;" />
 <ul>
-<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/H1dGE64EnuA76FxC.png" alt="img" loading="lazy"></li>
-<li>可用双引号包住a，如a=$a:&quot;a&quot;或a=$a&quot;:a&quot;，得到a=123:a</li>
+<li>const对象：不能调用非const方法，因为非const方法内的变量可能发生改变</li>
+<li>const方法
+<ul>
+<li>内部是不能修改成员属性的</li>
+<li>mutable变量：逻辑上的const，虽然变量可改变，但不是核心数据</li>
 </ul>
 </li>
 </ul>
-<h3 id="特殊变量">特殊变量</h3>
-<p><strong>位置变量</strong></p>
+<h1 id="条款4确定对象被使用前已经先被初始化">条款4：确定对象被使用前已经先被初始化</h1>
+<p>1、手动初始化内置型对象</p>
 <ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/image-20201218170251055.png" alt="image-20201218170251055" style="zoom:67%;" />
-</li>
+<li>C++并不保证会初始化内置型对象</li>
 </ul>
-<p>结果：</p>
+<p>2、构造函数的赋值最好使用初始化列表</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210707184301293.png" alt="image-20210707184301293" style="zoom: 80%;" />
 <ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/image-20201215174953312.png" alt="image-20201215174953312" style="zoom:80%;" />
-</li>
-<li>
-<p>$n：如果n＞9，需要用大括号括起来</p>
-</li>
-<li>
-<p>$@ 和 $* 的区别在于：传入参数分别被双引号包围、且$变量也被双引号包围时，&quot;$@&quot; 会将所有的参数分开【一般情况】，而&quot;$*&quot; 会将所有的参数作为一个整体</p>
+<li>初始化列表调用的是构造函数
 <ul>
-<li>在用for...in 时可以看出，详见Shell特殊变量：<a href="http://c.biancheng.net/cpp/view/2739.html">Shell $0, $#, $*, $@, $?, $$和命令行参数</a>——C语言中文网</li>
+<li>构造函数和赋值运算符在C++中完全是两个概念</li>
+<li>构造函数主要负责对象初始化</li>
 </ul>
 </li>
-<li>
-<p>$#：不算$0</p>
-</li>
-</ul>
-<p><strong>状态变量</strong></p>
+<li>初始化列表（初值列）列出的成员顺序应该与它们在类内声明的顺序一致
 <ul>
-<li>$?：【上一条】指令执行结果，0——成功，非0——不成功
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/WZxQPRI.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>便于脚本自动判断指令成功与否</li>
+<li>所见顺序即实际顺序，方便维护</li>
+<li>即使反着写，程序还是按照声明顺序初始化变量</li>
 </ul>
 </li>
-<li>$$、$!：当前进程、最后运行的后台进程的PID，一般用于自动化测试、多脚本交互场景</li>
-</ul>
-<h2 id="输入输出">输入输出</h2>
+<li>减少“跨编译单元之初始化次序”问题，以local static对象替换non-local static对象
 <ul>
-<li>输入：read
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/FYoxJ3G.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>-p：显示友好提示，需在bash下使用</li>
-<li>-s：静默模式</li>
-<li>-t：输入等待时长，超时结束(单位：s)</li>
+<li>尽量跨文件初始化的依赖关系</li>
 </ul>
 </li>
-<li>输出：echo
-<ul>
-<li>-e：开启转义</li>
-</ul>
-</li>
-<li>输出：printf
-<ul>
-<li>和C语言的printf非常像！</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/eDTN857.png" alt="图片" style="zoom: 50%;" />
-</li>
-<li>[PS] !和\n放一起有特殊含义，需要分开
-<ul>
-<li>bash下需要分开</li>
-<li>zsh下可以分开，或用\转义</li>
-<li>一般对于<a href="https://www.runoob.com/w3cnote/shell-special-char.html">特殊符号</a>——菜鸟教程，需要警觉！</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="函数">函数</h2>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/ZPrTEAC.png" alt="图片" style="zoom: 50%;" />
-</li>
-<li>
-<p>没有形参</p>
-</li>
-<li>
-<p>定义：写法很多，function、()、{}组合搭配，第3种更类似C语言写法</p>
-</li>
-<li>
-<p>调用：函数名 参数...</p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/QNPEgM5.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>加function方便阅读</li>
-</ul>
-</li>
-<li>
-<p>❗【注意】shell中函数return的返回值有限制，范围是0-255，溢出会循环换算</p>
-</li>
-</ul>
-<h2 id="流程控制">流程控制</h2>
-<p>do——done、if——then——fi、case——esac</p>
-<h3 id="重点test表达式">【重点】TEST表达式⭐</h3>
-<ul>
-<li>可判断类型：字符串、整型、文件</li>
-<li>❗ 【注意】条件为真时，返回0，否则返回非0
-<ul>
-<li>Linux中命令的返回值也是如此，0才代表成功</li>
-</ul>
-</li>
-<li>[PS]
-<ul>
-<li>STRING1 = STRING2 也可以用== 【推荐后者，两个中括号[[ ]]支持】</li>
-<li>-G FILE：文件存在并且被有效组ID拥有
-<ul>
-<li>如果组被解散了，则组控制的文件的组ID就是无效的</li>
-</ul>
-</li>
-<li>具体可查阅man手册：man test</li>
-</ul>
-</li>
-</ul>
-<h3 id="分支结构">分支结构</h3>
-<p><strong>if</strong></p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/jskkNPD.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>if用两个中括号[[ ]]的写法，更高级，与TEST表达式兼容性更好</p>
-<ul>
-<li>而一个中括号[ ]是很多年前的写法，不推荐，两个中括号</li>
-<li>参考<a href="https://jishuin.proginn.com/p/763bfbd322c2">Linux Shell 中 ()、(())、[]、[[]]、{} 的作用</a>——博客</li>
-</ul>
-</li>
-</ul>
-<p><strong>case</strong></p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/Gcmmsqo.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>分号;;不能没有！相当于break，加了break也要有</p>
-</li>
-<li>
-<p>默认情况可用*)</p>
-</li>
-<li>
-<p>case用的较少，一般用来做菜单，比if更美观</p>
-</li>
-</ul>
-<h3 id="循环结构">循环结构</h3>
-<p><strong>for</strong></p>
-<ul>
-<li>
-<p>利用seq生成序列</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/RErKYyC.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>利用ls的匹配规则</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/dijMTBK.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>for的两种形式</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/4fYJlKD.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>双小括号(())中的内容只要符合C语言运算规则即可，变量可以不使用变量前缀$，可以写i++，平常不可以用++</p>
-</li>
-</ul>
-<p><strong>while</strong></p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/ph9c75d.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>同样适用test表达式</p>
-</li>
-<li>
-<p>初始化num变量，否则</p>
-<ul>
-<li>第一次echo $num时，$num是空值，表现为空行</li>
-<li>当遇到后面的+1时，系统判定它为整数类型，才当做整数用</li>
-</ul>
-</li>
-</ul>
-<p><strong>until</strong></p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/ArbsZlq.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>与while唯一的区别在于：until写的是停止条件，while写的是循环条件</p>
-</li>
-</ul>
-<h2 id="数组">数组</h2>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/1KrfABS.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>数组赋值【方式①】和调用</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/vxZJCeL.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>【常用的数组操作】还可以输出数组元素的下标，见后</p>
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/XkR8WFI.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>声明数组：declare -a num，方便阅读，不声明也可以 [弱类型语言]</p>
-</li>
-<li>
-<p>赋值【方式②、③】</p>
-<ul>
-<li>num[2]=10 num[5]=7 num[100]=3.2.4</li>
-<li>num=(1 a b 10)</li>
-</ul>
-</li>
-<li>
-<p>数组元素不一定要连续赋值，且可以为任意类型</p>
-<ul>
-<li>【常用的数组操作】加!：输出所有数组元素对应的下标，可以看出不是连续的</li>
-</ul>
-</li>
-</ul>
-<p>【其它数组操作】</p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/kCdnBAz.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>+=：追加</p>
-</li>
-<li>
-<p>unset：删除数组，或元素 [通过下标删除]</p>
-</li>
-<li>
-<p>[PS] 赋值方式③对多个空格也只作一个分隔符</p>
-</li>
-</ul>
-<p><strong>应用</strong></p>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/KCso9pi.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>可以用来存储文件名列表</p>
-</li>
-<li>
-<p>【注意】赋值方式③给数组赋值是以空格作为分隔符，所以如果文件名里有空格，需要特殊处理</p>
-</li>
-<li>
-<p>【PS】素数筛、线性筛</p>
-</li>
-</ul>
-<h1 id="随堂练习">随堂练习</h1>
-<h2 id="1~100的偶数和">1~100的偶数和</h2>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/U3SE9J8.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>$[ ]可用来做整数运算</p>
-</li>
-<li>
-<p>seq效率稍低</p>
-</li>
-</ul>
-<h2 id="暴力求素数">暴力求素数</h2>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/Tf9JTfx.png" alt="图片" style="zoom:80%;" />
-</li>
-<li>
-<p>函数的return值</p>
-<ul>
-<li>通过$?获得，在调用函数后echo $?即可，但是return值有范围限制0~255！</li>
-<li>通过命令替换符``取到</li>
-</ul>
-</li>
-<li>
-<p>注意对于循环变量i的冲突问题：定义局部变量</p>
-</li>
-<li>
-<p>🆒调试程序</p>
-<ul>
-<li>习惯：适当的echo输出</li>
-<li>全局调试：bash -x  *.sh</li>
-<li>局部调试：set -x [调试代码区域] set +x</li>
-</ul>
-</li>
-</ul>
-<h2 id="素数筛">素数筛</h2>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/oIUAfkz.png" alt="img" style="zoom: 80%;" />
-</li>
-<li>
-<p>方式一方便操作素数，且输出时可减少判断</p>
-</li>
-<li>
-<p>方式二还可以操作合数</p>
-</li>
-</ul>
-<p>【暴力法、素数筛2种方法效果比较】求2~10000的素数和</p>
-<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/GbtW6YK.png" alt="img" loading="lazy"></figure>
-<ul>
-<li>9.prime.sh 暴力法 —— 10.prime.sh 素数筛</li>
-</ul>
-<h1 id="附加知识点">附加知识点</h1>
-<ul>
-<li>.sh脚本可以直接bash或source执行，如果要使用./需要有可执行权限
-<ul>
-<li><a href="https://www.cnblogs.com/pcat/p/5467188.html">source、sh、bash、./有什么区别</a>——cnblogs</li>
-</ul>
-</li>
-<li>set -x可以开启shell调试</li>
-<li><a href="http://c.biancheng.net/view/1164.html">Shell命令替换：将命令的输出结果赋值给变量</a>——C语言中文网
-<ul>
-<li>$() 支持嵌套，反引号``不行</li>
-<li>$() 仅在 Bash 中有效 [似乎zsh、sh都支持]，而反引号``可在多种 Shell 中使用</li>
-</ul>
-</li>
-<li>双小括号(())中的内容
-<ul>
-<li>只要符合C语言运算规则即可</li>
-<li>变量可以不使用变量前缀$</li>
-<li>可以写i++，平常不可以用++</li>
-</ul>
-</li>
-<li>⭐在Shell中，变量还未定义时，其值为空，echo输出表现为空行</li>
-<li>⭐空格问题【严格】
-<ul>
-<li>赋值语句：=左右不能有空格</li>
-<li>TEST表达式相关：[[  ]]两端必须有空格</li>
-</ul>
-</li>
-<li>对于变量名i，如果想将$i与_i拼接，用$i_i，会去找变量i_i，所以要用${i}_i</li>
-</ul>
-<h1 id="tips">Tips</h1>
-<ul>
-<li>写Shell脚本
-<ul>
-<li>不要太考虑性能，单纯做数学计算效率低</li>
-<li>为的是快速解决一个问题，用来规划所有任务的流程</li>
-<li>做操作前记得加【备份】操作</li>
-<li>一般是让系统做事情，难于操作特定的程序做事情
-<ul>
-<li>程序一般有自己的参数设置，但不具有普适性</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>API一般指服务</li>
-<li>⭐<a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-shell-styleguide/contents/">Shell 风格指南</a>——Google 开源项目风格指南——Shell编程规范</li>
-<li><a href="https://sukbeta.github.io/shell-comment/">Shell脚本多行注释和单行注释的方法</a>——博客</li>
-</ul>
-<pre><code class="language-bash">:&lt;&lt;!
-[要注释的代码]
-!
-</code></pre>
-<ul>
-<li>可以了解<a href="https://www.runoob.com/linux/linux-comm-let.html">let</a>——菜鸟教程，方便的语法</li>
 </ul>
 <hr>
-<h1 id="课程速记">课程速记</h1>
-<ul>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/ErJdxj5.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/vvhOeW9.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>
-<img src="https://gitee.com/doubleL3/blog-imgs/raw/master/img/jwZAXCe.png" alt="图片" style="zoom:67%;" />
-</li>
-</ul>
 
             </div>
             
@@ -1063,7 +675,7 @@ PATH=${PATH}:path  # 变量后接字符串，可以直接拼接字符串
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://doublelll3.ml/lnxrm_7_Shell编程基础/" title="7 Shell编程基础">https://doublelll3.ml/lnxrm_7_Shell编程基础/</a>
+      <a href="https://doublelll3.ml/cpp_Effective_CPP/" title="Effective C++阅读分享">https://doublelll3.ml/cpp_Effective_CPP/</a>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">源码链接：</strong>
@@ -1086,18 +698,24 @@ PATH=${PATH}:path  # 变量后接字符串，可以直接拼接字符串
     
       <a href="https://doublelll3.ml/computer/"># 计算机</a>
     
-      <a href="https://doublelll3.ml/os/"># 操作系统</a>
+      <a href="https://doublelll3.ml/ccpp/"># C/C++</a>
     
       <a href="https://doublelll3.ml/hzcla/"># 海贼班</a>
-    
-      <a href="https://doublelll3.ml/linux/"># Linux</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="《C++程序设计》笔记汇总" href="https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/">《C++程序设计》笔记汇总</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="《C++程序设计》笔记汇总" href="https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/">上一篇</a>
+      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="《胡船长专属课堂》笔记汇总" href="https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/">《胡船长专属课堂》笔记汇总</a>
+        <a class="nav-mobile-next" title="《胡船长专属课堂》笔记汇总" href="https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>

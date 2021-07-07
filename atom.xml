@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-07-05T08:18:51.395Z</updated>
+    <updated>2021-07-07T10:52:32.359Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -382,13 +382,85 @@
 <p><strong>掌舵：光哥</strong></p>
 <h2 id="传送门">传送门</h2>
 <ol start="0">
-<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
+<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++（7.7更新）</a></li>
 <li>类和对象</li>
 <li>重载</li>
 </ol>
 <hr>
-<p>【附加】<a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
+<p>【附加】</p>
+<ul>
+<li>
+<p><a href="https://doublelll3.ml/cpp_Effective_CPP/">Effective C++阅读分享</a></p>
+</li>
+<li>
+<p><a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
+</li>
+</ul>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Effective C++阅读分享]]></title>
+        <id>https://doublelll3.ml/cpp_Effective_CPP/</id>
+        <link href="https://doublelll3.ml/cpp_Effective_CPP/">
+        </link>
+        <updated>2021-02-27T10:10:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="条款1视c为一个语言联邦">条款1：视C++为一个语言联邦</h1>
+<p>除了过程、对象、模板、函数四种编程范式，还有元编程形式，其可包括在泛型编程里，即模板；STL就是元编程的一个典范</p>
+<ul>
+<li>可体会学习C++的方法</li>
+</ul>
+<h1 id="条款2尽量以constenuminline替换define">条款2：尽量以const/enum/inline替换#define</h1>
+<p>能不用#define就不用，为了方便调试；而用define容易掩盖错误，因为所有宏对编译器不可见</p>
+<ol>
+<li>对于单纯常量，最好用const对象或者enums</li>
+<li>对于形似函数的宏，最好用inline函数</li>
+</ol>
+<h1 id="条款3尽可能使用const">条款3：尽可能使用const</h1>
+<p>数据意义上的const VS. 逻辑意义上的const</p>
+<ul>
+<li>编译器强制实施前者，我们编写程序时使用后者</li>
+<li>前者：真正数据意义上的const是很难实现的，涉及到指针，可能通过其他方式改变数据</li>
+<li>后者：核心的数据没变，就可以认为是逻辑意义上的const</li>
+</ul>
+<p>PS：const对象和方法</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210707184228548.png" alt="image-20210707184228548" style="zoom: 80%;" />
+<ul>
+<li>const对象：不能调用非const方法，因为非const方法内的变量可能发生改变</li>
+<li>const方法
+<ul>
+<li>内部是不能修改成员属性的</li>
+<li>mutable变量：逻辑上的const，虽然变量可改变，但不是核心数据</li>
+</ul>
+</li>
+</ul>
+<h1 id="条款4确定对象被使用前已经先被初始化">条款4：确定对象被使用前已经先被初始化</h1>
+<p>1、手动初始化内置型对象</p>
+<ul>
+<li>C++并不保证会初始化内置型对象</li>
+</ul>
+<p>2、构造函数的赋值最好使用初始化列表</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210707184301293.png" alt="image-20210707184301293" style="zoom: 80%;" />
+<ul>
+<li>初始化列表调用的是构造函数
+<ul>
+<li>构造函数和赋值运算符在C++中完全是两个概念</li>
+<li>构造函数主要负责对象初始化</li>
+</ul>
+</li>
+<li>初始化列表（初值列）列出的成员顺序应该与它们在类内声明的顺序一致
+<ul>
+<li>所见顺序即实际顺序，方便维护</li>
+<li>即使反着写，程序还是按照声明顺序初始化变量</li>
+</ul>
+</li>
+<li>减少“跨编译单元之初始化次序”问题，以local static对象替换non-local static对象
+<ul>
+<li>尽量跨文件初始化的依赖关系</li>
+</ul>
+</li>
+</ul>
+<hr>
 ]]></content>
     </entry>
     <entry>
@@ -419,11 +491,20 @@
 </ol>
 <h2 id="c程序设计">C++程序设计</h2>
 <ol start="0">
-<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
+<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++（7.7更新）</a></li>
 <li>类和对象</li>
 <li>重载</li>
 </ol>
-<p>【附加】<a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
+<hr>
+<p>【附加】</p>
+<ul>
+<li>
+<p><a href="https://doublelll3.ml/cpp_Effective_CPP/">Effective C++阅读分享</a></p>
+</li>
+<li>
+<p><a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
+</li>
+</ul>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
@@ -1876,34 +1957,6 @@ echo &quot;./ls -b $path:&quot; | lolcat
 <ul>
 <li>整体思路参考：<a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/#%E5%AE%9E%E7%8E%B0ls-al%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF">《1 文件、目录操作与实现ls的思路——实现ls-al的基本思路》</a></li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《网络与系统编程》笔记汇总]]></title>
-        <id>https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/</id>
-        <link href="https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/">
-        </link>
-        <updated>2021-01-06T05:40:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="网络与系统编程笔记汇总">《网络与系统编程》笔记汇总</h1>
-<p><strong>掌舵：宿船</strong></p>
-<h2 id="传送门">传送门</h2>
-<ol start="0">
-<li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">课程介绍及命令行解析函数</a></li>
-<li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">文件、目录操作与实现ls的思路</a></li>
-<li><a href="https://doublelll3.ml/wxb_2_%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9EIO/">阻塞与非阻塞IO</a></li>
-<li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">多进程</a></li>
-<li><a href="https://doublelll3.ml/wxb_4_%E9%AB%98%E7%BA%A7%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">高级进程管理</a></li>
-<li><a href="https://doublelll3.ml/wxb_5_%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/">进程间通信</a></li>
-<li><a href="https://doublelll3.ml/wxb_6_%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">多线程编程基础</a></li>
-<li><a href="https://doublelll3.ml/wxb_7_Socket%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">Socket编程基础</a></li>
-</ol>
-<hr>
-<ol>
-<li><a href="https://doublelll3.ml/wxb_Linux%E4%B8%ADls_-al%E7%9A%84%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0/">[Task001] Linux中ls -al的手动实现</a></li>
-<li><a href="https://doublelll3.ml/wxb_git_commit%E7%9A%84-m%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0/">[Task002] git commit的-m原理实现</a></li>
-<li><a href="https://doublelll3.ml/wxb_%E5%9F%BA%E4%BA%8E%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1_%E7%94%A8100%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%8A%A2%E7%AE%97%E7%B4%AF%E5%8A%A0%E5%92%8C/">[Task003] 基于文件的进程间通信——用100个进程抢算累加和</a></li>
-</ol>
-<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
 </feed>
