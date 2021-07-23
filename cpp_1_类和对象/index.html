@@ -8,7 +8,7 @@
 <meta name="keywords" content="非科班,海贼班,面试,计算机,算法,投资理财,时间管理,Double">
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
-<title>《网络与系统编程》笔记汇总 | Double&#39;s Way</title>
+<title>1 类和对象 | Double&#39;s Way</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1627047427413">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="《网络与系统编程》笔记汇总" />
-  <meta name="keywords" content="计算机,操作系统,笔记专辑,海贼班,Linux,网络系统" />
+  <meta name="description" content="1 类和对象" />
+  <meta name="keywords" content="计算机,C/C++,海贼班" />
 </head>
 
 <body>
@@ -279,12 +279,62 @@
   <div class="toc-wrapper auto-number no_compress"
     id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E7%BD%91%E7%BB%9C%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0%E6%B1%87%E6%80%BB">《网络与系统编程》笔记汇总</a>
+<li><a href="#%E8%AF%BE%E7%A8%8B%E5%86%85%E5%AE%B9">课程内容</a>
 <ul>
-<li><a href="#%E4%BC%A0%E9%80%81%E9%97%A8">传送门</a></li>
-<li><a href="#%E6%9C%89%E9%97%AE%E9%A2%98%E5%A4%9A%E5%A4%9A%E6%8C%87%E7%82%B9"><em>有问题多多指点！</em></a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%8F%98%E9%87%8F">类型和变量</a>
+<ul>
+<li><a href="#%E7%B1%BB%E5%9E%8B">类型</a></li>
 </ul>
 </li>
+<li><a href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0">构造函数和析构函数</a>
+<ul>
+<li><a href="#%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">三种基本的构造函数</a></li>
+<li><a href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0">析构函数</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%94%E5%9B%9E%E5%80%BC%E4%BC%98%E5%8C%96rvo">返回值优化（RVO）</a>
+<ul>
+<li><a href="#%E5%BC%95%E5%85%A5">引入</a></li>
+<li><a href="#%E5%85%B7%E4%BD%93%E5%88%86%E6%9E%90">具体分析</a></li>
+<li><a href="#%E5%85%B3%E9%97%ADrvo%E5%90%8E">关闭RVO后</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F%E7%82%B9">注意点</a></li>
+<li><a href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%9A%84%E4%BC%98%E5%8C%96">+ 赋值运算的优化</a></li>
+<li><a href="#%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E5%88%86%E6%9E%90">+ 拷贝构造函数的调用分析</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B6%E5%AE%83%E7%9F%A5%E8%AF%86%E7%82%B9">其它知识点</a>
+<ul>
+<li><a href="#%E5%BC%95%E7%94%A8">引用</a></li>
+<li><a href="#%E7%B1%BB%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95">类属性与方法</a></li>
+<li><a href="#const%E6%96%B9%E6%B3%95">const方法</a></li>
+<li><a href="#default%E5%92%8Cdelete">default和delete</a></li>
+<li><a href="#struct%E5%92%8Cclass">struct和class</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA">代码演示</a>
+<ul>
+<li><a href="#%E7%B1%BB%E7%9A%84%E7%A4%BA%E4%BE%8B">类的示例</a></li>
+<li><a href="#%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0cout">简单实现cout</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0-2">构造函数和析构函数</a>
+<ul>
+<li><a href="#1%E6%9E%90%E6%9E%84%E9%A1%BA%E5%BA%8F%E7%9A%84%E6%8E%A2%E8%AE%A8">1）析构顺序的探讨</a></li>
+<li><a href="#2%E8%BD%AC%E6%8D%A2%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">2）转换构造函数</a></li>
+<li><a href="#3%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">3）拷贝构造函数</a></li>
+<li><a href="#4%E6%80%9D%E8%80%83">4）思考</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D-%E6%B5%85%E6%8B%B7%E8%B4%9D">深拷贝、浅拷贝</a></li>
+<li><a href="#new-malloc%E5%B7%AE%E5%88%AB%E5%88%86%E6%9E%90">new、malloc差别分析</a></li>
+<li><a href="#%E7%B1%BB%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%96%B9%E6%B3%95-const-mutable">类属性与方法、const、mutable</a></li>
+<li><a href="#default-delete">default、delete</a></li>
+</ul>
+</li>
+<li><a href="#%E9%99%84%E5%8A%A0%E7%9F%A5%E8%AF%86%E7%82%B9">附加知识点</a></li>
+<li><a href="#%E6%80%9D%E8%80%83%E7%82%B9">思考点</a></li>
+<li><a href="#tips">Tips</a></li>
 </ul>
 
   </div>
@@ -550,8 +600,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/">
-      《网络与系统编程》笔记汇总
+    <a class="post-title-link" href="https://doublelll3.ml/cpp_1_类和对象/">
+      1 类和对象
     </a>
   </h1>
   <div class="post-meta">
@@ -559,7 +609,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2021-01-06 13:40:00">2021-01-06</span>
+      <span class="publish-time" data-t="2021-02-28 18:00:00">2021-02-28</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -574,32 +624,14 @@
       
       
       
-      <a href="https://doublelll3.ml/os/">
-        <span>操作系统</span>
-      </a>、
-      
-      
-      
-      <a href="https://doublelll3.ml/albums/">
-        <span>笔记专辑</span>
+      <a href="https://doublelll3.ml/ccpp/">
+        <span>C/C++</span>
       </a>、
       
       
       
       <a href="https://doublelll3.ml/hzcla/">
         <span>海贼班</span>
-      </a>、
-      
-      
-      
-      <a href="https://doublelll3.ml/linux/">
-        <span>Linux</span>
-      </a>、
-      
-      
-      
-      <a href="https://doublelll3.ml/net/">
-        <span>网络系统</span>
       </a>
       
       
@@ -608,17 +640,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1<span class="language" data-lan="minute">分钟</span></span>
+      <span>13<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>122<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>3627<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/wxb_《网络与系统编程》笔记汇总/" data-flag-title="《网络与系统编程》笔记汇总" class="meta-item pc-show leancloud_visitors">
+    <span id="/cpp_1_类和对象/" data-flag-title="1 类和对象" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -627,26 +659,493 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id="网络与系统编程笔记汇总">《网络与系统编程》笔记汇总</h1>
-<p><strong>掌舵：宿船</strong></p>
-<h2 id="传送门">传送门</h2>
-<ol start="0">
-<li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">课程介绍及命令行解析函数</a></li>
-<li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">文件、目录操作与实现ls的思路</a></li>
-<li><a href="https://doublelll3.ml/wxb_2_%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9EIO/">阻塞与非阻塞IO</a></li>
-<li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">多进程</a></li>
-<li><a href="https://doublelll3.ml/wxb_4_%E9%AB%98%E7%BA%A7%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">高级进程管理</a></li>
-<li><a href="https://doublelll3.ml/wxb_5_%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/">进程间通信</a></li>
-<li><a href="https://doublelll3.ml/wxb_6_%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">多线程编程基础</a></li>
-<li><a href="https://doublelll3.ml/wxb_7_Socket%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">Socket编程基础</a></li>
-</ol>
-<hr>
+              <h1 id="课程内容">课程内容</h1>
+<h2 id="类型和变量">类型和变量</h2>
+<blockquote>
+<p>可理解为类和对象的别名</p>
+</blockquote>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211429904.png" alt="image-20210723211429904" style="zoom:50%;" />
+</li>
+<li>C++中只规定了类型的最小位数，所以有的编译器可以实现更多位数的
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211436617.png" alt="image-20210723211436617" style="zoom: 67%;" />
+</li>
+<li>参考cppreference——<a href="https://en.cppreference.com/w/cpp/language/types#charater%20types">基础类型</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="类型">类型</h3>
+<blockquote>
+<p>= 类型数据 + 类型操作</p>
+</blockquote>
+<ul>
+<li>例如：int=4字节大小的数据 + 基本操作（<code>+-*/%</code>），可联想数据结构，int、double类型本质都是数据结构</li>
+<li>类型数据+类型操作 ➡️成员属性+成员方法
+<ul>
+<li>可理解为加强版的C语言struct（可以放属性，但不能放方法）</li>
+</ul>
+</li>
+</ul>
+<p><strong>访问权限</strong></p>
+<blockquote>
+<p>先理清类内和类外的概念，访问权限控制的是类外能不能访问类内</p>
+</blockquote>
+<ul>
+<li>public：公共
+<ul>
+<li>类内和类外都可以访问它</li>
+</ul>
+</li>
+<li>private：私有
+<ul>
+<li>只有类内的方法可以访问它</li>
+</ul>
+</li>
+<li>protected：受保护
+<ul>
+<li>除了类内，继承的类内也可以访问它</li>
+</ul>
+</li>
+<li>friendly：友元
+<ul>
+<li>它修饰的函数可以访问类内的私有成员和受保护成员</li>
+</ul>
+</li>
+</ul>
+<h2 id="构造函数和析构函数">构造函数和析构函数</h2>
+<blockquote>
+<p>对象的生命周期：构造→使用→析构</p>
+</blockquote>
+<h3 id="三种基本的构造函数">三种基本的构造函数</h3>
+<p><code>联想局部变量的初始化，对象也需要初始化</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><strong>构造函数类型</strong></th>
+<th style="text-align:left"><strong>使用方式</strong></th>
+<th style="text-align:left">⚠️<strong>注意</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">默认构造函数</td>
+<td style="text-align:left">People bob;<br>原型：People();</td>
+<td style="text-align:left">1、零参构造函数<br>2、编译器自动生成的</td>
+</tr>
+<tr>
+<td style="text-align:center">转换构造函数</td>
+<td style="text-align:left">People bob(&quot;DoubleLLL&quot;);<br>原型：People(string name);</td>
+<td style="text-align:left">1、一个参数的有参构造函数<br>2、该参数传递给类的成员变量，且不是本类的const引用<br>[PS] 有点像隐式的类型转换</td>
+</tr>
+<tr>
+<td style="text-align:center">拷贝构造函数</td>
+<td style="text-align:left">People bob(hug);<br>原型：People(const People &amp;a);</td>
+<td style="text-align:left">1、特殊的有参构造函数，传入的是本类的对象<br>2、与赋值运算符&quot;=&quot;不等价<br>[PS] 处理为const &amp;更方便</td>
+</tr>
+</tbody>
+</table>
+<h3 id="析构函数">析构函数</h3>
+<p><code>销毁对象</code></p>
+<p>原型：～People();</p>
+<p>⚠️注意：</p>
+<p>1、没有参数，也没有返回值</p>
+<p>2、资源回收时使用</p>
+<h3 id="小结">小结</h3>
+<blockquote>
+<p>都没有返回值，函数名与类名一致</p>
+</blockquote>
+<ul>
+<li>在工程开发中，构造函数和析构函数的功能会设计得非常简单
+<ul>
+<li>❓为什么不在构造函数中进行大量的资源申请？</li>
+<li>原因：构造函数的Bug，编译器较难察觉</li>
+<li>解决方式：伪构造函数、伪析构函数；工厂设计模式</li>
+</ul>
+</li>
+<li>[+] 移动构造函数（另一个关键构造函数，后续学习）
+<ul>
+<li>来自C++ 11标准——C++重新归回神坛的标准</li>
+<li>在此之前，STL的性能低下，因为C++的语言特性不好，它没有区分左值、右值概念，使得STL使用过程中发生的大量拷贝操作，尤其是深拷贝操作，会大大影响性能</li>
+<li>在此之后，有了右值的概念，引入了移动构造函数</li>
+</ul>
+</li>
+</ul>
+<h2 id="返回值优化rvo">返回值优化（RVO）</h2>
+<blockquote>
+<p>编译器默认开启了RVO</p>
+</blockquote>
+<h3 id="引入">引入</h3>
+<p><code>对象a通过fun()返回值进行构造</code></p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211452133.png" alt="image-20210723211452133" style="zoom:50%;" />
+<p>输出结果：</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211500226.png" alt="image-20210723211500226" style="zoom:50%;" />
+<ul>
+<li>理论上：应该输出1次transform和2次copy
+<ul>
+<li>详见具体分析👇</li>
+</ul>
+</li>
+<li>实际上：没有输出copy，且a.x的值为对象temp中的x值，即局部变量temp的地址直接使用了对象a的地址（先开辟的对象a的数据区，见下）
+<ul>
+<li>temp更像是一个引用</li>
+<li>存在编译器优化，即返回值优化RVO🌟</li>
+</ul>
+</li>
+</ul>
+<h3 id="具体分析">具体分析</h3>
+<p><code>对象初始化过程：1、开辟对象数据区➡️2、匹配构造函数➡️3、完成构造</code></p>
+<ul>
+<li>了解对象初始化过程后，再分析上面代码中的构造过程：
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211510540.png" alt="image-20210723211510540" style="zoom:50%;" />
+</li>
+<li>首先，开辟对象a的数据区</li>
+<li>然后，进入func函数，开辟对象temp的数据区，通过「转换构造」初始化局部变量temp——A temp(69);</li>
+<li>再者，通过「拷贝构造」将temp拷贝给临时匿名对象，并销毁对象temp——return temp;</li>
+<li>最后，通过「拷贝构造」将临时匿名对象拷贝给a，销毁临时匿名对象——Aa= func();</li>
+<li>👉由此可见，过程包含1次转换构造、2次拷贝构造</li>
+</ul>
+</li>
+<li>编译器优化
+<ul>
+<li>第1次优化，取消第1次「拷贝构造」，直接将temp拷贝给a（Windows下的优化）</li>
+<li>第2次优化，取消第2次「拷贝构造」，直接是temp指向a（Mac、Linux下的优化）</li>
+</ul>
+</li>
+</ul>
+<h3 id="关闭rvo后">关闭RVO后</h3>
+<p><code>通过g++ -fno-elide-constructors编译源文件，即可关闭RVO</code></p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211519691.png" alt="image-20210723211519691" style="zoom:50%;" />
+<ul>
+<li>出现了两次额外的「拷贝构造」，具体分析见上</li>
+</ul>
+<h3 id="注意点">注意点</h3>
+<ul>
+<li>编译器本质上是通过替换this指针实现RVO的</li>
+<li>因为编译器一般会对拷贝构造进行优化，所以在工程开发中，不要改变拷贝构造的语义
+<ul>
+<li>即：拷贝构造中只做拷贝操作，而不要做其它操作</li>
+<li>如：拷贝构造中，对拷贝的属性加1，就不符合拷贝构造的语义，编译器把拷贝构造优化掉后，结果与优化前不一致</li>
+</ul>
+</li>
+</ul>
+<h3 id="赋值运算的优化">+ 赋值运算的优化</h3>
+<p><code>也存在RVO——优化了1次拷贝构造，即将局部变量拷贝给临时匿名对象</code></p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211527733.png" alt="image-20210723211527733" style="zoom:50%;" />
+<ul>
+<li>添加了红框部分代码</li>
+<li>优化前结果：
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211535203.png" alt="image-20210723211535203" style="zoom:50%;" />
+</li>
+<li>1次「转换构造」 + 1次「拷贝构造」</li>
+</ul>
+</li>
+<li>优化后结果：
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211540883.png" alt="image-20210723211540883" style="zoom:50%;" />
+</li>
+<li>1次「拷贝构造」</li>
+</ul>
+</li>
+</ul>
+<h3 id="拷贝构造函数的调用分析">+ 拷贝构造函数的调用分析</h3>
+<p><code>多种写法下，拷贝构造函数是如何调用的？</code></p>
+<p><strong>场景</strong>：类A中包含一个自定义类Data的对象d，红框为添加的代码</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211549347.png" alt="image-20210723211549347" style="zoom:50%;" />
+<p>「主要关注第29行；关闭RVO编译，否则会跳过拷贝构造函数」</p>
 <ol>
-<li><a href="https://doublelll3.ml/wxb_Linux%E4%B8%ADls_-al%E7%9A%84%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0/">[Task001] Linux中ls -al的手动实现</a></li>
-<li><a href="https://doublelll3.ml/wxb_git_commit%E7%9A%84-m%E5%8E%9F%E7%90%86%E5%AE%9E%E7%8E%B0/">[Task002] git commit的-m原理实现</a></li>
-<li><a href="https://doublelll3.ml/wxb_%E5%9F%BA%E4%BA%8E%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1_%E7%94%A8100%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%8A%A2%E7%AE%97%E7%B4%AF%E5%8A%A0%E5%92%8C/">[Task003] 基于文件的进程间通信——用100个进程抢算累加和</a></li>
+<li>自定义拷贝构造函数，并且对每个成员属性都进行了显式拷贝，即第29行不变</li>
 </ol>
-<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211557942.png" alt="image-20210723211557942" style="zoom:50%;" />
+</li>
+<li>在构造对象d时，会调用Data类的拷贝构造函数</li>
+</ul>
+<ol start="2">
+<li>自定义拷贝构造函数，不对每个成员属性进行显式拷贝，即删去&quot;,d(a.d)&quot;</li>
+</ol>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211603337.png" alt="image-20210723211603337" style="zoom:50%;" />
+</li>
+<li>在构造对象d时，会调用Data类的<strong>默认</strong>构造函数（自定义时没显式拷贝，则匹配默认构造）</li>
+</ul>
+<ol start="3">
+<li>不自定义拷贝构造函数，编译器自动为其添加默认的拷贝构造函数，即删去第29～31行</li>
+</ol>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211610555.png" alt="image-20210723211610555" style="zoom:50%;" />
+</li>
+<li>在构造对象d时，会调用Data类的拷贝构造函数（编译器默认的）</li>
+</ul>
+<p><strong>结论</strong>：</p>
+<p>❗️要想达到预期的结果，在<strong>自定义拷贝构造函数</strong>时，应该对每个成员属性进行显式拷贝</p>
+<ul>
+<li>如果自定义的拷贝构造函数什么都不写，那该函数就什么都不会做</li>
+</ul>
+<h2 id="其它知识点">其它知识点</h2>
+<h3 id="引用">引用</h3>
+<blockquote>
+<p>引用就是其绑定对象的别名</p>
+</blockquote>
+<ul>
+<li>❗️引用在定义的时候就需要初始化，即绑定对象，如：
+<ul>
+<li>People a;</li>
+<li>定义时就初始化：People &amp;b = a;</li>
+<li>否则：People &amp;b; b = c; 会发生歧义——绑定对象还是赋值？</li>
+</ul>
+</li>
+</ul>
+<h3 id="类属性与方法">类属性与方法</h3>
+<blockquote>
+<p>加有static关键字<br>
+区别于成员属性（每一个对象特有的）、成员方法（this指针指向当前对象）</p>
+</blockquote>
+<ul>
+<li>类属性：该类所有对象统一的属性
+<ul>
+<li>全局唯一、共享</li>
+<li>例如：全人类的数量——人类中所有对象的数量</li>
+</ul>
+</li>
+<li>类方法：不单独属于某个对象的方法
+<ul>
+<li>不和对象绑定，无法访问this指针</li>
+<li>例如：测试某个高度是否为合法身高</li>
+</ul>
+</li>
+</ul>
+<h3 id="const方法">const方法</h3>
+<blockquote>
+<p>不改变对象的成员属性，不可调用非const成员函数</p>
+</blockquote>
+<ul>
+<li>提供给const对象使用（其任何属性都不能被改变）</li>
+</ul>
+<p>⚠️：</p>
+<p><strong>mutable</strong>：可变的，其修饰的变量在const方法中可变</p>
+<h3 id="default和delete">default和delete</h3>
+<blockquote>
+<p>默认函数的控制，C++ 11</p>
+</blockquote>
+<ul>
+<li>default：显式地使用编译器默认提供的规则
+<ul>
+<li>仅适用于类的特殊成员函数（默认构造函数、析构函数、拷贝构造函数、拷贝赋值运算符），且该特殊成员函数没有默认参数</li>
+<li>❗️该特性没有功能上的意义，这是C++的设计哲学：关注可读性、可维护性等
+<ul>
+<li>理解这种理念，可以提高自己在C++上的审美标准</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>delete：显式地禁用某个函数</li>
+</ul>
+<h3 id="struct和class">struct和class</h3>
+<ul>
+<li>struct
+<ul>
+<li>默认访问权限：public（黑名单机制，需要显式定义private成员）</li>
+<li>也是用来定义类的，有成员属性和成员方法，要与C中区分开来</li>
+</ul>
+</li>
+<li>class
+<ul>
+<li>默认访问权限：private（白名单机制：需要显式定义public成员）</li>
+</ul>
+</li>
+</ul>
+<p>❓：C++为什么要保留struct关键字？默认权限为什么是public？</p>
+<ul>
+<li>都是为了兼容C语言，可以减小推广难度</li>
+</ul>
+<p>PS：前端语言JavaScript为了减小推广难度，从名称蹭Java的热度，本质与Java无关</p>
+<h1 id="代码演示">代码演示</h1>
+<h2 id="类的示例">类的示例</h2>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211620159.png" alt="image-20210723211620159" style="zoom:50%;" />
+<ul>
+<li>类中属性和方法的声明和定义，建议分开</li>
+<li>this指针只在成员方法中使用，它指向当前对象的地址</li>
+</ul>
+<h2 id="简单实现cout">简单实现cout</h2>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211627367.png" alt="image-20210723211627367" style="zoom:50%;" />
+<ul>
+<li>cout是一个对象，是一个高级变量
+<ul>
+<li>返回其自身引用可以实现连续cout，使用引用的原因后续理解</li>
+<li>字符串需要使用const类型变量接收，否则会警告，因为是字符串是字面量</li>
+</ul>
+</li>
+<li>命名空间的精髓：相同的对象名可以存在不同的命名空间中</li>
+</ul>
+<h2 id="构造函数和析构函数-2">构造函数和析构函数</h2>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211634762.png" alt="image-20210723211634762" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211642463.png" alt="image-20210723211642463" style="zoom:50%;" />
+<p>运行结果：</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211648649.png" alt="image-20210723211648649" style="zoom:50%;" />
+<h3 id="1析构顺序的探讨">1）析构顺序的探讨</h3>
+<ul>
+<li>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211657929.png" alt="图片" style="zoom:50%;" />
+</li>
+<li>构造顺序：对象a，对象b</li>
+<li>析构顺序：对象b，对象a</li>
+<li>❓为什么析构函数的调用顺序是反过来的？是因为编译器产生的特例，还是一个正常的语言特性？👉语言特性
+<ul>
+<li>对象b的构造可能依赖对象a的信息➡️在析构的时候对象b也可能会用到对象a的信息➡️对象b要先于对象a析构</li>
+<li>❗️谁先构造，它就后析构</li>
+<li>PS
+<ul>
+<li>这与对象放在堆空间还是栈空间无关，实验表明，析构顺序都是反过来的</li>
+<li>可以认为是一种拓扑序</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2转换构造函数">2）转换构造函数</h3>
+<ul>
+<li>❓为什么叫做转换构造函数（单一参数的构造函数）
+<ul>
+<li>将一个变量转化成了该类型的对象</li>
+</ul>
+</li>
+<li>🌟a=123 涉及运算符重载：隐式类型转换➡️赋值➡️析构，详解见代码</li>
+</ul>
+<h3 id="3拷贝构造函数">3）拷贝构造函数</h3>
+<p>1、加引用：防止无限调用拷贝构造</p>
+<ul>
+<li>❗️如果拷贝构造函数为：A(A a) {}，则A b = a;时，</li>
+<li>因为[形参a]不是引用（值传递），所以需要先将[对象a]拷贝到[形参a]中生成临时对象</li>
+<li>此时，又会发生拷贝构造，而这个拷贝构造同样会经历上述过程</li>
+<li>从而无限递归</li>
+<li>PS：引用不产生任何拷贝行为，比指针更方便</li>
+</ul>
+<p>2、加const：防止const类型对象使用非const类型的拷贝构造，报错</p>
+<ul>
+<li>也防止被拷贝的对象被修改</li>
+</ul>
+<p>注：</p>
+<ul>
+<li>在定义对象时，&quot;=&quot;调用的是拷贝构造函数，而不是赋值运算，例如，A b = a</li>
+</ul>
+<h3 id="4思考">4）思考</h3>
+<ul>
+<li>对象是什么时候完成了构造？
+<ul>
+<li>「参考代码，以默认构造函数为例」</li>
+<li>功能上的构造 [逻辑上]：到第46行，构造函数表面上执行完成了</li>
+<li><strong>编译器的构造</strong>[实际上]：到第39行，就已经可以调用对象成员了❗️🌟</li>
+</ul>
+</li>
+<li>通过思考部分的代码可以理解：
+<ul>
+<li>场景：在类Data中添加有参构造函数，使编译器帮其添加的默认构造函数被删除</li>
+<li>过程：在生成类A对象时，成员属性Data类对象p、q需要已经完成构造，而此时Data类的默认构造已经被删除了</li>
+<li>结果
+<ul>
+<li>如果不使用初始化列表初始化p、q，则报错</li>
+<li>如果使用初始化列表，则可行，初始化列表属于编译器所谓的构造</li>
+</ul>
+</li>
+<li>❗️这说明<strong>编译器的构造</strong>是在函数声明后（第39行）就完成了</li>
+</ul>
+</li>
+<li>⚠️：
+<ul>
+<li>编译器会默认添加默认构造函数和拷贝构造函数</li>
+<li>构造行为都应该放在编译器所谓的构造里，如使用初始化列表</li>
+</ul>
+</li>
+</ul>
+<h2 id="深拷贝-浅拷贝">深拷贝、浅拷贝</h2>
+<p>拷贝对象：数组</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211710169.png" alt="image-20210723211710169" style="zoom:50%;" />
+<ul>
+<li>编译器默认添加的拷贝构造为浅拷贝
+<ul>
+<li>对于指针，只拷贝地址，所以对拷贝后的对象的修改，会修改原对象</li>
+</ul>
+</li>
+<li>自定义深拷贝版的拷贝构造函数
+<ul>
+<li>对于指针，拷贝其指向地址的值</li>
+<li>PS：构造函数只有在初始化时才被调用，不存在自己拷贝自己的行为</li>
+</ul>
+</li>
+</ul>
+<p>⚠️：</p>
+<ul>
+<li>为了适配重载&quot;&lt;&lt;&quot;时的const参数，需要实现const版的&quot;[]&quot;重载</li>
+<li>Array类里的end和数组结尾数据没关系，他只是用来监控数组越界的情况</li>
+</ul>
+<h2 id="new-malloc差别分析">new、malloc差别分析</h2>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211717190.png" alt="image-20210723211717190" style="zoom: 50%;" />
+<p>运行结果：</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211724784.png" alt="image-20210723211724784" style="zoom:50%;" />
+<ul>
+<li>malloc和new都可以申请空间，分别对应free和delete（如果是数组，则为delete[]）销毁空间</li>
+<li>new会自动调用构造函数，对应的delete会自动调用析构函数；而malloc和free都不会</li>
+<li>malloc +new可以实现原地构造，常用于深拷贝，其中，new还可以对应不同类的构造函数</li>
+</ul>
+<h2 id="类属性与方法-const-mutable">类属性与方法、const、mutable</h2>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211734657.png" alt="image-20210723211734657" style="zoom:50%;" />
+<ul>
+<li>类属性：带static在类内声明，不带static在类外初始化</li>
+<li>类方法：可以通过对象或类名两种方式调用它
+<ul>
+<li>因此，对象调用的方法不一定是成员方法，还可能是类方法</li>
+</ul>
+</li>
+<li>const：const对象只能调用const方法，const方法内只能调用const方法</li>
+<li>mutable：其修饰的变量可在const方法中改变</li>
+</ul>
+<h2 id="default-delete">default、delete</h2>
+<p><strong>功能需求</strong>：使某个类下的对象，不能被拷贝</p>
+<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211742795.png" alt="image-20210723211742795" style="zoom: 50%;" />
+<ul>
+<li>禁用拷贝构造函数和赋值运算符
+<ul>
+<li>拷贝构造函数：设置为=delete，或者，将其放在private权限中</li>
+<li>赋值运算符重载函数：同样设置为=delete（永远不能使用赋值运算），或者，将其放在private权限中（只有类内方法可以使用赋值运算）</li>
+<li>PS：赋值运算符要同时考虑const版和非const版</li>
+</ul>
+</li>
+<li>❓要真正实现对象不能被拷贝，应该将拷贝构造函数和赋值运算符重载都设置为=delete，否则类内方法还是可以拷贝该对象</li>
+</ul>
+<h1 id="附加知识点">附加知识点</h1>
+<ul>
+<li>构造函数后的花括号
+<ul>
+<li>加花括号，表示是一个函数实现</li>
+<li>不加花括号，则只是一个函数声明，还需要写一个专门的实现</li>
+</ul>
+</li>
+</ul>
+<h1 id="思考点">思考点</h1>
+<ul>
+<li>要关注编译器默认做的很多事情，这是C++复杂的地方</li>
+</ul>
+<h1 id="tips">Tips</h1>
+<ul>
+<li>C++
+<ul>
+<li>学习方法：按照编程范式分门别类地学习</li>
+<li>学习重点：程序的处理流程 [远比C复杂]</li>
+</ul>
+</li>
+</ul>
+<hr>
 
             </div>
             
@@ -659,7 +1158,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/" title="《网络与系统编程》笔记汇总">https://doublelll3.ml/wxb_《网络与系统编程》笔记汇总/</a>
+      <a href="https://doublelll3.ml/cpp_1_类和对象/" title="1 类和对象">https://doublelll3.ml/cpp_1_类和对象/</a>
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">源码链接：</strong>
@@ -682,30 +1181,16 @@
     
       <a href="https://doublelll3.ml/computer/"># 计算机</a>
     
-      <a href="https://doublelll3.ml/os/"># 操作系统</a>
-    
-      <a href="https://doublelll3.ml/albums/"># 笔记专辑</a>
+      <a href="https://doublelll3.ml/ccpp/"># C/C++</a>
     
       <a href="https://doublelll3.ml/hzcla/"># 海贼班</a>
-    
-      <a href="https://doublelll3.ml/linux/"># Linux</a>
-    
-      <a href="https://doublelll3.ml/net/"># 网络系统</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="Linux中ls -al的手动实现" href="https://doublelll3.ml/wxb_Linux中ls_-al的手动实现/">Linux中ls -al的手动实现</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="Linux中ls -al的手动实现" href="https://doublelll3.ml/wxb_Linux中ls_-al的手动实现/">上一篇</a>
-      
     </div>
     <div class="nav-next">
-      
-        <a class="nav-pc-next" title="《高级数据结构》笔记汇总" href="https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/">《高级数据结构》笔记汇总</a>
-        <a class="nav-mobile-next" title="《高级数据结构》笔记汇总" href="https://doublelll3.ml/gsj_《高级数据结构》笔记汇总/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>

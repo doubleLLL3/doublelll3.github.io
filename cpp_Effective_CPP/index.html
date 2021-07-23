@@ -9,7 +9,7 @@
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
 <title>Effective C++阅读分享 | Double&#39;s Way</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1627008373003">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1627047427413">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -2271,13 +2271,505 @@ string是一个class；头文件：&amp;lt;string&amp;gt;&lt;/p&gt;
       </div>
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://doublelll3.ml/cpp_1_类和对象/"" data-c="
+          &lt;h1 id=&#34;课程内容&#34;&gt;课程内容&lt;/h1&gt;
+&lt;h2 id=&#34;类型和变量&#34;&gt;类型和变量&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可理解为类和对象的别名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211429904.png&#34; alt=&#34;image-20210723211429904&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;C++中只规定了类型的最小位数，所以有的编译器可以实现更多位数的
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211436617.png&#34; alt=&#34;image-20210723211436617&#34; style=&#34;zoom: 67%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;参考cppreference——&lt;a href=&#34;https://en.cppreference.com/w/cpp/language/types#charater%20types&#34;&gt;基础类型&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;类型&#34;&gt;类型&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;= 类型数据 + 类型操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;例如：int=4字节大小的数据 + 基本操作（&lt;code&gt;+-*/%&lt;/code&gt;），可联想数据结构，int、double类型本质都是数据结构&lt;/li&gt;
+&lt;li&gt;类型数据+类型操作 ➡️成员属性+成员方法
+&lt;ul&gt;
+&lt;li&gt;可理解为加强版的C语言struct（可以放属性，但不能放方法）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;访问权限&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先理清类内和类外的概念，访问权限控制的是类外能不能访问类内&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;public：公共
+&lt;ul&gt;
+&lt;li&gt;类内和类外都可以访问它&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;private：私有
+&lt;ul&gt;
+&lt;li&gt;只有类内的方法可以访问它&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;protected：受保护
+&lt;ul&gt;
+&lt;li&gt;除了类内，继承的类内也可以访问它&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;friendly：友元
+&lt;ul&gt;
+&lt;li&gt;它修饰的函数可以访问类内的私有成员和受保护成员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;构造函数和析构函数&#34;&gt;构造函数和析构函数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对象的生命周期：构造→使用→析构&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;三种基本的构造函数&#34;&gt;三种基本的构造函数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;联想局部变量的初始化，对象也需要初始化&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;构造函数类型&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;strong&gt;使用方式&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;⚠️&lt;strong&gt;注意&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;默认构造函数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;People bob;&lt;br&gt;原型：People();&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1、零参构造函数&lt;br&gt;2、编译器自动生成的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;转换构造函数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;People bob(&amp;quot;DoubleLLL&amp;quot;);&lt;br&gt;原型：People(string name);&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1、一个参数的有参构造函数&lt;br&gt;2、该参数传递给类的成员变量，且不是本类的const引用&lt;br&gt;[PS] 有点像隐式的类型转换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;拷贝构造函数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;People bob(hug);&lt;br&gt;原型：People(const People &amp;amp;a);&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1、特殊的有参构造函数，传入的是本类的对象&lt;br&gt;2、与赋值运算符&amp;quot;=&amp;quot;不等价&lt;br&gt;[PS] 处理为const &amp;amp;更方便&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;析构函数&#34;&gt;析构函数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;销毁对象&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;原型：～People();&lt;/p&gt;
+&lt;p&gt;⚠️注意：&lt;/p&gt;
+&lt;p&gt;1、没有参数，也没有返回值&lt;/p&gt;
+&lt;p&gt;2、资源回收时使用&lt;/p&gt;
+&lt;h3 id=&#34;小结&#34;&gt;小结&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;都没有返回值，函数名与类名一致&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在工程开发中，构造函数和析构函数的功能会设计得非常简单
+&lt;ul&gt;
+&lt;li&gt;❓为什么不在构造函数中进行大量的资源申请？&lt;/li&gt;
+&lt;li&gt;原因：构造函数的Bug，编译器较难察觉&lt;/li&gt;
+&lt;li&gt;解决方式：伪构造函数、伪析构函数；工厂设计模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[+] 移动构造函数（另一个关键构造函数，后续学习）
+&lt;ul&gt;
+&lt;li&gt;来自C++ 11标准——C++重新归回神坛的标准&lt;/li&gt;
+&lt;li&gt;在此之前，STL的性能低下，因为C++的语言特性不好，它没有区分左值、右值概念，使得STL使用过程中发生的大量拷贝操作，尤其是深拷贝操作，会大大影响性能&lt;/li&gt;
+&lt;li&gt;在此之后，有了右值的概念，引入了移动构造函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;返回值优化rvo&#34;&gt;返回值优化（RVO）&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;编译器默认开启了RVO&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;引入&#34;&gt;引入&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;对象a通过fun()返回值进行构造&lt;/code&gt;&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211452133.png&#34; alt=&#34;image-20210723211452133&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211500226.png&#34; alt=&#34;image-20210723211500226&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;理论上：应该输出1次transform和2次copy
+&lt;ul&gt;
+&lt;li&gt;详见具体分析👇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;实际上：没有输出copy，且a.x的值为对象temp中的x值，即局部变量temp的地址直接使用了对象a的地址（先开辟的对象a的数据区，见下）
+&lt;ul&gt;
+&lt;li&gt;temp更像是一个引用&lt;/li&gt;
+&lt;li&gt;存在编译器优化，即返回值优化RVO🌟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;具体分析&#34;&gt;具体分析&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;对象初始化过程：1、开辟对象数据区➡️2、匹配构造函数➡️3、完成构造&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;了解对象初始化过程后，再分析上面代码中的构造过程：
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211510540.png&#34; alt=&#34;image-20210723211510540&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;首先，开辟对象a的数据区&lt;/li&gt;
+&lt;li&gt;然后，进入func函数，开辟对象temp的数据区，通过「转换构造」初始化局部变量temp——A temp(69);&lt;/li&gt;
+&lt;li&gt;再者，通过「拷贝构造」将temp拷贝给临时匿名对象，并销毁对象temp——return temp;&lt;/li&gt;
+&lt;li&gt;最后，通过「拷贝构造」将临时匿名对象拷贝给a，销毁临时匿名对象——Aa= func();&lt;/li&gt;
+&lt;li&gt;👉由此可见，过程包含1次转换构造、2次拷贝构造&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;编译器优化
+&lt;ul&gt;
+&lt;li&gt;第1次优化，取消第1次「拷贝构造」，直接将temp拷贝给a（Windows下的优化）&lt;/li&gt;
+&lt;li&gt;第2次优化，取消第2次「拷贝构造」，直接是temp指向a（Mac、Linux下的优化）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;关闭rvo后&#34;&gt;关闭RVO后&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;通过g++ -fno-elide-constructors编译源文件，即可关闭RVO&lt;/code&gt;&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211519691.png&#34; alt=&#34;image-20210723211519691&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;出现了两次额外的「拷贝构造」，具体分析见上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注意点&#34;&gt;注意点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;编译器本质上是通过替换this指针实现RVO的&lt;/li&gt;
+&lt;li&gt;因为编译器一般会对拷贝构造进行优化，所以在工程开发中，不要改变拷贝构造的语义
+&lt;ul&gt;
+&lt;li&gt;即：拷贝构造中只做拷贝操作，而不要做其它操作&lt;/li&gt;
+&lt;li&gt;如：拷贝构造中，对拷贝的属性加1，就不符合拷贝构造的语义，编译器把拷贝构造优化掉后，结果与优化前不一致&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;赋值运算的优化&#34;&gt;+ 赋值运算的优化&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;也存在RVO——优化了1次拷贝构造，即将局部变量拷贝给临时匿名对象&lt;/code&gt;&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211527733.png&#34; alt=&#34;image-20210723211527733&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;添加了红框部分代码&lt;/li&gt;
+&lt;li&gt;优化前结果：
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211535203.png&#34; alt=&#34;image-20210723211535203&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;1次「转换构造」 + 1次「拷贝构造」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;优化后结果：
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211540883.png&#34; alt=&#34;image-20210723211540883&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;1次「拷贝构造」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;拷贝构造函数的调用分析&#34;&gt;+ 拷贝构造函数的调用分析&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;多种写法下，拷贝构造函数是如何调用的？&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：类A中包含一个自定义类Data的对象d，红框为添加的代码&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211549347.png&#34; alt=&#34;image-20210723211549347&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;「主要关注第29行；关闭RVO编译，否则会跳过拷贝构造函数」&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自定义拷贝构造函数，并且对每个成员属性都进行了显式拷贝，即第29行不变&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211557942.png&#34; alt=&#34;image-20210723211557942&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;在构造对象d时，会调用Data类的拷贝构造函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;自定义拷贝构造函数，不对每个成员属性进行显式拷贝，即删去&amp;quot;,d(a.d)&amp;quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211603337.png&#34; alt=&#34;image-20210723211603337&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;在构造对象d时，会调用Data类的&lt;strong&gt;默认&lt;/strong&gt;构造函数（自定义时没显式拷贝，则匹配默认构造）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;不自定义拷贝构造函数，编译器自动为其添加默认的拷贝构造函数，即删去第29～31行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211610555.png&#34; alt=&#34;image-20210723211610555&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;在构造对象d时，会调用Data类的拷贝构造函数（编译器默认的）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;结论&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;❗️要想达到预期的结果，在&lt;strong&gt;自定义拷贝构造函数&lt;/strong&gt;时，应该对每个成员属性进行显式拷贝&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果自定义的拷贝构造函数什么都不写，那该函数就什么都不会做&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其它知识点&#34;&gt;其它知识点&lt;/h2&gt;
+&lt;h3 id=&#34;引用&#34;&gt;引用&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用就是其绑定对象的别名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;❗️引用在定义的时候就需要初始化，即绑定对象，如：
+&lt;ul&gt;
+&lt;li&gt;People a;&lt;/li&gt;
+&lt;li&gt;定义时就初始化：People &amp;amp;b = a;&lt;/li&gt;
+&lt;li&gt;否则：People &amp;amp;b; b = c; 会发生歧义——绑定对象还是赋值？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;类属性与方法&#34;&gt;类属性与方法&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;加有static关键字&lt;br&gt;
+区别于成员属性（每一个对象特有的）、成员方法（this指针指向当前对象）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;类属性：该类所有对象统一的属性
+&lt;ul&gt;
+&lt;li&gt;全局唯一、共享&lt;/li&gt;
+&lt;li&gt;例如：全人类的数量——人类中所有对象的数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;类方法：不单独属于某个对象的方法
+&lt;ul&gt;
+&lt;li&gt;不和对象绑定，无法访问this指针&lt;/li&gt;
+&lt;li&gt;例如：测试某个高度是否为合法身高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;const方法&#34;&gt;const方法&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不改变对象的成员属性，不可调用非const成员函数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;提供给const对象使用（其任何属性都不能被改变）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⚠️：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mutable&lt;/strong&gt;：可变的，其修饰的变量在const方法中可变&lt;/p&gt;
+&lt;h3 id=&#34;default和delete&#34;&gt;default和delete&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;默认函数的控制，C++ 11&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;default：显式地使用编译器默认提供的规则
+&lt;ul&gt;
+&lt;li&gt;仅适用于类的特殊成员函数（默认构造函数、析构函数、拷贝构造函数、拷贝赋值运算符），且该特殊成员函数没有默认参数&lt;/li&gt;
+&lt;li&gt;❗️该特性没有功能上的意义，这是C++的设计哲学：关注可读性、可维护性等
+&lt;ul&gt;
+&lt;li&gt;理解这种理念，可以提高自己在C++上的审美标准&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;delete：显式地禁用某个函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;struct和class&#34;&gt;struct和class&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;struct
+&lt;ul&gt;
+&lt;li&gt;默认访问权限：public（黑名单机制，需要显式定义private成员）&lt;/li&gt;
+&lt;li&gt;也是用来定义类的，有成员属性和成员方法，要与C中区分开来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;class
+&lt;ul&gt;
+&lt;li&gt;默认访问权限：private（白名单机制：需要显式定义public成员）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;❓：C++为什么要保留struct关键字？默认权限为什么是public？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;都是为了兼容C语言，可以减小推广难度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PS：前端语言JavaScript为了减小推广难度，从名称蹭Java的热度，本质与Java无关&lt;/p&gt;
+&lt;h1 id=&#34;代码演示&#34;&gt;代码演示&lt;/h1&gt;
+&lt;h2 id=&#34;类的示例&#34;&gt;类的示例&lt;/h2&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211620159.png&#34; alt=&#34;image-20210723211620159&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;类中属性和方法的声明和定义，建议分开&lt;/li&gt;
+&lt;li&gt;this指针只在成员方法中使用，它指向当前对象的地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;简单实现cout&#34;&gt;简单实现cout&lt;/h2&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211627367.png&#34; alt=&#34;image-20210723211627367&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;cout是一个对象，是一个高级变量
+&lt;ul&gt;
+&lt;li&gt;返回其自身引用可以实现连续cout，使用引用的原因后续理解&lt;/li&gt;
+&lt;li&gt;字符串需要使用const类型变量接收，否则会警告，因为是字符串是字面量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;命名空间的精髓：相同的对象名可以存在不同的命名空间中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;构造函数和析构函数-2&#34;&gt;构造函数和析构函数&lt;/h2&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211634762.png&#34; alt=&#34;image-20210723211634762&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211642463.png&#34; alt=&#34;image-20210723211642463&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;运行结果：&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211648649.png&#34; alt=&#34;image-20210723211648649&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;h3 id=&#34;1析构顺序的探讨&#34;&gt;1）析构顺序的探讨&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211657929.png&#34; alt=&#34;图片&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;构造顺序：对象a，对象b&lt;/li&gt;
+&lt;li&gt;析构顺序：对象b，对象a&lt;/li&gt;
+&lt;li&gt;❓为什么析构函数的调用顺序是反过来的？是因为编译器产生的特例，还是一个正常的语言特性？👉语言特性
+&lt;ul&gt;
+&lt;li&gt;对象b的构造可能依赖对象a的信息➡️在析构的时候对象b也可能会用到对象a的信息➡️对象b要先于对象a析构&lt;/li&gt;
+&lt;li&gt;❗️谁先构造，它就后析构&lt;/li&gt;
+&lt;li&gt;PS
+&lt;ul&gt;
+&lt;li&gt;这与对象放在堆空间还是栈空间无关，实验表明，析构顺序都是反过来的&lt;/li&gt;
+&lt;li&gt;可以认为是一种拓扑序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2转换构造函数&#34;&gt;2）转换构造函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;❓为什么叫做转换构造函数（单一参数的构造函数）
+&lt;ul&gt;
+&lt;li&gt;将一个变量转化成了该类型的对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;🌟a=123 涉及运算符重载：隐式类型转换➡️赋值➡️析构，详解见代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3拷贝构造函数&#34;&gt;3）拷贝构造函数&lt;/h3&gt;
+&lt;p&gt;1、加引用：防止无限调用拷贝构造&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;❗️如果拷贝构造函数为：A(A a) {}，则A b = a;时，&lt;/li&gt;
+&lt;li&gt;因为[形参a]不是引用（值传递），所以需要先将[对象a]拷贝到[形参a]中生成临时对象&lt;/li&gt;
+&lt;li&gt;此时，又会发生拷贝构造，而这个拷贝构造同样会经历上述过程&lt;/li&gt;
+&lt;li&gt;从而无限递归&lt;/li&gt;
+&lt;li&gt;PS：引用不产生任何拷贝行为，比指针更方便&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2、加const：防止const类型对象使用非const类型的拷贝构造，报错&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;也防止被拷贝的对象被修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在定义对象时，&amp;quot;=&amp;quot;调用的是拷贝构造函数，而不是赋值运算，例如，A b = a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4思考&#34;&gt;4）思考&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对象是什么时候完成了构造？
+&lt;ul&gt;
+&lt;li&gt;「参考代码，以默认构造函数为例」&lt;/li&gt;
+&lt;li&gt;功能上的构造 [逻辑上]：到第46行，构造函数表面上执行完成了&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编译器的构造&lt;/strong&gt;[实际上]：到第39行，就已经可以调用对象成员了❗️🌟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;通过思考部分的代码可以理解：
+&lt;ul&gt;
+&lt;li&gt;场景：在类Data中添加有参构造函数，使编译器帮其添加的默认构造函数被删除&lt;/li&gt;
+&lt;li&gt;过程：在生成类A对象时，成员属性Data类对象p、q需要已经完成构造，而此时Data类的默认构造已经被删除了&lt;/li&gt;
+&lt;li&gt;结果
+&lt;ul&gt;
+&lt;li&gt;如果不使用初始化列表初始化p、q，则报错&lt;/li&gt;
+&lt;li&gt;如果使用初始化列表，则可行，初始化列表属于编译器所谓的构造&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;❗️这说明&lt;strong&gt;编译器的构造&lt;/strong&gt;是在函数声明后（第39行）就完成了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;⚠️：
+&lt;ul&gt;
+&lt;li&gt;编译器会默认添加默认构造函数和拷贝构造函数&lt;/li&gt;
+&lt;li&gt;构造行为都应该放在编译器所谓的构造里，如使用初始化列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;深拷贝-浅拷贝&#34;&gt;深拷贝、浅拷贝&lt;/h2&gt;
+&lt;p&gt;拷贝对象：数组&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211710169.png&#34; alt=&#34;image-20210723211710169&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;编译器默认添加的拷贝构造为浅拷贝
+&lt;ul&gt;
+&lt;li&gt;对于指针，只拷贝地址，所以对拷贝后的对象的修改，会修改原对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自定义深拷贝版的拷贝构造函数
+&lt;ul&gt;
+&lt;li&gt;对于指针，拷贝其指向地址的值&lt;/li&gt;
+&lt;li&gt;PS：构造函数只有在初始化时才被调用，不存在自己拷贝自己的行为&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⚠️：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为了适配重载&amp;quot;&amp;lt;&amp;lt;&amp;quot;时的const参数，需要实现const版的&amp;quot;[]&amp;quot;重载&lt;/li&gt;
+&lt;li&gt;Array类里的end和数组结尾数据没关系，他只是用来监控数组越界的情况&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;new-malloc差别分析&#34;&gt;new、malloc差别分析&lt;/h2&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211717190.png&#34; alt=&#34;image-20210723211717190&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;p&gt;运行结果：&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211724784.png&#34; alt=&#34;image-20210723211724784&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;malloc和new都可以申请空间，分别对应free和delete（如果是数组，则为delete[]）销毁空间&lt;/li&gt;
+&lt;li&gt;new会自动调用构造函数，对应的delete会自动调用析构函数；而malloc和free都不会&lt;/li&gt;
+&lt;li&gt;malloc +new可以实现原地构造，常用于深拷贝，其中，new还可以对应不同类的构造函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;类属性与方法-const-mutable&#34;&gt;类属性与方法、const、mutable&lt;/h2&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211734657.png&#34; alt=&#34;image-20210723211734657&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;类属性：带static在类内声明，不带static在类外初始化&lt;/li&gt;
+&lt;li&gt;类方法：可以通过对象或类名两种方式调用它
+&lt;ul&gt;
+&lt;li&gt;因此，对象调用的方法不一定是成员方法，还可能是类方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;const：const对象只能调用const方法，const方法内只能调用const方法&lt;/li&gt;
+&lt;li&gt;mutable：其修饰的变量可在const方法中改变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;default-delete&#34;&gt;default、delete&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;功能需求&lt;/strong&gt;：使某个类下的对象，不能被拷贝&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210723211742795.png&#34; alt=&#34;image-20210723211742795&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;禁用拷贝构造函数和赋值运算符
+&lt;ul&gt;
+&lt;li&gt;拷贝构造函数：设置为=delete，或者，将其放在private权限中&lt;/li&gt;
+&lt;li&gt;赋值运算符重载函数：同样设置为=delete（永远不能使用赋值运算），或者，将其放在private权限中（只有类内方法可以使用赋值运算）&lt;/li&gt;
+&lt;li&gt;PS：赋值运算符要同时考虑const版和非const版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;❓要真正实现对象不能被拷贝，应该将拷贝构造函数和赋值运算符重载都设置为=delete，否则类内方法还是可以拷贝该对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;附加知识点&#34;&gt;附加知识点&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;构造函数后的花括号
+&lt;ul&gt;
+&lt;li&gt;加花括号，表示是一个函数实现&lt;/li&gt;
+&lt;li&gt;不加花括号，则只是一个函数声明，还需要写一个专门的实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;思考点&#34;&gt;思考点&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;要关注编译器默认做的很多事情，这是C++复杂的地方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;tips&#34;&gt;Tips&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;C++
+&lt;ul&gt;
+&lt;li&gt;学习方法：按照编程范式分门别类地学习&lt;/li&gt;
+&lt;li&gt;学习重点：程序的处理流程 [远比C复杂]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+">1 类和对象</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://doublelll3.ml/cpp_《CPP程序设计》笔记汇总/"" data-c="
           &lt;h1 id=&#34;c程序设计笔记汇总&#34;&gt;《C++程序设计》笔记汇总&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;掌舵：光哥&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;传送门&#34;&gt;传送门&lt;/h2&gt;
 &lt;ol start=&#34;0&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/&#34;&gt;从C到C++（7.7更新）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;类和对象&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/&#34;&gt;从C到C++&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cpp_1_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/&#34;&gt;类和对象&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;重载&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
@@ -3464,8 +3956,8 @@ ZY
 &lt;/ol&gt;
 &lt;h2 id=&#34;c程序设计&#34;&gt;C++程序设计&lt;/h2&gt;
 &lt;ol start=&#34;0&#34;&gt;
-&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/&#34;&gt;从C到C++（7.7更新）&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;类和对象&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/&#34;&gt;从C到C++&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cpp_1_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/&#34;&gt;类和对象&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;重载&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
