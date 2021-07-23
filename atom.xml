@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-07-17T03:00:56.398Z</updated>
+    <updated>2021-07-23T02:46:48.377Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -104,6 +104,11 @@
 <td>alt + Tab</td>
 </tr>
 <tr>
+<td style="text-align:left">同一应用下切换窗口</td>
+<td style="text-align:left">command + ～</td>
+<td>-</td>
+</tr>
+<tr>
 <td style="text-align:left">新建窗口</td>
 <td style="text-align:left">command + N</td>
 <td>ctrl + N</td>
@@ -192,6 +197,7 @@
 <li>参考<a href="https://support.apple.com/zh-cn/HT201236">Mac 键盘快捷键</a>——Apple官网</li>
 <li>Mac与Windows键位的一般对应关系：command——ctrl、option——alt、control——辅助ctrl</li>
 <li>Mac显示路径栏：option + command + P</li>
+<li>推荐一个Mac的破解软件网站：<a href="https://www.zhinin.com/">知您网</a>（https://www.zhinin.com/），一直在维护更新，资源颇多</li>
 </ul>
 ]]></content>
     </entry>
