@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-07-26T04:37:05.501Z</updated>
+    <updated>2021-08-01T15:18:44.285Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://doublelll3.ml/images/avatar.png</logo>
     <icon>https://doublelll3.ml/favicon.ico</icon>
     <rights>All rights reserved 2021, Double&apos;s Way</rights>
+    <entry>
+        <title type="html"><![CDATA[《从0开发一款iOS App》笔记汇总]]></title>
+        <id>https://doublelll3.ml/iosf0_《从0开发一款iOSApp》笔记汇总/</id>
+        <link href="https://doublelll3.ml/iosf0_《从0开发一款iOSApp》笔记汇总/">
+        </link>
+        <updated>2021-08-01T14:40:00.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="从0开发一款ios-app笔记汇总">《从0开发一款iOS App》笔记汇总</h1>
+<p>🎯：1. 熟练使用 UI 组件搭建 App 界面；2. 掌握 iOS 开发关键技术模块；3. 构建系统的移动开发知识体系；4. 具体独立开发完整 App 的能力。</p>
+<p>👨：导师，<strong>朱德权</strong>，腾讯高级工程师</p>
+<p>🔗：<a href="https://time.geekbang.org/course/intro/100025901">进入课程</a></p>
+<h2 id="传送门">传送门</h2>
+<ol start="0">
+<li>
+<p><a href="https://doublelll3.ml/iosf0_0_%E8%AF%BE%E7%A8%8B%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%BC%80%E5%8F%91%E5%89%8D%E5%87%86%E5%A4%87/">课程简介与开发前准备</a></p>
+</li>
+<li>
+<p>实现App的基本界面</p>
+</li>
+<li>
+<p>实现App的基础功能</p>
+</li>
+<li>
+<p>App功能扩展和完善</p>
+</li>
+</ol>
+<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[我，打工人，就这样开始新生活了]]></title>
         <id>https://doublelll3.ml/我，打工人，就这样开始了新生活/</id>
@@ -492,6 +520,7 @@
         <content type="html"><![CDATA[<h1 id="操作系统实战45讲笔记汇总">《操作系统实战45讲》笔记汇总</h1>
 <p>🎯：从0到1，实现自己的操作系统</p>
 <p>👨：导师，<strong>彭东</strong>，网名 LMOS，Intel 傲腾项目关键开发者</p>
+<p>🔗：<a href="https://time.geekbang.org/column/intro/411">进入课程</a></p>
 <h2 id="传送门">传送门</h2>
 <ol>
 <li><a href="https://doublelll3.ml/cosmos_1_%E5%B0%9D%E5%B0%9D%E9%B2%9C%EF%BC%9A%E4%BB%8E%E4%B8%80%E4%B8%AAHello%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AAHello/">尝尝鲜：从一个Hello到另一个Hello</a></li>
@@ -499,8 +528,6 @@
 <li>程序的基石：硬件</li>
 </ol>
 <h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
-<p>扫码即可加入：</p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210523213829681.png" alt="image-20210523213829681" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -1133,432 +1160,6 @@ int main(int argc, char **argv) {
 <li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">0 课程介绍及命令行解析函数</a>——getopt</li>
 <li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">1 文件、目录操作与实现ls的思路</a>——fopen、fread、fwrite</li>
 <li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">3 多进程</a>——fork、wait、flock⭐</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[git commit的-m原理实现]]></title>
-        <id>https://doublelll3.ml/wxb_git_commit的-m原理实现/</id>
-        <link href="https://doublelll3.ml/wxb_git_commit的-m原理实现/">
-        </link>
-        <updated>2021-01-17T10:00:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="功能要求">功能要求</h1>
-<p>[类似git commit -m &quot;msg&quot;的功能]</p>
-<ul>
-<li>使用-m选项时直接打印消息，未使用-m选项时自动打开vim供输入消息</li>
-<li>详细说明
-<ul>
-<li>① 当含有选项和选项参数-m &quot;first commit&quot;时
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/0xM7G6wlHc4iKOMK.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>直接打印相关消息</li>
-</ul>
-</li>
-<li>② 当没有-m选项时
-<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114221.png" alt="图片" loading="lazy"></li>
-<li>自动打开vim，用户在里面输入&quot;second commit&quot;，并保存退出后，再打印相关消息</li>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114230.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>如果在vim中没有输入有效消息 [注释不属于有效消息]</li>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114252.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>该操作会失败，并友好提示用户</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>[PS]
-<ul>
-<li>可能需要3个进程：父进程、vim进程、删除vim产生的文件的进程</li>
-<li>需要判断vim里输入的消息是否有效</li>
-<li>子进程跑，父进程等，读数据，打印出来 [cat]，rm</li>
-</ul>
-</li>
-</ul>
-<h1 id="最终效果">最终效果</h1>
-<ul>
-<li>输入./git_commit -m &quot;first commit&quot;
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114322.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>直接输出消息</li>
-</ul>
-</li>
-<li>输入./git_commit
-<ul>
-<li>先弹出vim，可输入任意消息</li>
-<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114334.png" alt="图片" loading="lazy"></li>
-<li>① 若输入包含注释的多行消息
-<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114354.png" alt="" loading="lazy"></li>
-<li>最终打印结果如下</li>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114406.png" style="zoom:67%;" />
-</li>
-<li>多行整合为一行 [同git设计]，并屏蔽注释</li>
-</ul>
-</li>
-<li>② 若直接:q退出vim
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114443.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>提示无法打开消息文件</li>
-</ul>
-</li>
-<li>③ 若输入全是注释
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114451.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>提示消息为空</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>[PS]</p>
-<ul>
-<li>vim打开文件时，是否可以指定其TYPE=GITCOMMIT？目前TYPE为空
-<ul>
-<li>👉 vim打开的文件名改为COMMIT_EDITMSG即可，这样消息代码就有些配色了</li>
-</ul>
-</li>
-</ul>
-<h1 id="实现过程">实现过程</h1>
-<h2 id="思路流程图">思路流程图</h2>
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114513.png" alt="图片" style="zoom: 50%;" />
-</li>
-</ul>
-<p>【进程分析】</p>
-<ul>
-<li>因为后面还需要创建<strong>rm</strong>的进程，所以不能将父进程直接替换为<strong>vim</strong>进程
-<ul>
-<li>否则退出vim后，程序就结束了</li>
-</ul>
-</li>
-<li>父进程需要fork一个子进程，再exec族将该进程替换为<strong>vim</strong>进程</li>
-<li>父进程再fork一个子进程，并替换为<strong>rm</strong>进程
-<ul>
-<li>直接将父进程直接替换为<strong>rm</strong>进程，也可行</li>
-<li>但fork一个新进程，可以让父进程监控删除状态，并有可能进行更多的操作</li>
-</ul>
-</li>
-</ul>
-<h2 id="获取命令行参数">获取命令行参数</h2>
-<p>捕捉-m选项，使用该选项必须带参数</p>
-<pre><code class="language-c++">#include &quot;head.h&quot;
-int main(int argc, char **argv) {
-    if (argc == 1) {
-        // 1.无选项：需要vim输入msg
-        printf(&quot;no msg, need vim.\n&quot;);
-    }
-    int opt;
-    while ((opt = getopt(argc, argv, &quot;m:&quot;)) != -1) {
-        switch (opt) {
-            case 'm': {
-                // 2.有-m及选项参数：打印参数
-                printf(&quot;msg: %s\n&quot;, optarg);
-            } break;
-            default: {
-                // 3.选项不合法：友好提示
-                fprintf(stderr, &quot;Usage: %s [-m msg]\n&quot;, argv[0]);
-                exit(1);
-            }
-        }
-    }
-    return 0;
-}
-</code></pre>
-<ul>
-<li>只有三种情况：① 无选项；② 有-m选项与选项参数；③ 选项不合法</li>
-<li>头文件head.h见末尾</li>
-<li>使用测试脚本test.sh [见末尾] 测试，效果如下：
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114533.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>展示了三种情况下的输出</li>
-</ul>
-</li>
-</ul>
-<h2 id="输入消息">输入消息</h2>
-<p>利用vim供输入消息</p>
-<ul>
-<li>父进程使用fork创建子进程，再利用execlp将其替换为vim进程</li>
-<li>父进程使用wait监控子进程状态，并避免产生僵尸进程</li>
-</ul>
-<pre><code class="language-c++">// 输入消息
-void input_msg() {
-    pid_t pid;
-    int status;
-    // 父进程复制一个子进程
-    if ((pid = fork()) &lt; 0) {
-        perror(&quot;fork()&quot;);
-        exit(1);
-    }
-    if (pid == 0) {
-        // 将子进程替换为vim进程
-        execlp(&quot;vim&quot;, &quot;vim&quot;, &quot;COMMIT_MSG&quot;, NULL);
-    } else {
-        wait(&amp;status);  // 监控子进程状态
-        // 父进程提示vim出错
-        if (WEXITSTATUS(status)) printf(&quot;vim error!\n&quot;);
-        else printf(&quot;input msg completed!\n&quot;);
-    }
-    return ;
-}
-</code></pre>
-<ul>
-<li>命令无选项时，用vim进程打开COMMIT_MSG文件
-<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114552.png" alt="图片" loading="lazy"></li>
-<li>用户可输入消息</li>
-</ul>
-</li>
-<li>退出vim后，vim进程终止，父进程可感知
-<ul>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/76aV94dOxwPhW5Vh.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>父进程提示&quot;input msg completed!&quot;</li>
-</ul>
-</li>
-</ul>
-<h2 id="读取消息">读取消息</h2>
-<p>父进程尝试读取消息文件</p>
-<ul>
-<li>【友好提示】消息文件可能无法打开 [如文件不存在]，也可能不包含有效消息 [全是注释]</li>
-<li>【分行解析】判断行注释的存在；如果输入了多行有效消息，打印结果时整合到一行，每行消息用空格隔开 [同git的设计]</li>
-</ul>
-<pre><code class="language-c++">#define MAX_LENGTH 512
-// 读取消息
-void read_msg() {
-    int fd, flag = 0;                    // flag：是否读取到了有效消息
-    char buff[MAX_LENGTH] = {0};         // 最多读取MAX_LENGTH字节消息
-    ssize_t nread;
-    // 如果无法打开消息文件，友好提示
-    if ((fd = open(&quot;COMMIT_MSG&quot;, O_RDONLY)) &lt; 0) {
-        printf(&quot;aborting commit due to msg file can't open.\n&quot;);
-        exit(1);
-    }
-    // 读取消息文件
-    if ((nread = read(fd, buff, sizeof(buff) - 1)) &gt; 0) {
-        char *line;
-        // 分行判断消息是否有效
-        line = strtok(buff, &quot;\n&quot;);
-        while (line != NULL) {
-            // 如果不是无效消息 [不是注释]
-            if (line[0] != '#') {
-                flag || printf(&quot;msg:&quot;);  // 第一次打印有效消息时打印消息前缀：&quot;msg:&quot;
-                flag = 1;
-                printf(&quot; %s&quot;, line);
-            }
-            line = strtok(NULL, &quot;\n&quot;);   // 不断调用直到遇到buff的'\0'
-        }
-        flag &amp;&amp; printf(&quot;\n&quot;);
-    }
-    // 如果没有读到有效消息，友好提示
-    if (!flag) {
-        printf(&quot;aborting commit due to empty commit msg.\n&quot;);
-    }
-    close(fd);
-    return ;
-}
-</code></pre>
-<ul>
-<li>特判flag输出消息前缀：&quot;msg:&quot;</li>
-<li>最多读取消息文件的前512个字节</li>
-<li>⭐字符串分割函数strtok——<a href="http://www.cplusplus.com/reference/cstring/strtok/?kw=strtok">cplusplus</a>
-<ul>
-<li>char* strtok(char* str, const char* delimiters)</li>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114631.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>需要不断调用，从第二次起传入的str替换为NULL，每次调用返回一个被分割的字符串，返回NULL表示到达str末尾</li>
-</ul>
-</li>
-<li>效果如下：
-<ul>
-<li>命令无选项时，在vim中输入下列消息</li>
-<li><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114643.png" alt="图片" loading="lazy"></li>
-<li>读取成功后，整合到一行打印</li>
-<li>
-<img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/20210120114654.png" alt="图片" style="zoom:67%;" />
-</li>
-<li>注释会被忽略</li>
-</ul>
-</li>
-</ul>
-<h2 id="删除消息文件">删除消息文件</h2>
-<p>为了让父进程有可能做更多事，这里fork了一个子进程，并替换为rm进程</p>
-<ul>
-<li>父进程可监控rm进程发挥状态，虽然rm进程也会报失败信息</li>
-</ul>
-<pre><code class="language-c++">// 删除消息文件
-void remove_file() {
-    pid_t pid;
-    int status;
-    if ((pid = fork()) &lt; 0) {
-        perror(&quot;fork&quot;);
-        exit(1);
-    }
-    if (pid == 0) {
-        execlp(&quot;rm&quot;, &quot;rm&quot;, &quot;COMMIT_MSG&quot;, NULL);
-    } else {
-        wait(&amp;status);
-        // 父进程提示rm失败 [rm进程也会有提示]
-        if (WEXITSTATUS(status)) printf(&quot;remove msg file error!\n&quot;);
-    }
-    return ;
-}
-</code></pre>
-<ul>
-<li>使用完消息文件后，不再留下COMMIT_MSG文件</li>
-</ul>
-<h1 id="完整代码">完整代码</h1>
-<h2 id="git_commitc">git_commit.c</h2>
-<pre><code class="language-c++">#include &quot;head.h&quot;
-#define MAX_LENGTH 512
-// 输入消息
-void input_msg() {
-    pid_t pid;
-    int status;
-    // 父进程复制一个子进程
-    if ((pid = fork()) &lt; 0) {
-        perror(&quot;fork()&quot;);
-        exit(1);
-    }
-    if (pid == 0) {
-        // 将子进程替换为vim进程
-        execlp(&quot;vim&quot;, &quot;vim&quot;, &quot;COMMIT_MSG&quot;, NULL);
-    } else {
-        wait(&amp;status);  // 监控子进程状态
-        // 父进程提示vim出错
-        if (WEXITSTATUS(status)) printf(&quot;vim error!\n&quot;);
-    }
-    return ;
-}
-// 读取消息
-void read_msg() {
-    int fd, flag = 0;                    // flag：是否读取到了有效消息
-    char buff[MAX_LENGTH] = {0};         // 最多读取MAX_LENGTH字节消息
-    ssize_t nread;
-    // 如果无法打开消息文件，友好提示
-    if ((fd = open(&quot;COMMIT_MSG&quot;, O_RDONLY)) &lt; 0) {
-        printf(&quot;aborting commit due to msg file can't open.\n&quot;);
-        exit(1);
-    }
-    // 读取消息文件
-    if ((nread = read(fd, buff, sizeof(buff) - 1)) &gt; 0) {
-        char *line;
-        // 分行判断消息是否有效
-        line = strtok(buff, &quot;\n&quot;);
-        while (line != NULL) {
-            // 如果不是无效消息 [不是注释]
-            if (line[0] != '#') {
-                flag || printf(&quot;msg:&quot;);  // 第一次打印有效消息时打印消息前缀：&quot;msg:&quot;
-                flag = 1;
-                printf(&quot; %s&quot;, line);
-            }
-            line = strtok(NULL, &quot;\n&quot;);   // 不断调用直到遇到buff的'\0'
-        }
-        flag &amp;&amp; printf(&quot;\n&quot;);
-    }
-    // 如果没有读到有效消息，友好提示
-    if (!flag) {
-        printf(&quot;aborting commit due to empty commit msg.\n&quot;);
-    }
-    close(fd);
-    return ;
-}
-// 删除消息文件
-void remove_file() {
-    pid_t pid;
-    int status;
-    if ((pid = fork()) &lt; 0) {
-        perror(&quot;fork&quot;);
-        exit(1);
-    }
-    if (pid == 0) {
-        execlp(&quot;rm&quot;, &quot;rm&quot;, &quot;COMMIT_MSG&quot;, NULL);
-    } else {
-        wait(&amp;status);
-        // 父进程提示rm失败 [rm进程也会有提示]
-        if (WEXITSTATUS(status)) printf(&quot;remove msg file error!\n&quot;);
-    }
-    return ;
-}
-int main(int argc, char **argv) {
-    if (argc == 1) {
-        // 1.无选项：需要vim输入msg
-        input_msg();
-        read_msg();
-        remove_file();  // 如果可以到这步，消息文件已产生
-    }
-    int opt;
-    while ((opt = getopt(argc, argv, &quot;m:&quot;)) != -1) {
-        switch (opt) {
-            case 'm': {
-                // 2.有-m及选项参数：打印参数
-                printf(&quot;msg: %s\n&quot;, optarg);
-            } break;
-            default: {
-                // 3.选项不合法：友好提示
-                fprintf(stderr, &quot;Usage: %s [-m msg]\n&quot;, argv[0]);
-                exit(1);
-            }
-        }
-    }
-    return 0;
-}
-</code></pre>
-<h2 id="headh">head.h</h2>
-<pre><code class="language-c++">#ifndef _HEAD_H
-#define _HEAD_H
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-#include &lt;sys/types.h&gt;
-#include &lt;sys/wait.h&gt;
-#include &lt;sys/stat.h&gt;
-#include &lt;fcntl.h&gt;
-#include &lt;string.h&gt;
-#endif
-</code></pre>
-<h2 id="testsh">test.sh</h2>
-<pre><code class="language-shell">#!/bin/bash
-cmd=&quot;./git_commit&quot;
-msg=&quot;first commit&quot;
-echo &quot;1)${cmd}:&quot; | lolcat
-${cmd}
-echo &quot;2)${cmd} -m \&quot;${msg}\&quot;:&quot; | lolcat
-${cmd} -m &quot;${msg}&quot;
-echo &quot;3)${cmd} -m:&quot; | lolcat
-${cmd} -m
-echo &quot;3)${cmd} -b:&quot; | lolcat
-${cmd} -b
-</code></pre>
-<ul>
-<li>./git_commit的git_commit是使用gcc ... -o git_commit生成的可执行文件名</li>
-</ul>
-<h1 id="参考">参考</h1>
-<ul>
-<li>主要知识点参考《网络与系统编程》
-<ul>
-<li><a href="https://doublelll3.ml/wxb_0_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/">0 课程介绍及命令行解析函数</a>——getopt</li>
-<li><a href="https://doublelll3.ml/wxb_1_%E6%96%87%E4%BB%B6%E3%80%81%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E7%8E%B0ls%E7%9A%84%E6%80%9D%E8%B7%AF/">1 文件、目录操作与实现ls的思路</a>——open、read</li>
-<li><a href="https://doublelll3.ml/wxb_3_%E5%A4%9A%E8%BF%9B%E7%A8%8B/">3 多进程</a>——fork、wait、exec族⭐</li>
 </ul>
 </li>
 </ul>
