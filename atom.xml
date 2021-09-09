@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-08-01T15:18:44.285Z</updated>
+    <updated>2021-09-09T15:05:07.212Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -17,7 +17,13 @@
         </link>
         <updated>2021-08-01T14:40:00.000Z</updated>
         <content type="html"><![CDATA[<h1 id="从0开发一款ios-app笔记汇总">《从0开发一款iOS App》笔记汇总</h1>
-<p>🎯：1. 熟练使用 UI 组件搭建 App 界面；2. 掌握 iOS 开发关键技术模块；3. 构建系统的移动开发知识体系；4. 具体独立开发完整 App 的能力。</p>
+<p>🎯</p>
+<ol>
+<li>熟练使用 UI 组件搭建 App 界面；</li>
+<li>掌握 iOS 开发关键技术模块；</li>
+<li>构建系统的移动开发知识体系；</li>
+<li>具体独立开发完整 App 的能力。</li>
+</ol>
 <p>👨：导师，<strong>朱德权</strong>，腾讯高级工程师</p>
 <p>🔗：<a href="https://time.geekbang.org/course/intro/100025901">进入课程</a></p>
 <h2 id="传送门">传送门</h2>
