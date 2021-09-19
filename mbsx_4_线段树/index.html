@@ -9,7 +9,7 @@
 <meta name="description" content="你永远不知道你不知道什么">
 <meta name="theme-color" content="#000">
 <title>4 线段树 | Double&#39;s Way</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1631199748778">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/favicon.ico?v=1632050125849">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/css/muse.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/doubleLLL3/doubleLLL3.github.io@main/media/fonts/font-awesome.css">
 <link
@@ -250,19 +250,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">25</span>
+        <span class="site-item-stat-count">26</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">17</span>
+        <span class="site-item-stat-count">18</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">17</span>
+        <span class="site-item-stat-count">18</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -1446,6 +1446,466 @@
     <div class="result" id="result">
       
       <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://doublelll3.ml/git3_1_Git基础/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;本机测试环境：macOS 11&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;01-课程综述&#34;&gt;01 | 课程综述&lt;/h1&gt;
+&lt;p&gt;VSC：版本控制系统&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;集中式——客户端必须时刻和服务器相连
+&lt;ul&gt;
+&lt;li&gt;SVM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;分布式——服务端和客户端都有完整的版本库
+&lt;ul&gt;
+&lt;li&gt;Git，Linus开发&lt;/li&gt;
+&lt;li&gt;基于Git的开源社区——背景：DevOps时代，开发运维
+&lt;ul&gt;
+&lt;li&gt;GitHub——全球最大&lt;/li&gt;
+&lt;li&gt;GitLab——公司常用；免费、提供了持续集成-CI；如阿里云、点评&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;02-安装git&#34;&gt;02 | 安装Git&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git&#34;&gt;起步-安装Git&lt;/a&gt;——官网：Linux、macOS、Windows、源码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;03-使用git之前需要做的最小配置&#34;&gt;03 | 使用Git之前需要做的最小配置&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 添加name和email配置
+git config [--local | --global | --system] user.name &#39;Your name&#39;
+git config [--local | --global | --system] user.email &#39;Your email&#39;
+## 查看现有配置
+git config --list [--local | --global | --system]
+## 区别
+##  --local：本仓库
+##  --global: 当前用户的所有仓库
+##  --system: 本系统的所有用户
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：记录人员信息，CR（Code Review，代码审查）时也可以对应发邮件提醒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;04-创建第一个仓库并配置local用户信息&#34;&gt;04 | 创建第一个仓库并配置local用户信息&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;创建仓库的两种方式，均会生成.git文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 在已有项目文件夹里创建git仓库
+git init
+## 新建一个名为[Project Name]的git仓库
+git init [Project Name]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;如果需要单独配置local用户信息，使用--local配置即可，该种配置优先级最高，见上一节&lt;/li&gt;
+&lt;li&gt;进行一次简单的commit❗️&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 添加文件到该git项目中，略
+## 添加要commit的文件到
+git add [File Name]
+### PS：添加当前路径下的所有文件—— git add .
+## 附带信息进行commit操作
+git commit -m&#39;Some Message&#39;
+### 查看git状态，如：哪些文件待commit，哪些未被跟踪
+git status
+### 查看git记录，如：commit的记录
+git log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;05-通过几次commit来认识工作区和暂存区&#34;&gt;05 | 通过几次commit来认识工作区和暂存区&lt;/h1&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919175938063.png&#34; alt=&#34;image-20210919175938063&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;暂存区&lt;/strong&gt;❗️——Git的精髓之一
+&lt;ul&gt;
+&lt;li&gt;使用场景：有两套方案，第一套方案可以暂存，然后做第二套方案，如果第二套方案没有第一套好，可以再回到第一套&lt;/li&gt;
+&lt;li&gt;PS：
+&lt;ul&gt;
+&lt;li&gt;如果要把工作区的某个 file 替换为暂存区，则 &lt;code&gt;git checkout -- file&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果要把工作区变更的所有文件都&lt;strong&gt;恢复&lt;/strong&gt;成和暂存区的一样，则 &lt;code&gt;git checkout *&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add -u&lt;/code&gt; 与 &lt;code&gt;git add .&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;前者：只操作&lt;strong&gt;已经被跟踪的文件&lt;/strong&gt;，即将文件的修改和删除，添加到暂存区&lt;/li&gt;
+&lt;li&gt;后者：还会操作文件的新建，即将文件的创建、修改和删除，添加到暂存区
+&lt;ul&gt;
+&lt;li&gt;PS： &lt;code&gt;git add all/-A&lt;/code&gt; 针对整个仓库，不只是当前路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;具体操作类似上一节——一次简单的commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;06-给文件重命名的简便方法&#34;&gt;06 | 给文件重命名的简便方法&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;细化步骤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 重命名
+mv readme readme.md
+## 添加新文件readme.md
+git add readme.md
+## 删除被跟踪的旧文件readme
+git rm readme
+## 提交
+git commit -m&amp;quot;rename&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;git reset --hard&lt;/code&gt; 回退到最新的一次提交，即清空暂存区&lt;/li&gt;
+&lt;li&gt;再展示精简步骤&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 一条命令顶上面三条
+git mv readme readme.md
+## 提交
+git commit -m&amp;quot;rename&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;实操展示
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180107864.png&#34; alt=&#34;image-20210919180107864&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;通过git status实时观察暂存区状态&lt;/li&gt;
+&lt;li&gt;PS：第一种方式git status也能检测出是renamed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;07-通过git-log查看版本演变历史&#34;&gt;07 | 通过git log查看版本演变历史&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 查看简洁的单行历史
+git log --oneline
+## 查看最近的4条历史
+git log -n4
+git log -4 
+## 查看所有分支的历史
+git log --all
+## 查看指定分支(名为BRANCH_NAME)的历史
+git log BRANCH_NAME
+## 查看图形化的版本历史
+git log --graph
+## 组合使用：查看所有分支最近4条图形化的单行历史
+git log --all -n4 --graph --oneline
+## 跳转到网页版的git log帮助文档
+git help --web log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git log --all -n4 --graph --oneline&lt;/code&gt; 效果图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180234006.png&#34; alt=&#34;image-20210919180234006&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;附加命令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git branch&lt;/code&gt; 查看本地有哪些分支， &lt;code&gt;-a&lt;/code&gt; 会同时查看本地和远程的分支&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b&lt;/code&gt;  &amp;lt;new_branch&amp;gt; [&lt;start point&gt;]
+&lt;ul&gt;
+&lt;li&gt;创建名为new_brach（以commit hash值为start point的commit为基）的新分支&lt;/li&gt;
+&lt;li&gt;为了简便，start point可以选取hash值的一个片段，只要能够唯一标识commit即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -am&#39;msg&#39;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;直接将&lt;strong&gt;工作区&lt;/strong&gt;和暂存区中的文件添加到版本库中，相当于使用了add&lt;/li&gt;
+&lt;li&gt;⚠️：只能提交已经被跟踪的文件，新建的文件还是要先通过 &lt;code&gt;git add .&lt;/code&gt; 添加到暂存区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以在~/.zshrc里，通过别名设置更友好的log显示方式，设置好后使用 &lt;code&gt;lg ...&lt;/code&gt; 即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;alias lg=&amp;quot;git log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&#39; --abbrev-commit&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;一般地，单字母的选项对应 &lt;code&gt;-&lt;/code&gt; ，非单字母的选项是 &lt;code&gt;--&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;08-gitk通过图形界面工具来查看版本历史&#34;&gt;08 | gitk：通过图形界面工具来查看版本历史&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Mac下安装： &lt;code&gt;brew install git-gui&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用： &lt;code&gt;gitk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;界面简单展示
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180257780.png&#34; alt=&#34;image-20210919180257780&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;选择View-New View后，选中All refs后，即可展示所有分支、Tag信息&lt;/li&gt;
+&lt;li&gt;右键某一个commit有很多操作，如Create tag&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为什么一次commit既有作者Author，又有提交人Committer
+&lt;ul&gt;
+&lt;li&gt;尊重版权&lt;/li&gt;
+&lt;li&gt;比如 &lt;code&gt;git cherry-pick&lt;/code&gt; 命令：将指定的commit应用于其他分支
+&lt;ul&gt;
+&lt;li&gt;具体使用参考&lt;a href=&#34;https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html&#34;&gt;git cherry-pick 教程&lt;/a&gt;——阮一峰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;另推荐一款Git图形界面工具：&lt;a href=&#34;https://www.sourcetreeapp.com/&#34;&gt;Sourcetree&lt;/a&gt;，其实工具之间大同小异，看个人习惯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;09-探密git目录&#34;&gt;09 | 探密.git目录&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Git具有优秀的存储能力，不需要网络，本地也能做版本管理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180314456.png&#34; alt=&#34;image-20210919180314456&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;🌟4个关键文件：HEAD、config、refs、objects，下面一一剖析&lt;/li&gt;
+&lt;li&gt;❗️3个重要对象：commit、tree、blob，PS：tag
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180331254.png&#34; alt=&#34;image-20210919180331254&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;关系图如上，参考&lt;a href=&#34;http://gitbook.liuhui998.com/1_2.html&#34;&gt;GIT对象模型&lt;/a&gt;——Git Community Book 中文版&lt;/li&gt;
+&lt;li&gt;blob：全称Binary Large Object，即二进制大型对象，可理解为文件对象&lt;/li&gt;
+&lt;li&gt;下一节还会深入讲解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HEAD：指向当前正在工作的分支
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180401832.png&#34; alt=&#34;image-20210919180401832&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;手动修改HEAD里的分支，效果同 &lt;code&gt;git checkout&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;config：本地仓库（local）配置信息
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180433585.png&#34; alt=&#34;image-20210919180433585&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;主要关注user信息&lt;/li&gt;
+&lt;li&gt;手动修改config文件，效果同 &lt;code&gt;git config --local&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;refs：包含heads和tags文件夹
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180453044.png&#34; alt=&#34;image-20210919180453044&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;heads里每个分支存放的是一个commit的hash值&lt;/li&gt;
+&lt;li&gt;tags里每个里程碑存放的也是一个commit的hash值
+&lt;ul&gt;
+&lt;li&gt;也可能是一个tag的hash值，其又指向commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git cat-file&lt;/code&gt; ：显示版本库对象的信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-t&lt;/code&gt; ：类型&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; ：内容（直接用cat命令可能会显示乱码，因为这些对象需要解析）&lt;/li&gt;
+&lt;li&gt;后接者唯一的hash值或文件名即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PS：细心的你会发现一个commit里存储了一个tree的hash值，是不是和一开始的关系图串起来了，再试试查看tree的内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;objects：存放所有对象，包括tree / blob / commit
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180522562.png&#34; alt=&#34;image-20210919180522562&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;1）大部分文件夹📁都是以hash值的前2位字符命名，里面存放38位字符命名的文件
+&lt;ul&gt;
+&lt;li&gt;由这40位字符组成唯一的hash值，指向一个对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2）tree对象里存储了blob对象信息，blob对象的内容就是某个文件的内容，如css.x
+&lt;ul&gt;
+&lt;li&gt;tree对象里还可以存储另一个tree对象信息&lt;/li&gt;
+&lt;li&gt;只要文件的内容相同，在Git眼里它就是唯一的一个blob&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;3）blob对象内容与其指向的文件内容一致
+&lt;ul&gt;
+&lt;li&gt;一定会一致吗？不一定，和版本有关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PS：还有pack文件夹和info文件夹
+&lt;ul&gt;
+&lt;li&gt;前者用于存放打包的松散的文件夹，后者与前者相配合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;10-commit-tree和blob三个对象之间的关系&#34;&gt;10 | commit、tree和blob三个对象之间的关系&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上一节提到了它们仨，这一节再具体看一个commit，加深理解&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180550646.png&#34; alt=&#34;image-20210919180550646&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;这是它们三者的关系图，可以关注箭头的走向，参考&lt;a href=&#34;http://gitbook.liuhui998.com/1_2.html&#34;&gt;GIT对象模型&lt;/a&gt;——Git Community Book 中文版&lt;/li&gt;
+&lt;li&gt;解析
+&lt;ul&gt;
+&lt;li&gt;一个commit里的内容由一棵tree来管理，有且只有一棵
+&lt;ul&gt;
+&lt;li&gt;存放当前commit里所有文件夹和文件的一个快照&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一棵tree里可以有多个子tree和多个blob&lt;/li&gt;
+&lt;li&gt;一个blob里存储的就是文件对象的具体信息
+&lt;ul&gt;
+&lt;li&gt;文件内容一样则唯一，与文件名完全无关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;示例
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180605998.png&#34; alt=&#34;image-20210919180605998&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;commit👉tree👉blob + tree&lt;/li&gt;
+&lt;li&gt;PS： &lt;code&gt;lg&lt;/code&gt; 是在第7节配置的 &lt;code&gt;git log&lt;/code&gt; 友好显示版命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;11-小练习数一数tree的个数&#34;&gt;11 | 小练习：数一数tree的个数&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;新建的Git仓库，有且仅有1个commit，仅仅包含/doc/readme&lt;br&gt;
+请问内含多少个tree、多少个blob？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下面开始试验🧪&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 首先新建Git仓库
+git init watch_git_object
+## 进入仓库，创建doc文件夹，并添加readme
+cd watch_git_object
+mkdir doc
+echo &amp;quot;hello, world&amp;quot; &amp;gt; doc/readme
+## 此时观察.git/objects里有没有文件类型的文件：空
+find .git/objects -type f
+## 把doc添加到暂存区
+git add doc/
+## 再次观察：Git生成了一个blob对象，里面记录了readme的内容
+find .git/objects -type f
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180621066.png&#34; alt=&#34;image-20210919180621066&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;添加到暂存区时，就会产生blob对象&lt;/li&gt;
+&lt;li&gt;❗️此时还没有commit、tree对象，下面进行commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;## 进行commit
+git commit -m&#39;Add readme&#39;
+## 观察.git/objects里的文件：已经有4个了
+find .git/objects -type f
+## 逐个检查它们的类型和内容，如下图所示
+git cat-file -t ***
+git cat-file -p ***
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180648116.png&#34; alt=&#34;image-20210919180648116&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;可以看出新生成了：1个commit、2个tree&lt;/li&gt;
+&lt;li&gt;它们的关系是：
+&lt;ul&gt;
+&lt;li&gt;commit👉tree（commit对应一个tree）👉tree（doc文件夹）👉blob（readme文件）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;12-分离头指针情况下的注意事项&#34;&gt;12 | 分离头指针情况下的注意事项&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;detached HEAD&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;产生：切换HEAD到某一个commit上（即使是某分支最新的commit）
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180704824.png&#34; alt=&#34;image-20210919180704824&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout &amp;lt;HASH_OF_COMMIT&amp;gt;&lt;/code&gt; ，而非某一个分支&lt;/li&gt;
+&lt;li&gt;此时就会出现detached HEAD情况，你可以做一些&lt;strong&gt;试验性操作&lt;/strong&gt;，并进行commit
+&lt;ul&gt;
+&lt;li&gt;1）如果不想保留这些commit：可以直接切换回分支，不做其它额外的操作&lt;/li&gt;
+&lt;li&gt;2）如果想保留这些commit：则需要在此创建一个新的分支，从而与分支挂钩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;接着对readme做一些修改，并进行提交，当切换回某个分支时
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180715656.png&#34; alt=&#34;image-20210919180715656&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Git友好提示：如果想要保留刚才的提交，可以通过commit的hash值创建一个新的分支&lt;/li&gt;
+&lt;li&gt;借助gitk查看此时分支的情况，可以看到，看不到刚才commit的影子
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180721680.png&#34; alt=&#34;image-20210919180721680&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;执行上述友好提示中的 &lt;code&gt;git branch fix_readme 34976f8&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180732030.png&#34; alt=&#34;image-20210919180732030&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;前面做的提交已经与fix_readme分支联系起来了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;小结
+&lt;ul&gt;
+&lt;li&gt;使用场景：做一些试验性尝试&lt;/li&gt;
+&lt;li&gt;⚠️：当想做保留所做的提交时，要与某个分支挂钩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;13-进一步理解head和branch&#34;&gt;13 | 进一步理解HEAD和branch&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;带着2个问题学习：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;新建分支的时候，HEAD会发生什么变化？（HEAD指向）&lt;/li&gt;
+&lt;li&gt;HEAD相关的使用技巧是什么？（指代commit，特殊标记 &lt;code&gt;^&lt;/code&gt; 、 &lt;code&gt;~&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;下面一一进行探讨：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1
+&lt;ul&gt;
+&lt;li&gt;HEAD可以指向具体的分支，也可以指向具体的commit&lt;/li&gt;
+&lt;li&gt;通过 &lt;code&gt;git checkout -b &amp;lt;NEW_BRANCH_NAME&amp;gt; &amp;lt;BASE_BRANCH_NAME/HASH_OF_COMMIT&amp;gt;&lt;/code&gt; 命令，基于某个分支或提交，创建新的分支，并切换到新分支上&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180741612.png&#34; alt=&#34;image-20210919180741612&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;可以发现：HEAD从指向分离头指针，转变到，指向fix_new分支上&lt;/li&gt;
+&lt;li&gt;再观察HEAD文件的信息&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180750690.png&#34; alt=&#34;image-20210919180750690&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;其实，&lt;strong&gt;HEAD&lt;/strong&gt;指向&lt;strong&gt;某个分支&lt;/strong&gt;，而该分支指向某个&lt;strong&gt;特定的commit&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2
+&lt;ul&gt;
+&lt;li&gt;既然HEAD最终指向一个commit，那也可以用它来指代commit的hash值啦～&lt;/li&gt;
+&lt;li&gt;比如在使用 &lt;code&gt;git diff &amp;lt;A&amp;gt; &amp;lt;B&amp;gt;&lt;/code&gt; 比较两个commit时&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180756092.png&#34; alt=&#34;image-20210919180756092&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;上面3条命令是等价的，即：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git diff 34976f8 a60a3d5&lt;/code&gt; 、 &lt;code&gt;git diff HEAD HEAD~&lt;/code&gt; 、 &lt;code&gt;git diff HEAD &#39;HEAD^&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;⚠️：
+&lt;ul&gt;
+&lt;li&gt;HEAD的 &lt;code&gt;^&lt;/code&gt; 和 &lt;code&gt;~&lt;/code&gt; 标记都可以获取HEAD的祖先commit&lt;/li&gt;
+&lt;li&gt;它们的区别可参考下图：
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210919180803607.png&#34; alt=&#34;image-20210919180803607&#34; loading=&#34;lazy&#34;&gt;&lt;/li&gt;
+&lt;li&gt;这个分支图的方向和 &lt;code&gt;git log --graph&lt;/code&gt; 生成的图方向相反，即A是最小的&lt;/li&gt;
+&lt;li&gt;结合了有merge分支的情况&lt;/li&gt;
+&lt;li&gt;参考&lt;a href=&#34;https://stackoverflow.com/questions/2221658/whats-the-difference-between-head-and-head-in-git&#34;&gt;What&#39;s the difference between HEAD^ and HEAD~ in Git?&lt;/a&gt;——StackOverflow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在zsh下， &lt;code&gt;^&lt;/code&gt; 有特殊含义，所以需要用引号包起来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;学到这里，是不是更新了自己对Git的认识呢～是否期待Next Part呢？！&lt;/p&gt;
+&lt;/blockquote&gt;
+">1 Git基础</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://doublelll3.ml/git3_《玩转Git三剑客》笔记汇总/"" data-c="
+          &lt;h1 id=&#34;玩转git三剑客笔记汇总&#34;&gt;《玩转Git三剑客》笔记汇总&lt;/h1&gt;
+&lt;p&gt;🎯&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;深入理解 Git 工作原理；&lt;/li&gt;
+&lt;li&gt;掌握 Git 的高级使用技巧；&lt;/li&gt;
+&lt;li&gt;用 GitHub 进行团队项目代码管理；&lt;/li&gt;
+&lt;li&gt;通过 GitLab 完成简单的 DevOps 流程。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;👨：导师，&lt;strong&gt;苏玲&lt;/strong&gt;，携程代码平台负责人&lt;/p&gt;
+&lt;p&gt;🔗：&lt;a href=&#34;https://time.geekbang.org/course/intro/100021601&#34;&gt;查看课程&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;传送门&#34;&gt;传送门&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/git3_1_Git%E5%9F%BA%E7%A1%80/&#34;&gt;Git基础&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;独自使用Git时的常见场景&lt;/li&gt;
+&lt;li&gt;Git与GitHub的简单同步&lt;/li&gt;
+&lt;li&gt;Git多人单分支集成协作时的常见场景&lt;/li&gt;
+&lt;li&gt;Git集成使用禁忌&lt;/li&gt;
+&lt;li&gt;初识GitHub&lt;/li&gt;
+&lt;li&gt;使用GitHub进行团队协作&lt;/li&gt;
+&lt;li&gt;GitLab实践&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;有问题多多指点&#34;&gt;&lt;em&gt;有问题多多指点！&lt;/em&gt;&lt;/h2&gt;
+">《玩转Git三剑客》笔记汇总</a>
+      </div>
+      
+      <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://doublelll3.ml/iosf0_0_课程简介与开发前准备/"" data-c="
           &lt;p&gt;&lt;strong&gt;为什么学习iOS开发，以及使用OC语言？&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1552,7 +2012,7 @@
 &lt;li&gt;具体独立开发完整 App 的能力。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;👨：导师，&lt;strong&gt;朱德权&lt;/strong&gt;，腾讯高级工程师&lt;/p&gt;
-&lt;p&gt;🔗：&lt;a href=&#34;https://time.geekbang.org/course/intro/100025901&#34;&gt;进入课程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔗：&lt;a href=&#34;https://time.geekbang.org/course/intro/100025901&#34;&gt;查看课程&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;传送门&#34;&gt;传送门&lt;/h2&gt;
 &lt;ol start=&#34;0&#34;&gt;
 &lt;li&gt;
@@ -2476,9 +2936,15 @@ sudo apt install nasm
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="https://doublelll3.ml/cosmos_《操作系统实战45讲》笔记汇总/"" data-c="
           &lt;h1 id=&#34;操作系统实战45讲笔记汇总&#34;&gt;《操作系统实战45讲》笔记汇总&lt;/h1&gt;
-&lt;p&gt;🎯：从0到1，实现自己的操作系统&lt;/p&gt;
+&lt;p&gt;🎯：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;洞悉 OS 运行机制与架构实现；&lt;/li&gt;
+&lt;li&gt;强化理解 Linux 核心技术；&lt;/li&gt;
+&lt;li&gt;系统级别的编程技巧；&lt;/li&gt;
+&lt;li&gt;“保姆级”代码注释及详解图。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;👨：导师，&lt;strong&gt;彭东&lt;/strong&gt;，网名 LMOS，Intel 傲腾项目关键开发者&lt;/p&gt;
-&lt;p&gt;🔗：&lt;a href=&#34;https://time.geekbang.org/column/intro/411&#34;&gt;进入课程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🔗：&lt;a href=&#34;https://time.geekbang.org/column/intro/411&#34;&gt;查看课程&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;传送门&#34;&gt;传送门&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://doublelll3.ml/cosmos_1_%E5%B0%9D%E5%B0%9D%E9%B2%9C%EF%BC%9A%E4%BB%8E%E4%B8%80%E4%B8%AAHello%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AAHello/&#34;&gt;尝尝鲜：从一个Hello到另一个Hello&lt;/a&gt;&lt;/li&gt;
