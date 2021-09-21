@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://doublelll3.ml</id>
     <title>Double&apos;s Way</title>
-    <updated>2021-09-19T11:15:37.635Z</updated>
+    <updated>2021-09-21T02:57:26.213Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://doublelll3.ml"/>
     <link rel="self" href="https://doublelll3.ml/atom.xml"/>
@@ -10,6 +10,80 @@
     <logo>https://doublelll3.ml/images/avatar.png</logo>
     <icon>https://doublelll3.ml/favicon.ico</icon>
     <rights>All rights reserved 2021, Double&apos;s Way</rights>
+    <entry>
+        <title type="html"><![CDATA[从《虾票票》带你入门iOS（1）——定位与目标]]></title>
+        <id>https://doublelll3.ml/spp_1_从《虾票票》带你入门iOS（1）——定位与目标/</id>
+        <link href="https://doublelll3.ml/spp_1_从《虾票票》带你入门iOS（1）——定位与目标/">
+        </link>
+        <updated>2021-09-21T02:20:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>最近一个多月，在公司做了3个小项目，有类似《小红书》的，有类似银行开户的，还有类似《淘票票》的。<br>
+最后一位是仿照《淘票票》制作的，整个过程下来，真的可以说是入门iOS的<strong>最精简学习路径</strong>了！这就开始带你入门iOS～</p>
+</blockquote>
+<h1 id="我们的定位">我们的定位</h1>
+<p><strong>面向懂一点OC（Object-C）语法、想入门iOS的同学。</strong></p>
+<p>如果不懂，也没关系，我会在合适的位置放上一些OC语法的介绍。</p>
+<p>PS：这里有一份可以随时查看的OC工具文档：<a href="https://www.yiibai.com/objective_c">Objective-C教程</a>（<a href="https://www.yiibai.com/objective_c">https://www.yiibai.com/objective_c</a>）——易百教程。</p>
+<h1 id="我们的目标">我们的目标</h1>
+<p>很简单，就是制作下面这一款《<strong>虾票票</strong>》，并<strong>入门iOS</strong>！</p>
+<p>下面简单介绍一下票票的前世今生～</p>
+<h2 id="前世淘票票">前世：《淘票票》</h2>
+<p>首先来看一下《淘票票》的主页与详情页（侵删❗️）：</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/image-20210921104220770.png" alt="淘票票" loading="lazy"></figure>
+<p>再来分析一下主页应该包含的功能：</p>
+<p>1️⃣启动——加载出页面范围内的内容；</p>
+<p>2️⃣上拉——加载出页面范围外的内容；</p>
+<p>3️⃣下拉——刷新，重新加载页面范围内的内容；</p>
+<p>4️⃣点击购票按钮——购票按钮变灰，文字转变为已购票；</p>
+<p>5️⃣点击某一部电影——跳转到对应的详情页。</p>
+<p>PS：电影的相关信息存储在后端，而后端可以通过 <code>python -m SimpleHTTPServer [port]</code>搭建（Mac自带），局域网内通过 <code>http://ip:port/</code> 即可访问服务所在的文件夹内容，即电影列表和详情。</p>
+<h2 id="今生虾票票">今生：《虾票票》</h2>
+<p>先给大家一个预期，看看你即将学习的《虾票票》长什么样儿？当然整个过程下来，相信你能做得更好！</p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/%E8%99%BE%E7%A5%A8%E7%A5%A8V1.0.gif-0.0000-25.2300.gif" alt="虾票票V1.0" loading="lazy"></figure>
+<p>至此，你是否有所<strong>期待</strong>了呢？还是失望地离开？欢迎<strong>留言</strong>说出你的想法和建议！</p>
+<h1 id="下次见面">下次见面</h1>
+<p>我们会聊一聊：</p>
+<ul>
+<li>iOS的简史（iOS的故事当然不能放过）</li>
+<li>如何创建一个iOS工程</li>
+<li>工程里非常重要的几个配置</li>
+</ul>
+<h1 id="现在你可以">现在你可以</h1>
+<h2 id="做一做">做一做</h2>
+<ul>
+<li>买一台Mac（<a href="https://www.apple.com.cn/mac/">https://www.apple.com.cn/mac/</a>）</li>
+<li>安装Xcode（App Store）</li>
+<li>点一个点赞 / 收藏 / 在看（别忘了下次更新来看看）</li>
+</ul>
+<h2 id="想一想">想一想</h2>
+<ul>
+<li>后端应该存放电影的哪些信息？用什么文件存？</li>
+<li>对本课程还有什么期待，欢迎<strong>留言</strong>！</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[来了！从《虾票票》带你入门iOS！]]></title>
+        <id>https://doublelll3.ml/spp_来了！从《虾票票》带你入门iOS！/</id>
+        <link href="https://doublelll3.ml/spp_来了！从《虾票票》带你入门iOS！/">
+        </link>
+        <updated>2021-09-21T02:10:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>最近一个多月，在公司做了3个小项目，有类似《小红书》的，有类似银行开户的，还有类似《淘票票》的。<br>
+最后一位是仿照《淘票票》制作的，整个过程下来，真的可以说是入门iOS的<strong>最精简学习路径</strong>了！这就开始带你入门iOS～</p>
+</blockquote>
+<h1 id="大纲">大纲</h1>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/doubleLLL3/blogImgs@main/img/%E4%BB%8E%E3%80%8A%E8%99%BE%E7%A5%A8%E7%A5%A8%E3%80%8B%E5%B8%A6%E4%BD%A0%E5%85%A5%E9%97%A8iOS.png" alt="从《虾票票》带你入门iOS" loading="lazy"></figure>
+<ol>
+<li><a href="https://doublelll3.ml/spp_1_%E4%BB%8E%E3%80%8A%E8%99%BE%E7%A5%A8%E7%A5%A8%E3%80%8B%E5%B8%A6%E4%BD%A0%E5%85%A5%E9%97%A8iOS%EF%BC%881%EF%BC%89%E2%80%94%E2%80%94%E5%AE%9A%E4%BD%8D%E4%B8%8E%E7%9B%AE%E6%A0%87/">从《虾票票》带你入门iOS（1）——定位与目标</a></li>
+<li>从《虾票票》带你入门iOS（2）——iOS简史与工程创建</li>
+<li>从《虾票票》带你入门iOS（3）——iOS常用UI组件</li>
+<li>从《虾票票》带你入门iOS（4）——Xcode调试</li>
+<li>从《虾票票》带你入门iOS（5）——CocoaPods介绍与使用</li>
+</ol>
+<p><em>争取一周推进一个Part！</em></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[《玩转Git三剑客》笔记汇总]]></title>
         <id>https://doublelll3.ml/git3_《玩转Git三剑客》笔记汇总/</id>
@@ -661,71 +735,6 @@
 </li>
 </ul>
 <hr>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《胡船长专属课堂》笔记汇总]]></title>
-        <id>https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/</id>
-        <link href="https://doublelll3.ml/hcz_《胡船长专属课堂》笔记汇总/">
-        </link>
-        <updated>2021-01-25T00:40:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="胡船长专属课堂笔记汇总">《胡船长专属课堂》笔记汇总</h1>
-<p><strong>掌舵：还用说？</strong></p>
-<h2 id="传送门">传送门</h2>
-<h2 id="高级数据结构">高级数据结构</h2>
-<ol>
-<li><a href="https://doublelll3.ml/gsj_1_%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E3%80%81AVL%E6%A0%91/">二叉排序树、AVL树</a></li>
-<li><a href="https://doublelll3.ml/gsj_2_%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
-<li><a href="https://doublelll3.ml/gsj_3_%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E4%B8%8E%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼树与哈夫曼编码</a></li>
-<li><a href="https://doublelll3.ml/gsj_4_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E5%8D%95%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95/">字符串匹配算法（上）：BF、KMP、SUNDAY、SHIFT-AND、Hash</a></li>
-<li><a href="https://doublelll3.ml/gsj_5_%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E5%A4%9A%E6%A8%A1%E5%8C%B9%E9%85%8D%E7%9B%B8%E5%85%B3/">字符串匹配算法（下）：Trie、AC、DAT</a></li>
-</ol>
-<h2 id="面试笔试算法下">面试笔试算法下</h2>
-<ol>
-<li><a href="https://doublelll3.ml/mbsx_1_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8A%EF%BC%89/">从递推到动态规划（上）</a></li>
-<li><a href="https://doublelll3.ml/mbsx_2_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8B%EF%BC%89/">从递推到动态规划（下）</a></li>
-<li><a href="https://doublelll3.ml/mbsx_3_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E6%A0%88/">单调队列与单调栈</a></li>
-<li><a href="https://doublelll3.ml/mbsx_4_%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></li>
-<li><a href="https://doublelll3.ml/mbsx_5_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></li>
-<li><a href="https://doublelll3.ml/mbsx_6_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0/">树状数组、线段树练习题</a></li>
-</ol>
-<h2 id="c程序设计">C++程序设计</h2>
-<ol start="0">
-<li><a href="https://doublelll3.ml/cpp_0_%E4%BB%8EC%E5%88%B0CPP/">从C到C++</a></li>
-<li><a href="https://doublelll3.ml/cpp_1_%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/">类和对象</a></li>
-<li>重载</li>
-</ol>
-<hr>
-<p>【附加】</p>
-<ul>
-<li>
-<p><a href="https://doublelll3.ml/cpp_Effective_CPP/">Effective C++阅读分享</a></p>
-</li>
-<li>
-<p><a href="https://doublelll3.ml/cpp_%E3%80%8ACPP%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B%E5%B0%8F%E4%BD%9C%E4%B8%9A/">小作业</a></p>
-</li>
-</ul>
-<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[《面试笔试算法下》笔记汇总]]></title>
-        <id>https://doublelll3.ml/mbsx_《面试笔试算法下》笔记汇总/</id>
-        <link href="https://doublelll3.ml/mbsx_《面试笔试算法下》笔记汇总/">
-        </link>
-        <updated>2021-01-23T01:51:00.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="面试笔试算法下笔记汇总">《面试笔试算法下》笔记汇总</h1>
-<p><strong>掌舵：光哥</strong></p>
-<h2 id="传送门">传送门</h2>
-<ol>
-<li><a href="https://doublelll3.ml/mbsx_1_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8A%EF%BC%89/">从递推到动态规划（上）</a></li>
-<li><a href="https://doublelll3.ml/mbsx_2_%E4%BB%8E%E9%80%92%E6%8E%A8%E5%88%B0%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8B%EF%BC%89/">从递推到动态规划（下）</a></li>
-<li><a href="https://doublelll3.ml/mbsx_3_%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E6%A0%88/">单调队列与单调栈</a></li>
-<li><a href="https://doublelll3.ml/mbsx_4_%E7%BA%BF%E6%AE%B5%E6%A0%91/">线段树</a></li>
-<li><a href="https://doublelll3.ml/mbsx_5_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">树状数组</a></li>
-<li><a href="https://doublelll3.ml/mbsx_6_%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E3%80%81%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%83%E4%B9%A0/">树状数组、线段树练习题</a></li>
-</ol>
-<h2 id="有问题多多指点"><em>有问题多多指点！</em></h2>
 ]]></content>
     </entry>
 </feed>
